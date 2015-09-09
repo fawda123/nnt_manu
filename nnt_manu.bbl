@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{15}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -15,6 +15,11 @@ Beck MW, Wilson BN, Vondracek B, Hatch LK (2014).
   indices of biotic integrity for biological monitoring.}
 \newblock \emph{Ecological Indicators}, \textbf{45}, 195--208.
 
+\bibitem[{Garson(1991)}]{Garson91}
+Garson GD (1991).
+\newblock \enquote{Interpreting neural network connection weights.}
+\newblock \emph{Artificial Intelligence Expert}, \textbf{6}(4), 46--51.
+
 \bibitem[{Gevrey \emph{et~al.}(2003)Gevrey, Dimopoulos, and Lek}]{Gevrey03}
 Gevrey M, Dimopoulos I, Lek S (2003).
 \newblock \enquote{Review and comparison of methods to study the contribution
@@ -28,6 +33,21 @@ Goh ATC (1995).
 \newblock \emph{Artificial Intelligence in Engineering}, \textbf{9}(3),
   143--151.
 
+\bibitem[{Kell and Oliver(2003)}]{Kell03}
+Kell DB, Oliver SG (2003).
+\newblock \enquote{Here is the evidence, now what is the hypothesis? {T}he
+  complementary roles of inductive and hypothesis-driven science in the
+  post-genomic era.}
+\newblock \emph{BioEssays}, \textbf{26}(1), 99--105.
+
+\bibitem[{Kelling \emph{et~al.}(2009)Kelling, Hochachka, Fink, Riedewald,
+  Caruana, Ballard, and Hooker}]{Kelling09}
+Kelling S, Hochachka WM, Fink D, Riedewald M, Caruana R, Ballard G, Hooker G
+  (2009).
+\newblock \enquote{Data-intensive science: A new paradigm for biodiversity
+  studies.}
+\newblock \emph{BioScience}, \textbf{59}(7), 613--620.
+
 \bibitem[{Lek \emph{et~al.}(1996)Lek, Delacoste, Baran, Dimopoulos, Lauga, and
   Aulagnier}]{Lek96}
 Lek S, Delacoste M, Baran P, Dimopoulos I, Lauga J, Aulagnier S (1996).
@@ -35,10 +55,52 @@ Lek S, Delacoste M, Baran P, Dimopoulos I, Lauga J, Aulagnier S (1996).
   relationships in ecology.}
 \newblock \emph{Ecological Modelling}, \textbf{90}(1), 39--52.
 
+\bibitem[{Maier and Dandy(2000)}]{Maier00}
+Maier HR, Dandy GC (2000).
+\newblock \enquote{Neural networks for the prediction and forecasting of water
+  resources variables: A review of modelling issues and applications.}
+\newblock \emph{Environmental Modelling and Software}, \textbf{15}(1),
+  101--124.
+
+\bibitem[{Olden and Jackson(2002)}]{Olden02}
+Olden JD, Jackson DA (2002).
+\newblock \enquote{Illuminating the ``black box'': A randomization approach for
+  understanding variable contributions in artifical neural networks.}
+\newblock \emph{Ecological Modelling}, \textbf{154}(1-2), 135--150.
+
+\bibitem[{Olden \emph{et~al.}(2004)Olden, Joy, and Death}]{Olden04}
+Olden JD, Joy MK, Death RG (2004).
+\newblock \enquote{An accurate comparison of methods for quantifying variable
+  importance in artificial neural networks using simulated data.}
+\newblock \emph{Ecological Modelling}, \textbf{178}(3-4), 389--397.
+
 \bibitem[{\"{O}zesmi and \"{O}zesmi(1999)}]{Ozesmi99}
 \"{O}zesmi SL, \"{O}zesmi U (1999).
 \newblock \enquote{An artificial neural network approach to spatial habitat
   modelling with interspecific interaction.}
 \newblock \emph{Ecological Modelling}, \textbf{116}(1), 15--31.
+
+\bibitem[{Ripley(1996)}]{Ripley96}
+Ripley BD (1996).
+\newblock \emph{Pattern Recognition and Neural Networks}.
+\newblock Cambridge University Press, Cambridge, United Kingdom.
+
+\bibitem[{Rumelhart \emph{et~al.}(1986)Rumelhart, Hinton, and
+  Williams}]{Rumelhart86}
+Rumelhart DE, Hinton GE, Williams RJ (1986).
+\newblock \enquote{Learning representations by back-propagating errors.}
+\newblock \emph{Nature}, \textbf{323}(6088), 533--536.
+
+\bibitem[{Saeys \emph{et~al.}(2007)Saeys, Inza, and {n}aga}]{Saeys07}
+Saeys Y, Inza I, {n}aga PL (2007).
+\newblock \enquote{A review of feature selection techniques in bioinformatics.}
+\newblock \emph{Bioinformatics}, \textbf{23}(19), 2507--2517.
+
+\bibitem[{Swanson \emph{et~al.}(2015)Swanson, Kosmala, Lintott, Simpson, Smith,
+  and Packer}]{Swanson15}
+Swanson A, Kosmala M, Lintott C, Simpson R, Smith A, Packer C (2015).
+\newblock \enquote{{S}napshot {S}erengeti: High-frequency annotated camera trap
+  images of 40 mammalian species in {A}frican savanna.}
+\newblock \emph{Scientific Data}, \textbf{2}, 150026.
 
 \end{thebibliography}

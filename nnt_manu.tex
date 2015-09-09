@@ -49,6 +49,8 @@
 
 \usepackage{alltt}
 
+\usepackage{acronym}
+\acrodef{mlp}[mlp]{multilayer perceptron}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% declarations for jss.cls %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,13 +110,26 @@ Functions within this package can be used for the interpretation of neural netwo
 
 \section[Introduction]{Introduction}
 
-\citep{Goh95}
+The increasing quantity of information and computational capacity to address relevant research questions has contributed to the growth of data science as a legitimate field of study.   Data science is a relatively new paradigm of analysis that focuses on the synthesis of unstructured information from multiple sources to identify patterns or trends `born from the data' \citep{Kelling09}.  A central theme is the focus on data exploration and prediction as compared to specific hypothesis-testing of traditional, domain-specific methods of scientific exploration \citep{Kell03}.  Demand for quantitative toolsets to address challenges in data-rich environments has increased drastically with the continuing advancement of techniques for rapid acquisition of data. Fields of research characterized by high-throughput data have a strong foundation in computationally-intensive methods of analysis (e.g., \citet{Saeys07}).  By contrast, disciplines that have historically been limited by data quantity, such as ecological studies across broad temporal and spatial scales, have shown a need for data intensive approaches given the improved ability to acquire information (e.g., \citet{Swanson15}).  Regardless of the discipline, quantitative approaches that explicitly focus on  inductive reasoning can serve a complementary role to conventional, hypothesis-driven approaches to scientific discovery \citep{Kell03}.  
+
+Statistical methods that have been used to support data exploration for deductive analysis are numerous.  A common theme among many of these methods is the use of machine-learning algorithms where the primary objective is to identify emergent patterns in the data with minimal human intervention.  Neural networks, in particular, are designed to mimic the neuronal structure of the human brain by `learning' inherent data structures through adaptive algorithms.  Although the conceptual model was introduced several decades ago \citep{Maier00}, neural networks continue to maintain a central role in data intensive science.  The most popular form of neural network is the \ac{mlp} trained using the backpropagation algorithm \citep{Rumelhart86}.  This model is typically used to predict the response of one or more variables given co-occurrence of any of a number of explanatory variables.  The hallmark feature of the \ac{mlp} is the characterization of relationships between variabiles using an arbitrary number of parameters (i.e., the hidden layer) that are chosen through an iterative training process with the backpropation algorithm.  Conceptually, the \ac{mlp} is nothing more than a hyper-parameterized non-linear model that can a fit smooth function with almost non-existent residual error for any dataset.
+
+An arbitrarily large number of parameters to fit a neural network provides obvious predictive advantages, but conversely complicates the extraction of critical model information.  Information such as variable importance or model sensitivity are necessary aspects of exploraty data analysis that are not easily obtained from a neural network. As such, a common criticism is that neural networks are `black-boxes' that offer minimal insight into relationships among variables.  \citet{Olden02} provides a rebuttal to this concern by providing methods to extract information from neural networks, most of which were previously available but not commonly used to evaluate neural networks.  For example, \citet{Olden02} describes neural interpretation diagrams for plotting \citep{Ozesmi99}, the Garson algorithm for variable importance \citep{Garson91}, and the Profile method for sensitivity analysis \citep{Lek96}.  These quantitative tools `illuminate the black box' by disaggregating the network parameters as a means to characterize relationships between variables.  In essence, \ac{mlp} neural networks were developed for prediction but methods in \citep{Olden02} leverage these models to describe data signals.  Increasing the accesibility of these diagnostic tools will have value for exploratory analysis in data science.
+
+This article describes the \pkg{NeuralNetTools} package for \proglang{R} that was developed to improve the breadth and quality of information obtained from the \ac{mlp} neural network.  Functions provided by the package are those previously described in \citep{Olden02} but have not been available in an open-source proramming environment.  The reach of the package is all-inclusive such that generic functions were developed using S3 methods for all neural network object classes available in \proglang{R}.  The objecives of this article are to 1) provide an overview of the statistical foundation the \ac{mlp} network, 2) briefly describe similarities and differences between existing neural network packages in \proglang{R}, and 3) describe the theory and application of the primary functions in the \pkg{NeuralNetTools} package.  The package is currently available on CRAN, whereas the development version is maintained as a GitHub repository.  
+
+\section[Theoretical foundation]{Theoretical foundation and existing R packages}
+
+Packages available in R to create neural networks (similarities, differences)
+
+hyper-dimensional
+
+Formulaically \citep{Ripley96}
+$y_k = f_k \left(\sum\limits_{j=1}^k w_{jk}f_j \left( \sum\limits_{i=1}^j w_{ij}x_i\right) \right) $
 
 \section[Package structure]{Package structure}
 
-Packages in R that can create neural networks and relevant methods in NeuralNetTools
 
-Cautionary note about finding the `optimal' model.
 
 \subsection{Visualizing neural networks}
 
@@ -146,8 +161,12 @@ For all plots, the legend with the 'splits' label indicates the colors that corr
 
 Note that there is no predict method for neuralnet objects from the nn package. The lekprofile method for nn objects uses the nnet package to recreate the input model, which is then used for the sensitivity predictions. This approach only works for networks with one hidden layer.
 
-
 \section[Future development]{Future development}
+
+
+\section[Conclusions]{Conclusions}
+
+A cautionary note about the `optimal network' and reproducibility of results.  
 
 \section[Acknowledgments]{Acknowledgments}
 
