@@ -1,4 +1,4 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{17}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -26,12 +26,17 @@ Gevrey M, Dimopoulos I, Lek S (2003).
   of variables in artificial neural network models.}
 \newblock \emph{Ecological Modelling}, \textbf{160}(3), 249--264.
 
-\bibitem[{Goh(1995)}]{Goh95}
-Goh ATC (1995).
-\newblock \enquote{Back-propagation neural networks for modeling complex
-  systems.}
-\newblock \emph{Artificial Intelligence in Engineering}, \textbf{9}(3),
-  143--151.
+\bibitem[{Hornik(1991)}]{Hornik91}
+Hornik K (1991).
+\newblock \enquote{Approximation capabilities of multilayer feedforward
+  networks.}
+\newblock \emph{Neural Networks}, \textbf{4}(2), 251--257.
+
+\bibitem[{Jain \emph{et~al.}(2000)Jain, Duin, and Mao}]{Jain00}
+Jain AK, Duin RPW, Mao JC (2000).
+\newblock \enquote{Statistical pattern recognition: A review.}
+\newblock \emph{{IEEE} Transactions on Pattern Analysis and Machine
+  Intelligence}, \textbf{22}(1), 4--37.
 
 \bibitem[{Kell and Oliver(2003)}]{Kell03}
 Kell DB, Oliver SG (2003).
@@ -55,12 +60,17 @@ Lek S, Delacoste M, Baran P, Dimopoulos I, Lauga J, Aulagnier S (1996).
   relationships in ecology.}
 \newblock \emph{Ecological Modelling}, \textbf{90}(1), 39--52.
 
-\bibitem[{Maier and Dandy(2000)}]{Maier00}
-Maier HR, Dandy GC (2000).
-\newblock \enquote{Neural networks for the prediction and forecasting of water
-  resources variables: A review of modelling issues and applications.}
-\newblock \emph{Environmental Modelling and Software}, \textbf{15}(1),
-  101--124.
+\bibitem[{Lek and Gu\'{e}gan(2000)}]{Lek00}
+Lek S, Gu\'{e}gan JF (2000).
+\newblock \emph{Artificial Neuronal Networks: Application to Ecology and
+  Evolution}.
+\newblock Springer-Verlag, Berlin, Germany.
+
+\bibitem[{McCulloch and Pitts(1943)}]{McCulloch43}
+McCulloch WS, Pitts W (1943).
+\newblock \enquote{A logical calculus of the ideas imminent in nervous
+  activity.}
+\newblock \emph{Bulletin of Mathematical Biophysics}, \textbf{5}, 115--133.
 
 \bibitem[{Olden and Jackson(2002)}]{Olden02}
 Olden JD, Jackson DA (2002).
@@ -68,17 +78,17 @@ Olden JD, Jackson DA (2002).
   understanding variable contributions in artifical neural networks.}
 \newblock \emph{Ecological Modelling}, \textbf{154}(1-2), 135--150.
 
-\bibitem[{Olden \emph{et~al.}(2004)Olden, Joy, and Death}]{Olden04}
-Olden JD, Joy MK, Death RG (2004).
-\newblock \enquote{An accurate comparison of methods for quantifying variable
-  importance in artificial neural networks using simulated data.}
-\newblock \emph{Ecological Modelling}, \textbf{178}(3-4), 389--397.
-
 \bibitem[{\"{O}zesmi and \"{O}zesmi(1999)}]{Ozesmi99}
 \"{O}zesmi SL, \"{O}zesmi U (1999).
 \newblock \enquote{An artificial neural network approach to spatial habitat
   modelling with interspecific interaction.}
 \newblock \emph{Ecological Modelling}, \textbf{116}(1), 15--31.
+
+\bibitem[{Paruelo and Tomasel(1997)}]{Paruelo97}
+Paruelo JM, Tomasel F (1997).
+\newblock \enquote{Prediction of functional characteristics of ecosystems: A
+  comparison of artificial neural networks and regression models.}
+\newblock \emph{Ecological Modelling}, \textbf{98}(2-3), 173--186.
 
 \bibitem[{Ripley(1996)}]{Ripley96}
 Ripley BD (1996).
