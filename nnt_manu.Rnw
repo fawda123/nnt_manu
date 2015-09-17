@@ -92,16 +92,26 @@ where the estimated value of the response variable $y_k$ is a summation of the p
 # total downloads for neural network packages off CRAN
 # make sure to change cdate
 library(cranlogs)
+today <- as.character(as.Date(Sys.time()))
 
 tots <- c(
-  sum(cran_downloads('nnet', from = '2000-01-01', to = '2015-09-13')$count),
-  sum(cran_downloads('neuralnet', from = '2000-01-01', to = '2015-09-13')$count),
-  sum(cran_downloads('RSNNS', from = '2000-01-01', to = '2015-09-13')$count),
-  sum(cran_downloads('FCNN4R', from = '2000-01-01', to = '2015-09-13')$count)
+  sum(cran_downloads('nnet', from = '2000-01-01', to = today)$count),
+  sum(cran_downloads('neuralnet', from = '2000-01-01', to = today)$count),
+  sum(cran_downloads('RSNNS', from = '2000-01-01', to = today)$count),
+  sum(cran_downloads('FCNN4R', from = '2000-01-01', to = today)$count),
+  sum(cran_downloads('AMORE', from = '2000-01-01', to = today)$count),
+  sum(cran_downloads('nonmlp', from = '2000-01-01', to = today)$count),
+  sum(cran_downloads('qrnn', from = '2000-01-01', to = today)$count),
+  sum(cran_downloads('frbf', from = '2000-01-01', to = today)$count)
 )
+
 @
 
-Packages available in \proglang{R} to create \ac{mlp} neural networks include \pkg{neuralnet}, \pkg{nnet}, and \pkg{RSNNS}. The \pkg{train} can be used to create a neural network model by repeated training with the \code{nnet}method available from \pkg{nnet}.  An additional package, \pkg{FCNN4R}, provides an interface between \pkg{R} and the \pkg{FCNN} \proglang{C++} library.  At the time of writing, \pkg{FCNN4R} is a new package with less than 1\% of the total downloads of all neural network packages on CRAN.  As such, \pkg{NeuralNetTools} does not include methods for the \pkg{FCNN4R} package, although future versions may do so depending on the popularity of \pkg{FCNN4R}.  In general, the remaining packages use similar methods to create \ac{mlp} networks such that the resulting models are comparable.  Differences between the packages primarily include default values of the arguments and the ability to include multiple response variables or multiple hidden layers.  The primary functions in each package also vary in the type of input used to specify the model structure.  Differences that influence how the \pkg{NeuralNetTools} functions handle object classes from the different packages are described below. 
+See refs in the RSNNS paper!!
+
+Methods in \pkg{NeuralNetTools} were written for several \proglang{R} packages that can be used to create \ac{mlp} neural networks: \pkg{neuralnet} \citep{Fritsch12}, \pkg{nnet} \citep{Venables02}, and \pkg{RSNNS} \citep{Bergmeir12}. The \code{train} function from the \pkg{caret} package \citep{Kuhn15} can be used to create a neural network model by repeated training with functions from the remaining packages.  Additional packages without \pkg{NeuralNetTools} methods include....
+
+An additional package, \pkg{FCNN4R} \citep{Klima15}, provides an interface between \pkg{R} and the \pkg{FCNN} \proglang{C++} library.  At the time of writing, \pkg{FCNN4R} is a new package with less than 1\% of the total downloads of all neural network packages on CRAN.  As such, \pkg{NeuralNetTools} does not include methods for the \pkg{FCNN4R} package, although future versions may do so depending on the popularity of \pkg{FCNN4R}.  In general, the remaining packages use similar methods to create \ac{mlp} networks such that the resulting models are comparable.  Differences between the packages primarily include default values of the arguments and the ability to include multiple response variables or multiple hidden layers.  The primary functions in each package also vary in the type of input used to specify the model structure.  Differences that influence how the \pkg{NeuralNetTools} functions handle object classes from the different packages are described below. 
 
 \section[Package structure]{Package structure}
 
@@ -121,13 +131,13 @@ library(NeuralNetTools)
 
 \pkg{NeuralNetTools} includes four main functions that were developed following techniques described in \citet{Olden02} and references therein.  These functions include \code{plotnet} to plot a neural network interpretation diagram, \code{garson} and \code{olden} functions to evaluate variable importance, and \code{lekprofile} for a sensitivity analysis of neural network response to input variables.  Most of the functions require the extraction of model weights in a common format for each of the neural network object classes in \proglang{R}.  The \code{neuralweights} function can be used to retrieve model weights for any of the model classes describe above.  A two-element \code{list} is returned with the first element describing the structure of the network and the second element as a named list of weight values for the input model.  The function is used internally within the main package functions but may be useful for comparing networks of different object classes.
 
-A sample dataset is also included with \pkg{NeuralNetTools}.  The \code{neuraldat} dataset is a simple \code{data.frame} with 300 rows of observations and columns for two response variables (\code{Y1} and \code{Y2}) and three input variables (\code{X1}, \code{X2}, and \code{X3}.  The input variables are random observations from a standard normal distribution and the response variables are linear combinations of the input variables with additional random components.  The response variables are also standardized from zero to one.  A common approach for data preprocessing prior to creating a nueral network is to normalize the input variables and to standardize the response variables \citep{Lek00,Olden02}.  The \code{neuraldat} package provides data following this structure.  Novel datasets can be preprocessed in the common format using the \code{scale} function from \pkg{base} and the \code{rescale} function from \pkg{scales} for the input and response variables, respectively.
+A sample dataset is also included with \pkg{NeuralNetTools}.  The \code{neuraldat} dataset is a simple \code{data.frame} with 300 rows of observations and columns for two response variables (\code{Y1} and \code{Y2}) and three input variables (\code{X1}, \code{X2}, and \code{X3}.  The input variables are random observations from a standard normal distribution and the response variables are linear combinations of the input variables with additional random components.  The response variables are also standardized from zero to one.  A common approach for data preprocessing prior to creating a nueral network is to normalize the input variables and to standardize the response variables \citep{Lek00,Olden02}.  Novel datasets can be preprocessed to this common format using the \code{scale} function from \pkg{base} and the \code{rescale} function from \pkg{scales} for the input and response variables, respectively.
 
 \subsection{Visualizing neural networks}
 
-The number of existing functions in \pkg{R} to view neural networks is minimal.  Such tools have practical use for visualizing network architecture and connections between layers that mediate variable importance. To our knowledge, only the \pkg{neuralnet} and \pkg{FCNN4R} packages provide plotting methods for \ac{mlp} networks in R.  Although useful for viewing the basic structure, the output is visually minimal and does not include extensive options for customization.
+The number of existing functions in \pkg{R} to view neural networks is minimal.  Such tools have practical use for visualizing network architecture and connections between layers that mediate variable importance. To our knowledge, only the \pkg{neuralnet} and \pkg{FCNN4R} packages provide plotting methods for \ac{mlp} networks in R.  Although useful for viewing the basic structure, the output is minimal and does not include extensive options for customization.
 
-Tbe \code{plotnet} function plots a neural network as a neural interpretation diagram \citep{Ozesmi99} and includes many options to customize plot aesthetics. A neural interpration diagram is a modification to the standard conceptual illustration of the \ac{mlp} network that allows the user to change the thickness and color of the weight connections based on mangnitude and sign, respecitively.  The default settings plot positive weights between layers as black lines and negative weights as grey lines. Line thickness is in proportion to relative magnitude of each weight. The first layer includes only input variables with nodes labelled arbitrarily as I1 through In for n input variables. One through many hidden layers are plotted with each node in each layer labelled as H1 through Hn. The output layer is plotted last with nodes labeled as O1 through On. Bias nodes connected to the hidden and output layers are also shown. Differences in the behavior of \code{plotnet} for different object classes are minimal, with the exception of \code{mlp} class networks that do not include bias layers.
+Tbe \code{plotnet} function plots a neural network as a neural interpretation diagram \citep{Ozesmi99} and includes several options to customize plot aesthetics. A neural interpration diagram is a modification to the standard conceptual illustration of the \ac{mlp} network that allows the user to change the thickness and color of the weight connections based on mangnitude and sign, respectively.  The default settings plot positive weights between layers as black lines and negative weights as grey lines. Line thickness is in proportion to absolte magnitude of each weight. The first layer includes only input variables with nodes labelled arbitrarily as I1 through In for n input variables. One through many hidden layers are plotted with each node in each layer labelled as H1 through Hn. The output layer is plotted last with nodes labeled as O1 through On. Bias nodes connected to the hidden and output layers are also shown. Differences in the behavior of \code{plotnet} for different object classes are minimal, with the exception of \code{mlp} class networks that do not include bias layers.  The following shows some examples of basic plots 
 
 <<echo = F>>=
 library(NeuralNetTools)
@@ -136,7 +146,6 @@ library(NeuralNetTools)
 # create a model using the nnet package
 # neuraldat is included with NeuralDat
 @
-
 
 A primary network and a skip layer network can be plotted for nnet models with a skip layer connection. The default is to plot the primary network, whereas the skip layer network can be viewed with \code{skip = TRUE}. If \code{nid = TRUE}, the line widths for both the primary and skip layer plots are relative to all weights. Viewing both plots is recommended to see which network has larger relative weights. Plotting a network with only a skip layer (i.e., no hidden layer, \code{size = 0}) will include bias connections to the output layer, whereas these are not included in the plot of the skip layer if size is greater than zero.
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{22}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -14,6 +14,30 @@ Beck MW, Wilson BN, Vondracek B, Hatch LK (2014).
 \newblock \enquote{Application of neural networks to quantify the utility of
   indices of biotic integrity for biological monitoring.}
 \newblock \emph{Ecological Indicators}, \textbf{45}, 195--208.
+
+\bibitem[{Bergmeir and Ben\'itez(2012)}]{Bergmeir12}
+Bergmeir C, Ben\'itez JM (2012).
+\newblock \enquote{Neural Networks in {R} Using the Stuttgart Neural Network
+  Simulator: {RSNNS}.}
+\newblock \emph{Journal of Statistical Software}, \textbf{46}(7), 1--26.
+\newblock \urlprefix\url{http://www.jstatsoft.org/v46/i07/}.
+
+\bibitem[{Fritsch \emph{et~al.}(2012)Fritsch, Guenther, and following earlier
+  work~by Marc~Suling}]{Fritsch12}
+Fritsch S, Guenther F, following earlier work~by Marc~Suling (2012).
+\newblock \emph{neuralnet: Training of neural networks}.
+\newblock R package version 1.32,
+  \urlprefix\url{http://CRAN.R-project.org/package=neuralnet}.
+
+\bibitem[{from Jed~Wing \emph{et~al.}(2015)from Jed~Wing, Weston, Williams,
+  Keefer, Engelhardt, Cooper, Mayer, Kenkel, the R~Core~Team, Benesty,
+  Lescarbeau, Ziem, and Scrucca.}]{Kuhn15}
+from Jed~Wing MKC, Weston S, Williams A, Keefer C, Engelhardt A, Cooper T,
+  Mayer Z, Kenkel B, the R~Core~Team, Benesty M, Lescarbeau R, Ziem A, Scrucca
+  L (2015).
+\newblock \emph{caret: Classification and Regression Training}.
+\newblock R package version 6.0-52,
+  \urlprefix\url{http://CRAN.R-project.org/package=caret}.
 
 \bibitem[{Garson(1991)}]{Garson91}
 Garson GD (1991).
@@ -52,6 +76,11 @@ Kelling S, Hochachka WM, Fink D, Riedewald M, Caruana R, Ballard G, Hooker G
 \newblock \enquote{Data-intensive science: A new paradigm for biodiversity
   studies.}
 \newblock \emph{BioScience}, \textbf{59}(7), 613--620.
+
+\bibitem[{Klima(2015)}]{Klima15}
+Klima G (2015).
+\newblock \emph{FCNN4R: Fast Compressed Neural Networks for R}.
+\newblock R package version 0.4.1.
 
 \bibitem[{Lek \emph{et~al.}(1996)Lek, Delacoste, Baran, Dimopoulos, Lauga, and
   Aulagnier}]{Lek96}
@@ -112,5 +141,11 @@ Swanson A, Kosmala M, Lintott C, Simpson R, Smith A, Packer C (2015).
 \newblock \enquote{{S}napshot {S}erengeti: High-frequency annotated camera trap
   images of 40 mammalian species in {A}frican savanna.}
 \newblock \emph{Scientific Data}, \textbf{2}, 150026.
+
+\bibitem[{Venables and Ripley(2002)}]{Venables02}
+Venables WN, Ripley BD (2002).
+\newblock \emph{Modern Applied Statistics with {S}}.
+\newblock Fourth edition. Springer, New York, New York.
+\newblock \urlprefix\url{http://www.stats.ox.ac.uk/pub/MASS4}.
 
 \end{thebibliography}
