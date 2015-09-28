@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{27}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -169,5 +169,16 @@ Venables WN, Ripley BD (2002).
 \newblock \emph{Modern Applied Statistics with {S}}.
 \newblock Fourth edition. Springer, New York, New York.
 \newblock \urlprefix\url{http://www.stats.ox.ac.uk/pub/MASS4}.
+
+\bibitem[{Zell \emph{et~al.}(1998)Zell, Mamier, Vogt, Mache, H\"{u}bner,
+  D\"{o}ring, Herrmann, Soyez, Schmalzl, Sommer, Hatzigeorgiou, Posselt,
+  Schreiner, Kett, Clemente, Wieland, and Gatter}]{Zell98}
+Zell A, Mamier G, Vogt M, Mache N, H\"{u}bner R, D\"{o}ring S, Herrmann KU,
+  Soyez T, Schmalzl M, Sommer T, Hatzigeorgiou A, Posselt D, Schreiner T, Kett
+  B, Clemente G, Wieland J, Gatter J (1998).
+\newblock \emph{{SNNS}: Stuttgart Neural Network Simulator, User Manual,
+  Version 4.2}.
+\newblock University of Stuttgart and WSI, University of T\"{u}bingen,
+  \urlprefix\url{http://www.ra.cs.uni-tuebingen.de/SNNS/}.
 
 \end{thebibliography}

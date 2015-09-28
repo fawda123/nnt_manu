@@ -173,11 +173,24 @@ modskip <- nnet(Y1 ~ X1 + X2 + X3, data = neuraldat, size = 5, skip = TRUE)
 
 # plot
 par(mar = c(0, 0, 0, 0))
-plotnet(modskip, skip = TRUE)
-plotnet(modskip)
+plotnet(modskip, skip = TRUE, rel_rsc = 8)
+plotnet(modskip, rel_rsc = 8)
 @
 
-The \pkg{RSNNS} package provides several algorithms that can be used to prune connections in a neural network.  This approach is useful to identify and remove connection weights between layers that do contribute to the predictive performance of the network, which allows for a potential increase in power by increasing the degrees of freedom.  The \pkg{RSNNS} package implements 
+The \pkg{RSNNS} package provides several algorithms that can be used to prune connections or nodes in a neural network.  This approach can remove connection weights between layers or input nodes that do not contribute to the predictive performance of the network.  Pruning has the benefit of a potential increase in power by increasing the degrees of freedom or the identification of input nodes with low importance.  Algorithms in \pkg{RSNNS} for weight pruning include magnitude based pruning, Optimal Brain Damage, and Optimal Brain Surgeon, whereas algorithms for node pruning include skeletonization and the non-contributing units method \citep{Zell98}.  The \code{plotnet} function includes options to display pruned connections that are removed using any of the three methods for removing weighted connections.  
+
+<<plotprune, eval = F, echo = T, fig.height = 7, fig.width = 7, out.width = '\\textwidth'>>=
+
+# pruned model using code from RSSNS pruning demo
+pruneFuncParams <- list(max_pr_error_increase = 10.0, pr_accepted_error = 1.0,
+ no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01, init_matrix_value = 1e-6,
+ input_pruning = TRUE, hidden_pruning = TRUE)
+mod <- mlp(x, y, size = 5, pruneFunc = "OptimalBrainSurgeon",
+ pruneFuncParams = pruneFuncParams)
+
+plotnet(mod)
+plotnet(mod, prune_col = 'lightblue')
+@
 
 \subsection{Evaluating variable importance}
 

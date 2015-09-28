@@ -213,8 +213,8 @@ A primary and skip layer network can also be plotted for \code{nnet} models with
 
 \hlcom{# plot}
 \hlkwd{par}\hlstd{(}\hlkwc{mar} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{0}\hlstd{))}
-\hlkwd{plotnet}\hlstd{(modskip,} \hlkwc{skip} \hlstd{=} \hlnum{TRUE}\hlstd{)}
-\hlkwd{plotnet}\hlstd{(modskip)}
+\hlkwd{plotnet}\hlstd{(modskip,} \hlkwc{skip} \hlstd{=} \hlnum{TRUE}\hlstd{,} \hlkwc{rel_rsc} \hlstd{=} \hlnum{8}\hlstd{)}
+\hlkwd{plotnet}\hlstd{(modskip,} \hlkwc{rel_rsc} \hlstd{=} \hlnum{8}\hlstd{)}
 \end{alltt}
 \end{kframe}\begin{figure}[!ht]
 
@@ -229,7 +229,21 @@ A primary and skip layer network can also be plotted for \code{nnet} models with
 
 \end{knitrout}
 
-The \pkg{RSNNS} package provides several algorithms that can be used to prune connections in a neural network.  This approach is useful to identify and remove connection weights between layers that do contribute to the predictive performance of the network, which allows for a potential increase in power by increasing the degrees of freedom.  The \pkg{RSNNS} package implements 
+The \pkg{RSNNS} package provides several algorithms that can be used to prune connections or nodes in a neural network.  This approach can remove connection weights between layers or input nodes that do not contribute to the predictive performance of the network.  Pruning has the benefit of a potential increase in power by increasing the degrees of freedom or the identification of input nodes with low importance.  Algorithms in \pkg{RSNNS} for weight pruning include magnitude based pruning, Optimal Brain Damage, and Optimal Brain Surgeon, whereas algorithms for node pruning include skeletonization and the non-contributing units method \citep{Zell98}.  The \code{plotnet} function includes options to display pruned connections that are removed using any of the three methods for removing weighted connections.  
+
+\begin{kframe}
+\begin{alltt}
+\hlcom{# pruned model using code from RSSNS pruning demo}
+\hlstd{pruneFuncParams} \hlkwb{<-} \hlkwd{list}\hlstd{(}\hlkwc{max_pr_error_increase} \hlstd{=} \hlnum{10.0}\hlstd{,} \hlkwc{pr_accepted_error} \hlstd{=} \hlnum{1.0}\hlstd{,}
+ \hlkwc{no_of_pr_retrain_cycles} \hlstd{=} \hlnum{1000}\hlstd{,} \hlkwc{min_error_to_stop} \hlstd{=} \hlnum{0.01}\hlstd{,} \hlkwc{init_matrix_value} \hlstd{=} \hlnum{1e-6}\hlstd{,}
+ \hlkwc{input_pruning} \hlstd{=} \hlnum{TRUE}\hlstd{,} \hlkwc{hidden_pruning} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+\hlstd{mod} \hlkwb{<-} \hlkwd{mlp}\hlstd{(x, y,} \hlkwc{size} \hlstd{=} \hlnum{5}\hlstd{,} \hlkwc{pruneFunc} \hlstd{=} \hlstr{"OptimalBrainSurgeon"}\hlstd{,}
+ \hlkwc{pruneFuncParams} \hlstd{= pruneFuncParams)}
+
+\hlkwd{plotnet}\hlstd{(mod)}
+\hlkwd{plotnet}\hlstd{(mod,} \hlkwc{prune_col} \hlstd{=} \hlstr{'lightblue'}\hlstd{)}
+\end{alltt}
+\end{kframe}
 
 \subsection{Evaluating variable importance}
 
