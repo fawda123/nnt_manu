@@ -159,7 +159,7 @@ A sample dataset is also included with \pkg{NeuralNetTools}.  The \code{neuralda
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{# set random seed for initial inputs during training}
+\hlcom{# set random seed for initial weights for training}
 \hlkwd{set.seed}\hlstd{(}\hlnum{123}\hlstd{)}
 
 \hlcom{# mlp object, RSNNS package}
@@ -229,21 +229,33 @@ A primary and skip layer network can also be plotted for \code{nnet} models with
 
 \end{knitrout}
 
-The \pkg{RSNNS} package provides several algorithms that can be used to prune connections or nodes in a neural network.  This approach can remove connection weights between layers or input nodes that do not contribute to the predictive performance of the network.  Pruning has the benefit of a potential increase in power by increasing the degrees of freedom or the identification of input nodes with low importance.  Algorithms in \pkg{RSNNS} for weight pruning include magnitude based pruning, Optimal Brain Damage, and Optimal Brain Surgeon, whereas algorithms for node pruning include skeletonization and the non-contributing units method \citep{Zell98}.  The \code{plotnet} function includes options to display pruned connections that are removed using any of the three methods for removing weighted connections.  
+The \pkg{RSNNS} package provides several algorithms that can be used to prune connections or nodes in a neural network.  This approach can remove connection weights between layers or input nodes that do not contribute to the predictive performance of the network.  Pruning has the benefit of a potential increase in power by increasing the degrees of freedom or the identification of input nodes with low importance.  Algorithms in \pkg{RSNNS} for weight pruning include magnitude based pruning, Optimal Brain Damage, and Optimal Brain Surgeon, whereas algorithms for node pruning include skeletonization and the non-contributing units method \citep{Zell98}.  The \code{plotnet} function can be used to plot a pruned neural network, with options to omit or display the pruned connections (\cref{fig:plotprune}).  
 
 \begin{kframe}
 \begin{alltt}
-\hlcom{# pruned model using code from RSSNS pruning demo}
+\hlcom{# pruned model using RSNNS}
 \hlstd{pruneFuncParams} \hlkwb{<-} \hlkwd{list}\hlstd{(}\hlkwc{max_pr_error_increase} \hlstd{=} \hlnum{10.0}\hlstd{,} \hlkwc{pr_accepted_error} \hlstd{=} \hlnum{1.0}\hlstd{,}
- \hlkwc{no_of_pr_retrain_cycles} \hlstd{=} \hlnum{1000}\hlstd{,} \hlkwc{min_error_to_stop} \hlstd{=} \hlnum{0.01}\hlstd{,} \hlkwc{init_matrix_value} \hlstd{=} \hlnum{1e-6}\hlstd{,}
- \hlkwc{input_pruning} \hlstd{=} \hlnum{TRUE}\hlstd{,} \hlkwc{hidden_pruning} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+  \hlkwc{no_of_pr_retrain_cycles} \hlstd{=} \hlnum{1000}\hlstd{,} \hlkwc{min_error_to_stop} \hlstd{=} \hlnum{0.01}\hlstd{,}
+  \hlkwc{init_matrix_value} \hlstd{=} \hlnum{1e-6}\hlstd{,} \hlkwc{input_pruning} \hlstd{=} \hlnum{TRUE}\hlstd{,} \hlkwc{hidden_pruning} \hlstd{=} \hlnum{TRUE}\hlstd{)}
 \hlstd{mod} \hlkwb{<-} \hlkwd{mlp}\hlstd{(x, y,} \hlkwc{size} \hlstd{=} \hlnum{5}\hlstd{,} \hlkwc{pruneFunc} \hlstd{=} \hlstr{"OptimalBrainSurgeon"}\hlstd{,}
  \hlkwc{pruneFuncParams} \hlstd{= pruneFuncParams)}
 
+\hlcom{# plot, pruned connections are omitted (default) or included with prune_col}
+\hlkwd{par}\hlstd{(}\hlkwc{mar} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{0}\hlstd{))}
 \hlkwd{plotnet}\hlstd{(mod)}
 \hlkwd{plotnet}\hlstd{(mod,} \hlkwc{prune_col} \hlstd{=} \hlstr{'lightblue'}\hlstd{)}
 \end{alltt}
-\end{kframe}
+\end{kframe}\begin{figure}[!ht]
+
+{\centering \includegraphics[width=0.48\textwidth]{figs/plotprune-1} 
+\includegraphics[width=0.48\textwidth]{figs/plotprune-2} 
+
+}
+
+\caption{A pruned neural network using the ``Optimal Brain Surgeon'' algorithm described in \citet{Zell98}.  The default plotting behavior of \code{plotnet} is to omit pruned connections (left), whereas they can be viewed as dashed lines by including the \code{prune\_col} argument (right).}\label{fig:plotprune}
+\end{figure}
+
+
 
 \subsection{Evaluating variable importance}
 

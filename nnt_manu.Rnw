@@ -135,7 +135,7 @@ A sample dataset is also included with \pkg{NeuralNetTools}.  The \code{neuralda
 library(NeuralNetTools)
 @
 <<results = 'hide'>>=
-# set random seed for initial inputs during training
+# set random seed for initial weights for training
 set.seed(123)
 
 # mlp object, RSNNS package
@@ -177,22 +177,25 @@ plotnet(modskip, skip = TRUE, rel_rsc = 8)
 plotnet(modskip, rel_rsc = 8)
 @
 
-The \pkg{RSNNS} package provides several algorithms that can be used to prune connections or nodes in a neural network.  This approach can remove connection weights between layers or input nodes that do not contribute to the predictive performance of the network.  Pruning has the benefit of a potential increase in power by increasing the degrees of freedom or the identification of input nodes with low importance.  Algorithms in \pkg{RSNNS} for weight pruning include magnitude based pruning, Optimal Brain Damage, and Optimal Brain Surgeon, whereas algorithms for node pruning include skeletonization and the non-contributing units method \citep{Zell98}.  The \code{plotnet} function includes options to display pruned connections that are removed using any of the three methods for removing weighted connections.  
+The \pkg{RSNNS} package provides several algorithms that can be used to prune connections or nodes in a neural network.  This approach can remove connection weights between layers or input nodes that do not contribute to the predictive performance of the network.  Pruning has the benefit of a potential increase in power by increasing the degrees of freedom or the identification of input nodes with low importance.  Algorithms in \pkg{RSNNS} for weight pruning include magnitude based pruning, Optimal Brain Damage, and Optimal Brain Surgeon, whereas algorithms for node pruning include skeletonization and the non-contributing units method \citep{Zell98}.  The \code{plotnet} function can be used to plot a pruned neural network, with options to omit or display the pruned connections (\cref{fig:plotprune}).  
 
-<<plotprune, eval = F, echo = T, fig.height = 7, fig.width = 7, out.width = '\\textwidth'>>=
-
-# pruned model using code from RSSNS pruning demo
+<<plotprune, eval = T, echo = T, fig.show = 'hold', fig.height = 7, fig.width = 7.7, out.width = '0.48\\textwidth', fig.cap = 'A pruned neural network using the ``Optimal Brain Surgeon\'\' algorithm described in \\citet{Zell98}.  The default plotting behavior of \\code{plotnet} is to omit pruned connections (left), whereas they can be viewed as dashed lines by including the \\code{prune\\_col} argument (right).'>>=
+# pruned model using RSNNS
 pruneFuncParams <- list(max_pr_error_increase = 10.0, pr_accepted_error = 1.0,
- no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01, init_matrix_value = 1e-6,
- input_pruning = TRUE, hidden_pruning = TRUE)
+  no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01, 
+  init_matrix_value = 1e-6, input_pruning = TRUE, hidden_pruning = TRUE)
 mod <- mlp(x, y, size = 5, pruneFunc = "OptimalBrainSurgeon",
  pruneFuncParams = pruneFuncParams)
 
+# plot, pruned connections are omitted (default) or included with prune_col
+par(mar = c(0, 0, 0, 0))
 plotnet(mod)
 plotnet(mod, prune_col = 'lightblue')
 @
 
 \subsection{Evaluating variable importance}
+
+The primary benefit of visualizing a neural network interpretation diagram is the ability to evaluate network archicture and the variation in weighted connections between the layers.  For most networks, 
 
 The \code{garson} function uses Garson's algorithm to evaluate relative variable importance. This function identifies the relative importance of explanatory variables for a single response variable by deconstructing the model weights. The importance of each variable can be determined by identifying all weighted connections between the layers in the network. That is, all weights connecting the specific input node that pass through the hidden layer to the response variable are identified. This is repeated for all other explanatory variables until a list of all weights that are specific to each input variable is obtained. The connections are tallied for each input node and scaled relative to all other inputs. A single value is obtained for each explanatory variable that describes the relationship with the response variable in the model. The results indicate relative importance as the absolute magnitude from zero to one. The function cannot be used to evaluate the direction of the response. Only neural networks with one hidden layer and one output node can be evaluated.
 
