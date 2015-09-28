@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{26}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -22,22 +22,30 @@ Bergmeir C, Ben\'itez JM (2012).
 \newblock \emph{Journal of Statistical Software}, \textbf{46}(7), 1--26.
 \newblock \urlprefix\url{http://www.jstatsoft.org/v46/i07/}.
 
-\bibitem[{Fritsch \emph{et~al.}(2012)Fritsch, Guenther, and following earlier
-  work~by Marc~Suling}]{Fritsch12}
-Fritsch S, Guenther F, following earlier work~by Marc~Suling (2012).
+\bibitem[{Cannon(2011)}]{Cannon11}
+Cannon AJ (2011).
+\newblock \enquote{Quantile regression neural networks: implementation in R and
+  application to precipitation downscaling.}
+\newblock \emph{Computers \& Geosciences}, \textbf{37}, 1277--1284.
+  doi:10.1016/j.cageo.2010.07.005.
+
+\bibitem[{Cannon(2015)}]{Cannon15}
+Cannon AJ (2015).
+\newblock \emph{monmlp: Monotone Multi-Layer Perceptron Neural Network}.
+\newblock R package version 1.1.3,
+  \urlprefix\url{http://CRAN.R-project.org/package=monmlp}.
+
+\bibitem[{Csardi(2015)}]{Csardi15}
+Csardi G (2015).
+\newblock \emph{cranlogs: Download Logs from the 'RStudio' 'CRAN' Mirror}.
+\newblock R package version 2.1.0,
+  \urlprefix\url{https://github.com/metacran/cranlogs}.
+
+\bibitem[{Fritsch and Guenther(2012)}]{Fritsch12}
+Fritsch S, Guenther F (2012).
 \newblock \emph{neuralnet: Training of neural networks}.
 \newblock R package version 1.32,
   \urlprefix\url{http://CRAN.R-project.org/package=neuralnet}.
-
-\bibitem[{from Jed~Wing \emph{et~al.}(2015)from Jed~Wing, Weston, Williams,
-  Keefer, Engelhardt, Cooper, Mayer, Kenkel, the R~Core~Team, Benesty,
-  Lescarbeau, Ziem, and Scrucca.}]{Kuhn15}
-from Jed~Wing MKC, Weston S, Williams A, Keefer C, Engelhardt A, Cooper T,
-  Mayer Z, Kenkel B, the R~Core~Team, Benesty M, Lescarbeau R, Ziem A, Scrucca
-  L (2015).
-\newblock \emph{caret: Classification and Regression Training}.
-\newblock R package version 6.0-52,
-  \urlprefix\url{http://CRAN.R-project.org/package=caret}.
 
 \bibitem[{Garson(1991)}]{Garson91}
 Garson GD (1991).
@@ -82,6 +90,12 @@ Klima G (2015).
 \newblock \emph{FCNN4R: Fast Compressed Neural Networks for R}.
 \newblock R package version 0.4.1.
 
+\bibitem[{Kuhn(2015)}]{Kuhn15}
+Kuhn M (2015).
+\newblock \emph{caret: Classification and Regression Training}.
+\newblock R package version 6.0-52,
+  \urlprefix\url{http://CRAN.R-project.org/package=caret}.
+
 \bibitem[{Lek \emph{et~al.}(1996)Lek, Delacoste, Baran, Dimopoulos, Lauga, and
   Aulagnier}]{Lek96}
 Lek S, Delacoste M, Baran P, Dimopoulos I, Lauga J, Aulagnier S (1996).
@@ -94,6 +108,14 @@ Lek S, Gu\'{e}gan JF (2000).
 \newblock \emph{Artificial Neuronal Networks: Application to Ecology and
   Evolution}.
 \newblock Springer-Verlag, Berlin, Germany.
+
+\bibitem[{Limas \emph{et~al.}(2014)Limas, Mer\'{e}, Marcos,
+  de~Pis\'{o}n~Ascacibar, Espinoza, El\'{i}as, and Ramos}]{Castejon14}
+Limas MC, Mer\'{e} JBO, Marcos AG, de~Pis\'{o}n~Ascacibar FJM, Espinoza AVP,
+  El\'{i}as FA, Ramos JMP (2014).
+\newblock \emph{AMORE: A MORE flexible neural network package}.
+\newblock R package version 0.2-15,
+  \urlprefix\url{http://CRAN.R-project.org/package=AMORE}.
 
 \bibitem[{McCulloch and Pitts(1943)}]{McCulloch43}
 McCulloch WS, Pitts W (1943).

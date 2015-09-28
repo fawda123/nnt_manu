@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  17 SEP 2015 18:06
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  27 SEP 2015 19:03
 entering extended mode
 **nnt_manu.tex
 (M:\docs\manuscripts\nnt_manu\nnt_manu.tex
@@ -355,29 +355,43 @@ Package: xstring 2013/07/29  v1.7b  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks15
 )
+(C:\Users\mbeck\AppData\Roaming\MiKTeX\2.9\tex\latex\cleveref\cleveref.sty
+Package: cleveref 2013/03/22 v0.18.9 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2163.
+LaTeX Info: Redefining \cref on input line 2163.
+LaTeX Info: Redefining \Cref on input line 2163.
+LaTeX Info: Redefining \crefrange on input line 2163.
+LaTeX Info: Redefining \Crefrange on input line 2163.
+LaTeX Info: Redefining \cpageref on input line 2163.
+LaTeX Info: Redefining \Cpageref on input line 2163.
+LaTeX Info: Redefining \cpagerefrange on input line 2163.
+LaTeX Info: Redefining \Cpagerefrange on input line 2163.
+LaTeX Info: Redefining \labelcref on input line 2163.
+LaTeX Info: Redefining \labelcpageref on input line 2163.
+)
 (M:\docs\manuscripts\nnt_manu\nnt_manu.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 107.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 108.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
 
 (C:\Users\mbeck\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -394,7 +408,7 @@ LaTeX Font Info:    ... okay on input line 107.
 \everyMPtoPDFconversion=\toks17
 )
 \AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring ON on input line 107.
+Package hyperref Info: Link coloring ON on input line 108.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -403,9 +417,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count110
 )
-LaTeX Info: Redefining \ref on input line 107.
-LaTeX Info: Redefining \pageref on input line 107.
-LaTeX Info: Redefining \nameref on input line 107.
+LaTeX Info: Redefining \ref on input line 108.
+LaTeX Info: Redefining \pageref on input line 108.
+LaTeX Info: Redefining \nameref on input line 108.
 
 (M:\docs\manuscripts\nnt_manu\nnt_manu.out)
 (M:\docs\manuscripts\nnt_manu\nnt_manu.out)
@@ -414,42 +428,42 @@ LaTeX Info: Redefining \nameref on input line 107.
 <jsslogo.jpg, id=39, 540.0175pt x 393.47pt>
 File: jsslogo.jpg Graphic file (type jpg)
  <use jsslogo.jpg>
-Package pdftex.def Info: jsslogo.jpg used on input line 107.
+Package pdftex.def Info: jsslogo.jpg used on input line 108.
 (pdftex.def)             Requested size: 89.80768pt x 65.43607pt.
-LaTeX Font Info:    Try loading font information for T1+pzc on input line 107.
+LaTeX Font Info:    Try loading font information for T1+pzc on input line 108.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pzc.fd"
 File: t1pzc.fd 2001/06/04 font definitions for T1/pzc.
 )
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <28> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 107.
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 108.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 107.
+(Font)              <10.95> on input line 108.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 107.
+(Font)              <8> on input line 108.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 107.
-LaTeX Font Info:    Try loading font information for T1+aess on input line 107.
+(Font)              <6> on input line 108.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 108.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 Package acronym Info: Label `acro:mlp' newly defined as it shall be overridden
-although it is yet undefined on input line 115.
+although it is yet undefined on input line 116.
  [1
 
 {C:/Users/mbeck/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <M:/docs/man
 uscripts/nnt_manu/jsslogo.jpg>]
 LaTeX Font Info:    Font shape `T1/aer/b/sl' in size <10.95> not available
-(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 124.
+(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 125.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 2 []
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 133.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 134.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -461,46 +475,71 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [3]
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 142.
+(Font)              using `T1/aett/m/n' instead on input line 143.
 
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 142
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 143
 .
 (C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\ts1aett.fd
 File: ts1aett.fd 
 )
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 142
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 143
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `TS1/aett/m/n' in size <10.95> not available
-(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 142.
+(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 143.
+Package color Info: Redefining color shadecolor on input line 160.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 4 []
  []
 
-[4]
+[4] <figs/plotnet-1.pdf, id=177, 397.485pt x 397.485pt>
+File: figs/plotnet-1.pdf Graphic file (type pdf)
+
+<use figs/plotnet-1.pdf>
+Package pdftex.def Info: figs/plotnet-1.pdf used on input line 196.
+(pdftex.def)             Requested size: 213.40141pt x 213.40141pt.
+ <figs/plotnet-2.pdf, id=178, 397.485pt x 397.485pt>
+File: figs/plotnet-2.pdf Graphic file (type pdf)
+
+<use figs/plotnet-2.pdf>
+Package pdftex.def Info: figs/plotnet-2.pdf used on input line 197.
+(pdftex.def)             Requested size: 213.40141pt x 213.40141pt.
+Package color Info: Redefining color shadecolor on input line 209.
+
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 5
  []
 
-[5]
+[5] <figs/plotnet_skip-1.pdf, id=185, 397.485pt x 397.485pt>
+File: figs/plotnet_skip-1.pdf Graphic file (type pdf)
+
+<use figs/plotnet_skip-1.pdf>
+Package pdftex.def Info: figs/plotnet_skip-1.pdf used on input line 221.
+(pdftex.def)             Requested size: 213.40141pt x 213.40141pt.
+
+<figs/plotnet_skip-2.pdf, id=186, 397.485pt x 397.485pt>
+File: figs/plotnet_skip-2.pdf Graphic file (type pdf)
+
+<use figs/plotnet_skip-2.pdf>
+Package pdftex.def Info: figs/plotnet_skip-2.pdf used on input line 222.
+(pdftex.def)             Requested size: 213.40141pt x 213.40141pt.
+
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 6 []
  []
 
-[6] (M:\docs\manuscripts\nnt_manu\nnt_manu.bbl
+[6 <M:/docs/manuscripts/nnt_manu/figs/plotnet-1.pdf> <M:/docs/manuscripts/nnt_m
+anu/figs/plotnet-2.pdf> <M:/docs/manuscripts/nnt_manu/figs/plotnet_skip-1.pdf> 
+<M:/docs/manuscripts/nnt_manu/figs/plotnet_skip-2.pdf>]
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 7
  []
 
-[7])
-LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 208.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
-
+[7] (M:\docs\manuscripts\nnt_manu\nnt_manu.bbl
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 8 []
  []
@@ -510,27 +549,36 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 9
  []
 
-[9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
+[9])
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 267.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 10 []
+ []
+
+[10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
  (M:\docs\manuscripts\nnt_manu\nnt_manu.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `nnt_manu.out' has not changed.
 (rerunfilecheck)             Checksum: 832DFFACC80F9700DD71F5A88B8834AB;797.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 208.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
  ) 
 Here is how much of TeX's memory you used:
- 7359 strings out of 493921
- 107310 string characters out of 3147282
- 190365 words of memory out of 3000000
- 10458 multiletter control sequences out of 15000+200000
+ 8827 strings out of 493921
+ 139897 string characters out of 3147282
+ 241242 words of memory out of 3000000
+ 11910 multiletter control sequences out of 15000+200000
  50622 words of font info for 88 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,9n,34p,1434b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,9n,34p,1693b,482s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\mbeck\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tctt1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Program Fil
@@ -547,9 +595,9 @@ am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files
 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 urw/zapfchan/uzcmi8a.pfb>
-Output written on nnt_manu.pdf (9 pages, 265601 bytes).
+Output written on nnt_manu.pdf (10 pages, 294283 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 321 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 
