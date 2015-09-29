@@ -28,7 +28,8 @@
 \citation{Rumelhart86}
 \citation{Hornik91}
 \reset@newl@bel
-\newacro{mlp}[mlp]{multilayer perceptron}
+\newacro{mlp}[MLP]{multilayer perceptron}
+\newacro{nid}[NID]{neural interpretation diagram}
 \citation{Paruelo97}
 \citation{Olden02}
 \citation{Olden02}
@@ -42,6 +43,11 @@
 \newlabel{acro:mlp@cref}{{[section][1][]1}{2}}
 \acronymused{mlp}
 \acronymused{mlp}
+\acronymused{mlp}
+\undonewlabel{acro:nid}
+\newlabel{acro:nid}{{1}{2}{}{section*.2}{}}
+\newlabel{acro:nid@cref}{{[section][1][]1}{2}}
+\acronymused{nid}
 \acronymused{mlp}
 \acronymused{mlp}
 \acronymused{mlp}
@@ -62,27 +68,41 @@
 \acronymused{mlp}
 \acronymused{mlp}
 \acronymused{mlp}
-\acronymused{mlp}
 \citation{Olden02}
 \citation{Lek00,Olden02}
 \citation{Ozesmi99}
-\acronymused{mlp}
-\acronymused{mlp}
 \citation{Zell98}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Examples from the \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup  function showing neural networks as a standard graphic (left) and using the neural interpretation diagram (right)}}{6}{figure.1}}
-\newlabel{fig:plotnet}{{1}{6}{Examples from the \code {plotnet} function showing neural networks as a standard graphic (left) and using the neural interpretation diagram (right)}{figure.1}{}}
+\acronymused{mlp}
+\acronymused{nid}
+\acronymused{nid}
+\acronymused{mlp}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Examples from the \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup  function showing neural networks as a standard graphic (left) and using the \acl {nid} (right)}}{6}{figure.1}}
+\acronymused{nid}
+\newlabel{fig:plotnet}{{1}{6}{Examples from the \code {plotnet} function showing neural networks as a standard graphic (left) and using the \acl {nid} (right)}{figure.1}{}}
 \newlabel{fig:plotnet@cref}{{[figure][1][]1}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Examples from the \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup  function showing a neural network with a separate skip layer between the input and output layers. The skip layer (left) and primary neural network (right) can be viewed separately with \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup .}}{6}{figure.2}}
 \newlabel{fig:plotnet_skip}{{2}{6}{Examples from the \code {plotnet} function showing a neural network with a separate skip layer between the input and output layers. The skip layer (left) and primary neural network (right) can be viewed separately with \code {plotnet}}{figure.2}{}}
 \newlabel{fig:plotnet_skip@cref}{{[figure][2][]2}{6}}
 \citation{Zell98}
 \citation{Zell98}
+\citation{Garson91,Goh95}
+\citation{Olden04}
+\citation{Garson91}
+\citation{Goh95}
+\citation{Goh95}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A pruned neural network using the ``Optimal Brain Surgeon'' algorithm described in \citet  {Zell98}. The default plotting behavior of \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup  is to omit pruned connections (left), whereas they can be viewed as dashed lines by including the \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 prune\_col}\egroup  argument (right).}}{7}{figure.3}}
 \newlabel{fig:plotprune}{{3}{7}{A pruned neural network using the ``Optimal Brain Surgeon'' algorithm described in \citet {Zell98}. The default plotting behavior of \code {plotnet} is to omit pruned connections (left), whereas they can be viewed as dashed lines by including the \code {prune\_col} argument (right)}{figure.3}{}}
 \newlabel{fig:plotprune@cref}{{[figure][3][]3}{7}}
+\acronymused{nid}
+\acronymused{nid}
+\citation{Olden04}
+\citation{Wickham09}
 \citation{Lek96}
 \citation{Gevrey03}
 \citation{Beck14a}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Variable importance}}{9}{figure.4}}
+\newlabel{fig:plotimp}{{4}{9}{Variable importance}{figure.4}{}}
+\newlabel{fig:plotimp@cref}{{[figure][4][]4}{9}}
 \bibstyle{jss}
 \bibdata{refs}
 \bibcite{Beck14a}{{1}{2014}{{Beck \emph  {et~al.}}}{{Beck, Wilson, Vondracek, and Hatch}}}
@@ -93,22 +113,25 @@
 \bibcite{Fritsch12}{{6}{2012}{{Fritsch and Guenther}}{{}}}
 \bibcite{Garson91}{{7}{1991}{{Garson}}{{}}}
 \bibcite{Gevrey03}{{8}{2003}{{Gevrey \emph  {et~al.}}}{{Gevrey, Dimopoulos, and Lek}}}
-\bibcite{Hornik91}{{9}{1991}{{Hornik}}{{}}}
-\bibcite{Jain00}{{10}{2000}{{Jain \emph  {et~al.}}}{{Jain, Duin, and Mao}}}
-\bibcite{Kell03}{{11}{2003}{{Kell and Oliver}}{{}}}
-\bibcite{Kelling09}{{12}{2009}{{Kelling \emph  {et~al.}}}{{Kelling, Hochachka, Fink, Riedewald, Caruana, Ballard, and Hooker}}}
-\bibcite{Klima15}{{13}{2015}{{Klima}}{{}}}
-\bibcite{Kuhn15}{{14}{2015}{{Kuhn}}{{}}}
-\bibcite{Lek96}{{15}{1996}{{Lek \emph  {et~al.}}}{{Lek, Delacoste, Baran, Dimopoulos, Lauga, and Aulagnier}}}
-\bibcite{Lek00}{{16}{2000}{{Lek and Gu\'{e}gan}}{{}}}
-\bibcite{Castejon14}{{17}{2014}{{Limas \emph  {et~al.}}}{{Limas, Mer\'{e}, Marcos, de~Pis\'{o}n~Ascacibar, Espinoza, El\'{i}as, and Ramos}}}
-\bibcite{McCulloch43}{{18}{1943}{{McCulloch and Pitts}}{{}}}
-\bibcite{Olden02}{{19}{2002}{{Olden and Jackson}}{{}}}
-\bibcite{Ozesmi99}{{20}{1999}{{\"{O}zesmi and \"{O}zesmi}}{{}}}
-\bibcite{Paruelo97}{{21}{1997}{{Paruelo and Tomasel}}{{}}}
-\bibcite{Ripley96}{{22}{1996}{{Ripley}}{{}}}
-\bibcite{Rumelhart86}{{23}{1986}{{Rumelhart \emph  {et~al.}}}{{Rumelhart, Hinton, and Williams}}}
-\bibcite{Saeys07}{{24}{2007}{{Saeys \emph  {et~al.}}}{{Saeys, Inza, and {n}aga}}}
-\bibcite{Swanson15}{{25}{2015}{{Swanson \emph  {et~al.}}}{{Swanson, Kosmala, Lintott, Simpson, Smith, and Packer}}}
-\bibcite{Venables02}{{26}{2002}{{Venables and Ripley}}{{}}}
-\bibcite{Zell98}{{27}{1998}{{Zell \emph  {et~al.}}}{{Zell, Mamier, Vogt, Mache, H\"{u}bner, D\"{o}ring, Herrmann, Soyez, Schmalzl, Sommer, Hatzigeorgiou, Posselt, Schreiner, Kett, Clemente, Wieland, and Gatter}}}
+\bibcite{Goh95}{{9}{1995}{{Goh}}{{}}}
+\bibcite{Hornik91}{{10}{1991}{{Hornik}}{{}}}
+\bibcite{Jain00}{{11}{2000}{{Jain \emph  {et~al.}}}{{Jain, Duin, and Mao}}}
+\bibcite{Kell03}{{12}{2003}{{Kell and Oliver}}{{}}}
+\bibcite{Kelling09}{{13}{2009}{{Kelling \emph  {et~al.}}}{{Kelling, Hochachka, Fink, Riedewald, Caruana, Ballard, and Hooker}}}
+\bibcite{Klima15}{{14}{2015}{{Klima}}{{}}}
+\bibcite{Kuhn15}{{15}{2015}{{Kuhn}}{{}}}
+\bibcite{Lek96}{{16}{1996}{{Lek \emph  {et~al.}}}{{Lek, Delacoste, Baran, Dimopoulos, Lauga, and Aulagnier}}}
+\bibcite{Lek00}{{17}{2000}{{Lek and Gu\'{e}gan}}{{}}}
+\bibcite{Castejon14}{{18}{2014}{{Limas \emph  {et~al.}}}{{Limas, Mer\'{e}, Marcos, de~Pis\'{o}n~Ascacibar, Espinoza, El\'{i}as, and Ramos}}}
+\bibcite{McCulloch43}{{19}{1943}{{McCulloch and Pitts}}{{}}}
+\bibcite{Olden02}{{20}{2002}{{Olden and Jackson}}{{}}}
+\bibcite{Olden04}{{21}{2004}{{Olden \emph  {et~al.}}}{{Olden, Joy, and Death}}}
+\bibcite{Ozesmi99}{{22}{1999}{{\"{O}zesmi and \"{O}zesmi}}{{}}}
+\bibcite{Paruelo97}{{23}{1997}{{Paruelo and Tomasel}}{{}}}
+\bibcite{Ripley96}{{24}{1996}{{Ripley}}{{}}}
+\bibcite{Rumelhart86}{{25}{1986}{{Rumelhart \emph  {et~al.}}}{{Rumelhart, Hinton, and Williams}}}
+\bibcite{Saeys07}{{26}{2007}{{Saeys \emph  {et~al.}}}{{Saeys, Inza, and {n}aga}}}
+\bibcite{Swanson15}{{27}{2015}{{Swanson \emph  {et~al.}}}{{Swanson, Kosmala, Lintott, Simpson, Smith, and Packer}}}
+\bibcite{Venables02}{{28}{2002}{{Venables and Ripley}}{{}}}
+\bibcite{Wickham09}{{29}{2009}{{Wickham}}{{}}}
+\bibcite{Zell98}{{30}{1998}{{Zell \emph  {et~al.}}}{{Zell, Mamier, Vogt, Mache, H\"{u}bner, D\"{o}ring, Herrmann, Soyez, Schmalzl, Sommer, Hatzigeorgiou, Posselt, Schreiner, Kett, Clemente, Wieland, and Gatter}}}

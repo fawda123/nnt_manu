@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{30}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -57,6 +57,13 @@ Gevrey M, Dimopoulos I, Lek S (2003).
 \newblock \enquote{Review and comparison of methods to study the contribution
   of variables in artificial neural network models.}
 \newblock \emph{Ecological Modelling}, \textbf{160}(3), 249--264.
+
+\bibitem[{Goh(1995)}]{Goh95}
+Goh ATC (1995).
+\newblock \enquote{Back-propagation neural networks for modeling complex
+  systems.}
+\newblock \emph{Artificial Intelligence in Engineering}, \textbf{9}(3),
+  143--151.
 
 \bibitem[{Hornik(1991)}]{Hornik91}
 Hornik K (1991).
@@ -129,6 +136,12 @@ Olden JD, Jackson DA (2002).
   understanding variable contributions in artifical neural networks.}
 \newblock \emph{Ecological Modelling}, \textbf{154}(1-2), 135--150.
 
+\bibitem[{Olden \emph{et~al.}(2004)Olden, Joy, and Death}]{Olden04}
+Olden JD, Joy MK, Death RG (2004).
+\newblock \enquote{An accurate comparison of methods for quantifying variable
+  importance in artificial neural networks using simulated data.}
+\newblock \emph{Ecological Modelling}, \textbf{178}(3-4), 389--397.
+
 \bibitem[{\"{O}zesmi and \"{O}zesmi(1999)}]{Ozesmi99}
 \"{O}zesmi SL, \"{O}zesmi U (1999).
 \newblock \enquote{An artificial neural network approach to spatial habitat
@@ -169,6 +182,13 @@ Venables WN, Ripley BD (2002).
 \newblock \emph{Modern Applied Statistics with {S}}.
 \newblock Fourth edition. Springer, New York, New York.
 \newblock \urlprefix\url{http://www.stats.ox.ac.uk/pub/MASS4}.
+
+\bibitem[{Wickham(2009)}]{Wickham09}
+Wickham H (2009).
+\newblock \emph{ggplot2: Elegant Graphics for Data Analysis}.
+\newblock Springer. New York.
+\newblock ISBN 978-0-387-98140-6.
+\newblock \urlprefix\url{http://had.co.nz/ggplot2/book}.
 
 \bibitem[{Zell \emph{et~al.}(1998)Zell, Mamier, Vogt, Mache, H\"{u}bner,
   D\"{o}ring, Herrmann, Soyez, Schmalzl, Sommer, Hatzigeorgiou, Posselt,
