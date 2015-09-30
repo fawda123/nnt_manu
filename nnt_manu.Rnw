@@ -2,6 +2,8 @@
 
 \usepackage{acronym}
 \usepackage{cleveref}
+\usepackage{subfig}
+
 \acrodef{mlp}[MLP]{multilayer perceptron}
 \acrodef{nid}[NID]{neural interpretation diagram}
 
@@ -161,7 +163,7 @@ The number of existing functions in \pkg{R} to view neural networks is minimal. 
 
 Tbe \code{plotnet} function in \pkg{NeuralNetTools} plots a network as a \acl{nid} \citep{Ozesmi99} and includes several options to customize plot aesthetics. A \ac{nid} is a modification to the standard conceptual illustration of the \ac{mlp} network that allows the user to view the thickness and color of the weight connections based on mangnitude and sign, respectively.  The default settings plot positive weights between layers as black lines and negative weights as grey lines. Line thickness is in proportion to absolute magnitude of each weight (\cref{fig:plotnet}).
 
-<<plotnet, fig.show = 'hold', fig.height = 5.5, fig.width = 5.5, out.height = '7.5cm', out.width = '7.5cm', fig.cap = 'Examples from the \\code{plotnet} function showing neural networks as a standard graphic (left) and using the \\acl{nid} (right).  Labels outside of the nodes represent variable names and labels within the nodes indicate the layer and node (I: input, H: hidden, O: output, B: bias).  Default options are changed for the example.'>>=
+<<plotnet, fig.show = 'hold', fig.height = 5.5, fig.width = 5.5, out.height = '7.5cm', out.width = '7.5cm', fig.cap = 'Examples from the \\code{plotnet} function showing neural networks as a standard graphic (\\ref{fig:plotnet1}) and using the \\acl{nid} (\\ref{fig:plotnet2}).  Labels outside of the nodes represent variable names and labels within the nodes indicate the layer and node (I: input, H: hidden, O: output, B: bias).  Default options are changed for the example.', fig.subcap = c('', '')>>=
 par(mar = c(0, 0, 0, 0))
 plotnet(mod3, nid = F, circle_col = 'grey', bord_col = 'grey')
 plotnet(mod3)
@@ -169,7 +171,7 @@ plotnet(mod3)
 
 A primary and skip layer network can also be plotted for \code{nnet} models with a skip layer connection. The default is to plot the primary network, whereas the skip layer network can be viewed with \code{skip = TRUE}. If \code{nid = TRUE}, the line widths for both the primary and skip layer plots are relative to all weights. Viewing both plots is recommended to see which network has larger relative weights. Plotting a network with only a skip layer (i.e., no hidden layer, \code{size = 0}) will include bias connections to the output layer, whereas these are not included in the plot of the skip layer if size is greater than zero.
 
-<<plotnet_skip, fig.show = 'hold', fig.height = 5.5, fig.width = 5.5, out.height = '7.5cm', out.width = '7.5cm', fig.cap = 'Examples from the \\code{plotnet} function showing a neural network with a separate skip layer between the input and output layers.  The skip layer (left) and primary neural network (right) can be viewed separately with \\code{plotnet}.', results = 'hide'>>=
+<<plotnet_skip, fig.show = 'hold', fig.height = 5.5, fig.width = 5.5, out.height = '7.5cm', out.width = '7.5cm', fig.cap = 'Examples from the \\code{plotnet} function showing a neural network with a separate skip layer between the input and output layers.  The skip layer (\\ref{fig:plotnet_skip1}) and primary neural network (\\ref{fig:plotnet_skip2}) can be viewed separately with \\code{plotnet}.', results = 'hide', fig.subcap = c('', '')>>=
 # create a model with a skip layer
 modskip <- nnet(Y1 ~ X1 + X2 + X3, data = neuraldat, size = 5, skip = TRUE)
 
@@ -181,7 +183,7 @@ plotnet(modskip)
 
 The \pkg{RSNNS} package provides several algorithms that can be used to prune connections or nodes in a neural network.  This approach can remove connection weights between layers or input nodes that do not contribute to the predictive performance of the network.  Pruning has the benefit of a potential increase in power by increasing the degrees of freedom or the identification of input nodes with low importance.  Algorithms in \pkg{RSNNS} for weight pruning include magnitude based pruning, Optimal Brain Damage, and Optimal Brain Surgeon, whereas algorithms for node pruning include skeletonization and the non-contributing units method \citep{Zell98}.  The \code{plotnet} function can be used to plot a pruned neural network, with options to omit or display the pruned connections (\cref{fig:plotprune}).  
 
-<<plotprune, eval = T, echo = T, fig.show = 'hold', fig.height = 7, fig.width = 7.7, out.width = '0.48\\textwidth', fig.cap = 'A pruned neural network using the ``Optimal Brain Surgeon\'\' algorithm described in \\citet{Zell98}.  The default plotting behavior of \\code{plotnet} is to omit pruned connections (left), whereas they can be viewed as dashed lines by including the \\code{prune\\_col} argument (right).'>>=
+<<plotprune, eval = T, echo = T, fig.show = 'hold', fig.height = 7, fig.width = 7.7, out.width = '0.48\\textwidth', fig.cap = 'A pruned neural network using the ``Optimal Brain Surgeon\'\' algorithm described in \\citet{Zell98}.  The default plotting behavior of \\code{plotnet} is to omit pruned connections (\\ref{fig:plotprune1}), whereas they can be viewed as dashed lines by including the \\code{prune\\_col} argument (\\ref{fig:plotprune2}).', fig.subcap = c('', '')>>=
 # pruned model using RSNNS
 pruneFuncParams <- list(max_pr_error_increase = 10.0, pr_accepted_error = 1.0,
   no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01, 
@@ -203,9 +205,9 @@ Garson's algorithm was originally described by \citet{Garson91} and further modi
 
 The \code{olden} function is a more flexible approach to evaluate variable importance using the connection weights algorithm described in \citet{Olden04}. This method calculates importance as the product of the raw input-hidden and hidden-output connection weights between each input and output node and sums the product across all hidden nodes. An advantage is the relative contributions of each connection weight are maintained in both magnitude and sign, as compared to Garson's algorithm which only considers absolute magnitude. For example, connection weights that change sign (e.g., positive to negative) between the input-hidden to hidden-output layers would have a cancelling effect whereas Garson's algorithm may provide misleading results based on the absolute magnitude. An additional advantage is that Olden's algorithm is capable of evaluating neural networks with multiple hidden layers and response variables. The importance values assigned to each variable are also in units based on the summed product of the connection weights, whereas \code{garson} returns importance scaled from 0--1.
 
-Both functions have similar implementations and require only a model object as input.  The default output is a \pkg{ggplot2} bar plot \citep[i.e., \code{geom\_bar},][]{Wickham09} that shows the relative importance of each input variable in the model.  The plot aesthetics are based on internal code from the function but can be changed using conventional syntax for \pkg{ggplot2}.  The importance values can also be returned as a \code{data.frame} if \code{bar\_plot = FALSE}.  
+Both functions have similar implementations and require only a model object as input.  The default output is a \pkg{ggplot2} bar plot \citep[i.e., \code{geom\_bar},][]{Wickham09} that shows the relative importance of each input variable in the model (\cref{fig:plotimp}).  The plot aesthetics are based on internal code from the function but can be changed using conventional syntax for \pkg{ggplot2}.  The importance values can also be returned as a \code{data.frame} if \code{bar\_plot = FALSE}.  
 
-<<plotimp, fig.show = 'hold', fig.height = 2, fig.width = 4, out.width = '0.45\\textwidth', fig.cap = 'Variable importance'>>=
+<<eval = F>>=
 # garson and olden functions for each model
 garson(mod1)
 olden(mod1)
@@ -214,6 +216,51 @@ olden(mod2)
 garson(mod3)
 olden(mod3)
 @
+
+\begin{figure}
+\centering
+\subfloat[][Model 1 (\code{mlp}), \code{garson}]{
+<<plotimp-1, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
+garson(mod1)
+@
+\label{fig:plotimp1}
+}
+\subfloat[][Model 1 (\code{mlp}), \code{olden}]{
+<<plotimp-2, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
+olden(mod1)
+@
+\label{fig:plotimp2}
+}
+
+\subfloat[][Model 2 (\code{nn}), \code{garson}]{
+<<plotimp-3, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
+garson(mod2)
+@
+\label{fig:plotimp3}
+}
+\subfloat[][Model 2 (\code{nn}), \code{olden}]{
+<<plotimp-4, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
+olden(mod2)
+@
+\label{fig:plotimp4}
+}
+
+\subfloat[][Model 3 (\code{nnet}), \code{garson}]{
+<<plotimp-5, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
+garson(mod3)
+@
+\label{fig:plotimp5}
+}
+\subfloat[][Model 3 (\code{nnet}), \code{olden}]{
+<<plotimp-6, fig.height = 2, fig.width =4, out.width = '0.47\\textwidth', echo = F>>=
+olden(mod3)
+@
+\label{fig:plotimp6}
+}
+\caption{Variable importance for three models using Garson's algorithm for relative importance (\code{garson}, \citealt{Garson91,Goh95}) and Olden's conection weights algorithm (\code{olden}, \citealt{Olden04}).  Garson's algorithm shows importance as absolute values from 0--1 whereas Olden's algorithm preserves sign and magnitude.  Importance values for Olden's algorithm are directly from the summed product of model weights and should only be evaluated based on the sign and relative magnitudes between variables.}
+\label{fig:plotimp}
+\end{figure}
+
 
 \subsection{Sensitivity analysis}
 

@@ -51,6 +51,8 @@
 
 \usepackage{acronym}
 \usepackage{cleveref}
+\usepackage{subfig}
+
 \acrodef{mlp}[MLP]{multilayer perceptron}
 \acrodef{nid}[NID]{neural interpretation diagram}
 
@@ -195,12 +197,12 @@ Tbe \code{plotnet} function in \pkg{NeuralNetTools} plots a network as a \acl{ni
 \end{alltt}
 \end{kframe}\begin{figure}[!ht]
 
-{\centering \includegraphics[width=7.5cm,height=7.5cm]{figs/plotnet-1} 
-\includegraphics[width=7.5cm,height=7.5cm]{figs/plotnet-2} 
+{\centering \subfloat[\label{fig:plotnet1}]{\includegraphics[width=7.5cm,height=7.5cm]{figs/plotnet-1} }
+\subfloat[\label{fig:plotnet2}]{\includegraphics[width=7.5cm,height=7.5cm]{figs/plotnet-2} }
 
 }
 
-\caption[Examples from the \code{plotnet} function showing neural networks as a standard graphic (left) and using the \acl{nid} (right)]{Examples from the \code{plotnet} function showing neural networks as a standard graphic (left) and using the \acl{nid} (right).  Labels outside of the nodes represent variable names and labels within the nodes indicate the layer and node (I: input, H: hidden, O: output, B: bias).  Default options are changed for the example.}\label{fig:plotnet}
+\caption{Examples from the \code{plotnet} function showing neural networks as a standard graphic (\ref{fig:plotnet1}) and using the \acl{nid} (\ref{fig:plotnet2}).  Labels outside of the nodes represent variable names and labels within the nodes indicate the layer and node (I: input, H: hidden, O: output, B: bias).  Default options are changed for the example.}\label{fig:plotnet}
 \end{figure}
 
 
@@ -220,12 +222,12 @@ A primary and skip layer network can also be plotted for \code{nnet} models with
 \end{alltt}
 \end{kframe}\begin{figure}[!ht]
 
-{\centering \includegraphics[width=7.5cm,height=7.5cm]{figs/plotnet_skip-1} 
-\includegraphics[width=7.5cm,height=7.5cm]{figs/plotnet_skip-2} 
+{\centering \subfloat[\label{fig:plotnet_skip1}]{\includegraphics[width=7.5cm,height=7.5cm]{figs/plotnet_skip-1} }
+\subfloat[\label{fig:plotnet_skip2}]{\includegraphics[width=7.5cm,height=7.5cm]{figs/plotnet_skip-2} }
 
 }
 
-\caption{Examples from the \code{plotnet} function showing a neural network with a separate skip layer between the input and output layers.  The skip layer (left) and primary neural network (right) can be viewed separately with \code{plotnet}.}\label{fig:plotnet_skip}
+\caption{Examples from the \code{plotnet} function showing a neural network with a separate skip layer between the input and output layers.  The skip layer (\ref{fig:plotnet_skip1}) and primary neural network (\ref{fig:plotnet_skip2}) can be viewed separately with \code{plotnet}.}\label{fig:plotnet_skip}
 \end{figure}
 
 
@@ -249,12 +251,12 @@ The \pkg{RSNNS} package provides several algorithms that can be used to prune co
 \end{alltt}
 \end{kframe}\begin{figure}[!ht]
 
-{\centering \includegraphics[width=0.48\textwidth]{figs/plotprune-1} 
-\includegraphics[width=0.48\textwidth]{figs/plotprune-2} 
+{\centering \subfloat[\label{fig:plotprune1}]{\includegraphics[width=0.48\textwidth]{figs/plotprune-1} }
+\subfloat[\label{fig:plotprune2}]{\includegraphics[width=0.48\textwidth]{figs/plotprune-2} }
 
 }
 
-\caption{A pruned neural network using the ``Optimal Brain Surgeon'' algorithm described in \citet{Zell98}.  The default plotting behavior of \code{plotnet} is to omit pruned connections (left), whereas they can be viewed as dashed lines by including the \code{prune\_col} argument (right).}\label{fig:plotprune}
+\caption{A pruned neural network using the ``Optimal Brain Surgeon'' algorithm described in \citet{Zell98}.  The default plotting behavior of \code{plotnet} is to omit pruned connections (\ref{fig:plotprune1}), whereas they can be viewed as dashed lines by including the \code{prune\_col} argument (\ref{fig:plotprune2}).}\label{fig:plotprune}
 \end{figure}
 
 
@@ -267,7 +269,7 @@ Garson's algorithm was originally described by \citet{Garson91} and further modi
 
 The \code{olden} function is a more flexible approach to evaluate variable importance using the connection weights algorithm described in \citet{Olden04}. This method calculates importance as the product of the raw input-hidden and hidden-output connection weights between each input and output node and sums the product across all hidden nodes. An advantage is the relative contributions of each connection weight are maintained in both magnitude and sign, as compared to Garson's algorithm which only considers absolute magnitude. For example, connection weights that change sign (e.g., positive to negative) between the input-hidden to hidden-output layers would have a cancelling effect whereas Garson's algorithm may provide misleading results based on the absolute magnitude. An additional advantage is that Olden's algorithm is capable of evaluating neural networks with multiple hidden layers and response variables. The importance values assigned to each variable are also in units based on the summed product of the connection weights, whereas \code{garson} returns importance scaled from 0--1.
 
-Both functions have similar implementations and require only a model object as input.  The default output is a \pkg{ggplot2} bar plot \citep[i.e., \code{geom\_bar},][]{Wickham09} that shows the relative importance of each input variable in the model.  The plot aesthetics are based on internal code from the function but can be changed using conventional syntax for \pkg{ggplot2}.  The importance values can also be returned as a \code{data.frame} if \code{bar\_plot = FALSE}.  
+Both functions have similar implementations and require only a model object as input.  The default output is a \pkg{ggplot2} bar plot \citep[i.e., \code{geom\_bar},][]{Wickham09} that shows the relative importance of each input variable in the model (\cref{fig:plotimp}).  The plot aesthetics are based on internal code from the function but can be changed using conventional syntax for \pkg{ggplot2}.  The importance values can also be returned as a \code{data.frame} if \code{bar\_plot = FALSE}.  
 
 \begin{kframe}
 \begin{alltt}
@@ -279,20 +281,81 @@ Both functions have similar implementations and require only a model object as i
 \hlkwd{garson}\hlstd{(mod3)}
 \hlkwd{olden}\hlstd{(mod3)}
 \end{alltt}
-\end{kframe}\begin{figure}[!ht]
+\end{kframe}
 
-{\centering \includegraphics[width=0.45\textwidth]{figs/plotimp-1} 
-\includegraphics[width=0.45\textwidth]{figs/plotimp-2} 
-\includegraphics[width=0.45\textwidth]{figs/plotimp-3} 
-\includegraphics[width=0.45\textwidth]{figs/plotimp-4} 
-\includegraphics[width=0.45\textwidth]{figs/plotimp-5} 
-\includegraphics[width=0.45\textwidth]{figs/plotimp-6} 
+\begin{figure}
+\centering
+\subfloat[][Model 1 (\code{mlp}), \code{garson}]{
+
+
+{\centering \includegraphics[width=0.47\textwidth]{figs/plotimp-1-1} 
 
 }
 
-\caption[Variable importance]{Variable importance}\label{fig:plotimp}
-\end{figure}
 
+
+\label{fig:plotimp1}
+}
+\subfloat[][Model 1 (\code{mlp}), \code{olden}]{
+
+
+{\centering \includegraphics[width=0.47\textwidth]{figs/plotimp-2-1} 
+
+}
+
+
+
+\label{fig:plotimp2}
+}
+
+\subfloat[][Model 2 (\code{nn}), \code{garson}]{
+
+
+{\centering \includegraphics[width=0.47\textwidth]{figs/plotimp-3-1} 
+
+}
+
+
+
+\label{fig:plotimp3}
+}
+\subfloat[][Model 2 (\code{nn}), \code{olden}]{
+
+
+{\centering \includegraphics[width=0.47\textwidth]{figs/plotimp-4-1} 
+
+}
+
+
+
+\label{fig:plotimp4}
+}
+
+\subfloat[][Model 3 (\code{nnet}), \code{garson}]{
+
+
+{\centering \includegraphics[width=0.47\textwidth]{figs/plotimp-5-1} 
+
+}
+
+
+
+\label{fig:plotimp5}
+}
+\subfloat[][Model 3 (\code{nnet}), \code{olden}]{
+
+
+{\centering \includegraphics[width=0.47\textwidth]{figs/plotimp-6-1} 
+
+}
+
+
+
+\label{fig:plotimp6}
+}
+\caption{Variable importance for three models using Garson's algorithm for relative importance (\code{garson}, \citealt{Garson91,Goh95}) and Olden's conection weights algorithm (\code{olden}, \citealt{Olden04}).  Garson's algorithm shows importance as absolute values from 0--1 whereas Olden's algorithm preserves sign and magnitude.  Importance values for Olden's algorithm are directly from the summed product of model weights and should only be evaluated based on the sign and relative magnitudes between variables.}
+\label{fig:plotimp}
+\end{figure}
 
 
 \subsection{Sensitivity analysis}
