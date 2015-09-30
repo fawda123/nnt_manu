@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{31}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -64,6 +64,11 @@ Goh ATC (1995).
   systems.}
 \newblock \emph{Artificial Intelligence in Engineering}, \textbf{9}(3),
   143--151.
+
+\bibitem[{Hartigan and Wong(1979)}]{Hartigan79}
+Hartigan JA, Wong MA (1979).
+\newblock \enquote{A K-means clustering algorithm.}
+\newblock \emph{Applied Statistics}, \textbf{28}(1), 100--108.
 
 \bibitem[{Hornik(1991)}]{Hornik91}
 Hornik K (1991).

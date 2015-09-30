@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  30 SEP 2015 08:47
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  30 SEP 2015 13:30
 entering extended mode
 **nnt_manu.tex
 (M:\docs\manuscripts\nnt_manu\nnt_manu.tex
@@ -653,54 +653,89 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 _manu/figs/plotimp-2-1.pdf> <M:/docs/manuscripts/nnt_manu/figs/plotimp-3-1.pdf>
  <M:/docs/manuscripts/nnt_manu/figs/plotimp-4-1.pdf> <M:/docs/manuscripts/nnt_m
 anu/figs/plotimp-5-1.pdf> <M:/docs/manuscripts/nnt_manu/figs/plotimp-6-1.pdf>]
-(M:\docs\manuscripts\nnt_manu\nnt_manu.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 10 []
  []
 
-[10]
+[10] <figs/plotlek_sens1-1.pdf, id=371, 578.16pt x 180.675pt>
+File: figs/plotlek_sens1-1.pdf Graphic file (type pdf)
+
+<use figs/plotlek_sens1-1.pdf>
+Package pdftex.def Info: figs/plotlek_sens1-1.pdf used on input line 395.
+(pdftex.def)             Requested size: 354.12434pt x 110.6637pt.
+
+<figs/plotlek_sens2-1.pdf, id=372, 578.16pt x 180.675pt>
+File: figs/plotlek_sens2-1.pdf Graphic file (type pdf)
+
+<use figs/plotlek_sens2-1.pdf>
+Package pdftex.def Info: figs/plotlek_sens2-1.pdf used on input line 407.
+(pdftex.def)             Requested size: 354.12434pt x 110.6637pt.
+
+<figs/plotlek_bars1-1.pdf, id=381, 578.16pt x 180.675pt>
+File: figs/plotlek_bars1-1.pdf Graphic file (type pdf)
+
+<use figs/plotlek_bars1-1.pdf>
+Package pdftex.def Info: figs/plotlek_bars1-1.pdf used on input line 425.
+(pdftex.def)             Requested size: 354.12434pt x 110.6637pt.
+
+<figs/plotlek_bars2-1.pdf, id=382, 578.16pt x 180.675pt>
+File: figs/plotlek_bars2-1.pdf Graphic file (type pdf)
+
+<use figs/plotlek_bars2-1.pdf>
+Package pdftex.def Info: figs/plotlek_bars2-1.pdf used on input line 437.
+(pdftex.def)             Requested size: 354.12434pt x 110.6637pt.
+ (M:\docs\manuscripts\nnt_manu\nnt_manu.bbl
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 11
  []
 
-[11]
+[11 <M:/docs/manuscripts/nnt_manu/figs/plotlek_sens1-1.pdf> <M:/docs/manuscript
+s/nnt_manu/figs/plotlek_sens2-1.pdf>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 12 []
  []
 
-[12])
-LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 387.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 387.
-
+[12 <M:/docs/manuscripts/nnt_manu/figs/plotlek_bars1-1.pdf> <M:/docs/manuscript
+s/nnt_manu/figs/plotlek_bars2-1.pdf>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 13
  []
 
-[13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 387.
+[13])
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 455.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 455.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 14 []
+ []
+
+[14]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/aer/m/n/10.95 15
+ []
+
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 455.
  (M:\docs\manuscripts\nnt_manu\nnt_manu.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 387.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 387.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 455.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 455.
 Package rerunfilecheck Info: File `nnt_manu.out' has not changed.
 (rerunfilecheck)             Checksum: 832DFFACC80F9700DD71F5A88B8834AB;797.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 387.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 455.
  ) 
 Here is how much of TeX's memory you used:
- 10157 strings out of 493921
- 163821 string characters out of 3147282
- 263080 words of memory out of 3000000
- 13191 multiletter control sequences out of 15000+200000
- 54528 words of font info for 97 fonts, out of 3000000 for 9000
+ 10225 strings out of 493921
+ 165242 string characters out of 3147282
+ 262080 words of memory out of 3000000
+ 13243 multiletter control sequences out of 15000+200000
+ 56678 words of font info for 100 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,10n,47p,1693b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,47p,1693b,482s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\mbeck\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tctt1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Program Fil
@@ -719,9 +754,9 @@ type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8
 a.pfb>
-Output written on nnt_manu.pdf (13 pages, 367230 bytes).
+Output written on nnt_manu.pdf (15 pages, 417264 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 530 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
