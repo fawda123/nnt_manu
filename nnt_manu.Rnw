@@ -4,6 +4,7 @@
 \usepackage{cleveref}
 \usepackage{subfig}
 
+\acrodef{CRAN}[CRAN]{Comprehensive \proglang{R} Archive Network}
 \acrodef{mlp}[MLP]{multilayer perceptron}
 \acrodef{nid}[NID]{neural interpretation diagram}
 
@@ -84,7 +85,7 @@ Statistical methods that have been used to support data exploration for inductiv
 
 An arbitrarily large number of parameters to fit a neural network provides obvious predictive advantages, but conversely complicates the extraction of critical model information.  Information such as variable importance or model sensitivity are necessary aspects of exploratory data analysis that are not easily obtained from a neural network. As such, a common criticism is that neural networks are `black-boxes' that offer minimal insight into relationships among variables \citep[e.g.,][]{Paruelo97}.  \citet{Olden02} provide a rebuttal to this concern by describing methods to extract information from neural networks, most of which were previously available but not commonly used.  For example, \citet{Olden02} describe  the \ac{nid} for plotting \citep{Ozesmi99}, the Garson algorithm for variable importance \citep{Garson91}, and the Profile method for sensitivity analysis \citep{Lek96}.  These quantitative tools `illuminate the black box' by disaggregating the network parameters to characterize relationships between variables that are described by the model.  In essence, \ac{mlp} neural networks were developed for prediction but methods described in \citep{Olden02} leverage these models to describe data signals.  Increasing the accesibility of these diagnostic tools will have value for exploratory analysis in data science.
 
-This article describes the \pkg{NeuralNetTools} package for \proglang{R} that was developed to improve the breadth and quality of information obtained from the \ac{mlp} neural network.  Functions provided by the package are those previously described in \citep{Olden02} but have not been available in an open-source programming environment.  The reach of the package is all-inclusive such that generic functions were developed using S3 methods for all neural network object classes available in \proglang{R}.  The objecives of this article are to 1) provide an overview of the statistical foundation the \ac{mlp} network, 2) briefly describe similarities and differences between existing neural network packages in \proglang{R}, and 3) describe the theory and application of the primary functions in the \pkg{NeuralNetTools} package.  The package is currently available on CRAN, whereas the development version is maintained as a GitHub repository.  
+This article describes the \pkg{NeuralNetTools} package for \proglang{R} that was developed to improve the breadth and quality of information obtained from the \ac{mlp} neural network.  Functions provided by the package are those previously described in \citep{Olden02} but have not been available in an open-source programming environment.  The reach of the package is all-inclusive such that generic functions were developed using S3 methods for all neural network object classes available in \proglang{R}.  The objecives of this article are to 1) provide an overview of the statistical foundation the \ac{mlp} network, 2) briefly describe similarities and differences between existing neural network packages in \proglang{R}, and 3) describe the theory and application of the primary functions in the \pkg{NeuralNetTools} package.  The package is currently available on the \ac{CRAN}, whereas the development version is maintained as a GitHub repository.  
 
 \section[Theoretical foundation]{Theoretical foundation and existing R packages}
 
@@ -116,11 +117,11 @@ tots_nnt <- 100 * sum(tots[1:3])/sum(tots)
 tots_nnet <- 100 * tots[1]/sum(tots)
 @
 
-Methods in \pkg{NeuralNetTools} were written for several \proglang{R} packages that can be used to create \ac{mlp} neural networks: \pkg{neuralnet} \citep{Fritsch12}, \pkg{nnet} \citep{Venables02}, and \pkg{RSNNS} \citep{Bergmeir12}. Limited methods were also developed for neural network objects created with the \code{train} function from the \pkg{caret} package \citep{Kuhn15}.  Additional \proglang{R} packages that can create \ac{mlp} neural networks include \pkg{AMORE} that implements the ``TAO-robust back-propagation algorithm'' for model fitting \citep{Castejon14}, \pkg{FCNN4R} as an \proglang{R} interface to the \pkg{FCNN} \proglang{C++} library \citep{Klima15}, \pkg{monmlp} for networks with partial monotonicity constraints \citep{Cannon15}, and \pkg{qrnn} for quantile regression neural networks \citep{Cannon11}.  At the time of writing, the CRAN download logs \citep{Csardi15} showed that the \proglang{R} packages with methods in \pkg{NeuralNetTools} included \Sexpr{round(tots_nnt)}\% of all downloads for the available \ac{mlp} packages, with \pkg{nnet} accounting for over \Sexpr{round(tots_nnet)}\%.  As such, methods have not been included in \pkg{NeuralNetTools} for the remaining packages, although further development of \pkg{NeuralNetTools} could include additional methods based on popularity.  Methods are currently available for  \code{mlp} (\pkg{RSNNS}), \code{nn} (\pkg{neuralnet}), \code{nnet} (\pkg{nnet}), and \code{train} (\pkg{caret}, only if the object also inherits from the \code{nnet} class) objects.  Additional \code{default} or \code{numeric} methods are available for some of the generic functions.
+Methods in \pkg{NeuralNetTools} were written for several \proglang{R} packages that can be used to create \ac{mlp} neural networks: \pkg{neuralnet} \citep{Fritsch12}, \pkg{nnet} \citep{Venables02}, and \pkg{RSNNS} \citep{Bergmeir12}. Limited methods were also developed for neural network objects created with the \code{train} function from the \pkg{caret} package \citep{Kuhn15}.  Additional \proglang{R} packages that can create \ac{mlp} neural networks include \pkg{AMORE} that implements the ``TAO-robust back-propagation algorithm'' for model fitting \citep{Castejon14}, \pkg{FCNN4R} as an \proglang{R} interface to the \pkg{FCNN} \proglang{C++} library \citep{Klima15}, \pkg{monmlp} for networks with partial monotonicity constraints \citep{Cannon15}, and \pkg{qrnn} for quantile regression neural networks \citep{Cannon11}.  At the time of writing, the \ac{CRAN} download logs \citep{Csardi15} showed that the \proglang{R} packages with methods in \pkg{NeuralNetTools} included \Sexpr{round(tots_nnt)}\% of all downloads for the available \ac{mlp} packages, with \pkg{nnet} accounting for over \Sexpr{round(tots_nnet)}\%.  As such, methods have not been included in \pkg{NeuralNetTools} for the remaining packages, although further development of \pkg{NeuralNetTools} could include additional methods based on popularity.  Methods are currently available for  \code{mlp} (\pkg{RSNNS}), \code{nn} (\pkg{neuralnet}), \code{nnet} (\pkg{nnet}), and \code{train} (\pkg{caret}, only if the object also inherits from the \code{nnet} class) objects.  Additional \code{default} or \code{numeric} methods are available for some of the generic functions.
 
 \section[Package structure]{Package structure}
 
-The stable release of \pkg{NeurelNetTools} can be installed from CRAN and the development version can be installed from GitHub:
+The stable release of \pkg{NeurelNetTools} can be installed from \ac{CRAN} and the development version can be installed from GitHub:
 
 <<eval = F>>=
 # install from CRAN
@@ -288,19 +289,19 @@ lekprofile(mod3, group_vals = 6, group_show = TRUE)
 \begin{figure}
 \centering
 \subfloat[][Response with quantiles]{
-<<plotlek_sens1, fig.height = 2.5, fig.width = 8, out.width = '0.8\\textwidth', echo = F>>=
+<<plotlek_sens1, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', echo = F>>=
 lekprofile(mod3) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
 @
 \label{fig:plotlek_sens1}
 }
 
-\subfloat[][Reponse with clusters]{
-<<plotlek_sens2, fig.height = 2.5, fig.width = 8, out.width = '0.8\\textwidth', echo = F>>=
+\subfloat[][Response with clusters]{
+<<plotlek_sens2, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', echo = F>>=
 lekprofile(mod3, group_vals = 6) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
 @
 \label{fig:plotlek_sens2}
 }s
-\caption{Sensitivity analysis of neural network using the Lek profile method to evaluate the effects of explanatory variables.  \Cref{fig:plotlek_sens1} groups unevaluated explanatory variables at quantiles and \cref{fig:plotlek_sens2} groups by cluster means from {\it k}-means clustering of all explanatory variables.  Values at which explanatory variables are held constant in each plot are shown in \cref{fig:plotlek_bars1,fig:plotlek_bars2}, respectively.}
+\caption{Sensitivity analysis ofa  neural network using the Lek profile method to evaluate the effects of explanatory variables.  \Cref{fig:plotlek_sens1} groups unevaluated explanatory variables at quantiles and \cref{fig:plotlek_sens2} groups by cluster means from {\it k}-means clustering of all explanatory variables.  Values at which explanatory variables are held constant in each plot are shown in \cref{fig:plotlek_bars1,fig:plotlek_bars2}, respectively.}
 \label{fig:plotlek_sens}
 \end{figure}
 
@@ -308,14 +309,14 @@ lekprofile(mod3, group_vals = 6) + theme(plot.margin = grid::unit(c(0, 0, 0, 0),
 \begin{figure}
 \centering
 \subfloat[][Quantile groupings]{
-<<plotlek_bars1, fig.height = 2.5, fig.width = 8, out.width = '0.8\\textwidth', echo = F>>=
+<<plotlek_bars1, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', echo = F>>=
 lekprofile(mod3, group_show = TRUE) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
 @
 \label{fig:plotlek_bars1}
 }
 
 \subfloat[][Cluster groupings]{
-<<plotlek_bars2, fig.height = 2.5, fig.width = 8, out.width = '0.8\\textwidth', echo = F>>=
+<<plotlek_bars2, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', echo = F>>=
 lekprofile(mod3, group_vals = 6, group_show = TRUE) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
 @
 \label{fig:plotlek_bars2}
@@ -324,14 +325,21 @@ lekprofile(mod3, group_vals = 6, group_show = TRUE) + theme(plot.margin = grid::
 \label{fig:plotlek_bars}
 \end{figure}
 
-\section[Future development]{Future development}
+\section[Applied example]{Applied example}
 
-\section[Conclusions]{Conclusions}
 Issues with different indications of variable importance as a model is refit.
 
 A cautionary note about the `optimal network' and reproducibility of results.  Note that most literature sources suggest variable standardization prior to using a model yet none of the existing packages in R provide this functionality as a default option (verify).    
 
+\section[Conclusions]{Conclusions}
+
+The \pkg{NeuralNetTools} package provides a simple approach that improves the quality of information obtained from a feed-forward \ac{mlp} neural network.  Functions in the package can be used to visualize a neural network using a \acl{nid} (\code{plotnet}), evaluate variable importance (\code{garson}, \code{olden}), and conduct a sensitivity analysis \code{lekprofile}.  Methods are available for the most downloaded \ac{CRAN} packages that can create neural networks (\pkg{caret}, \pkg{neuralnet}, \pkg{nnet}, \pkg{RSNNS}), whereas additional methods will be made available based on future popularity of the remaining packages (\pkg{AMORE}, \pkg{FCNN4R}, \pkg{monmlp}, \pkg{qrnn}).  An additional objective of the package is to dispel the myth that supervised neural networks for prediction are `black boxes' that provide no information about underlying relationships between the variables \citep{Olden02}.  Although neural networks are considered complex relative to more conventional approaches, the theoretical foundation of the technique has many parallels with traditional modelling techniques that allow insight into causation.  For example, network weights are partially analagous to intercept and slope parameters in a standard regression model such that the estimates can be used to characterize variable interactions.  More over, the model fitting process requires the minimization of an objective function such that conventional techniques to evaluate model sensitivity or performance that apply to other models can be used with neural networks.  Common performance metrics can be used to select an optimal model, whereas functions in \pkg{NeuralNetTools} can provide a practical means of post-hoc assessment. 
+
+A more compelling issue is when and how to apply neural networks given alternative methods for data-intensive exploration.  A common opinion is that the potential for insight is positively related to model complexity and the relaxation of assumptions required for more constrained methods ().  Indeed, the `neural' component of neural networks is a reference to the network of impulses in the human brain that lead to learning.  This perception has likely contributed to the popularity of the method, although the appeal may be misinformed in practice depending on the dataset or question of interest.  Numerous examples have shown that the \ac{mlp} network may provide comparable insight into variable relationships or predicictive performance as more conventional methods.  As such, the neural network should be considered a tool in the larger toolbox of data-intensive methods that should be used after examination of the tradeoffs between techniques.  For example, an appropriate method should be chosen based on power given the sample size, expected interactions between variables, distributional forms of the response, and other relevant concerns that are considered during exploratory data analysis.  The true value of the \pkg{NeuralNetTools} package is a set of analysis tools that can inform a more balanced assessment given the alternative and complementary methods for data-intensive exploration.
+
 \section[Acknowledgments]{Acknowledgments}
+ 
+I would like to thank Dr. Bruce Wilson and Dr. Sanford Weisberg of the University of Minnesota for general guidance during the development of this package.  Contributions and suggestions from online users have also greatly improved the utility of the package.    
 
 % note that ref titles need to be in title-case 
 \bibliographystyle{jss}
