@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  1 OCT 2015 16:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  2 OCT 2015 14:11
 entering extended mode
 **nnt_manu.tex
 (M:\docs\manuscripts\nnt_manu\nnt_manu.tex
@@ -687,6 +687,14 @@ File: figs/plotlek_bars2-1.pdf Graphic file (type pdf)
 <use figs/plotlek_bars2-1.pdf>
 Package pdftex.def Info: figs/plotlek_bars2-1.pdf used on input line 438.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 447.
+
+
+(C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\ts1aer.fd
+File: ts1aer.fd 
+)
+LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10.95> not available
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 447.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 11
@@ -700,72 +708,77 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 
 [12 <M:/docs/manuscripts/nnt_manu/figs/plotlek_bars1-1.pdf> <M:/docs/manuscript
 s/nnt_manu/figs/plotlek_bars2-1.pdf>]
-(M:\docs\manuscripts\nnt_manu\nnt_manu.bbl
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 13
  []
 
-[13]
+[13] (M:\docs\manuscripts\nnt_manu\nnt_manu.bbl
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 14 []
  []
 
-[14])
-LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 463.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 463.
-
+[14]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 15
  []
 
-[15]
+[15])
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 494.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 494.
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 16 []
  []
 
 [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 463.
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/aer/m/n/10.95 17
+ []
+
+[17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 494.
  (M:\docs\manuscripts\nnt_manu\nnt_manu.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 463.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 463.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 494.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 494.
 Package rerunfilecheck Info: File `nnt_manu.out' has not changed.
 (rerunfilecheck)             Checksum: EBBF90D68488496A5C40C697E9BCBE2C;791.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 463.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 494.
  ) 
 Here is how much of TeX's memory you used:
- 10234 strings out of 493921
- 165332 string characters out of 3147282
+ 10274 strings out of 493921
+ 165946 string characters out of 3147282
  262080 words of memory out of 3000000
- 13250 multiletter control sequences out of 15000+200000
- 56678 words of font info for 100 fonts, out of 3000000 for 9000
+ 13281 multiletter control sequences out of 15000+200000
+ 57019 words of font info for 101 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,10n,47p,1772b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,47p,1698b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\mbeck\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-tctt1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmitt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8
-a.pfb>
-Output written on nnt_manu.pdf (16 pages, 421957 bytes).
+tcrm1095.pk> <C:\Users\mbeck\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\tctt1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
+enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfc
+han/uzcmi8a.pfb>
+Output written on nnt_manu.pdf (17 pages, 431761 bytes).
 PDF statistics:
- 538 PDF objects out of 1000 (max. 8388607)
- 92 named destinations out of 1000 (max. 500000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
  158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

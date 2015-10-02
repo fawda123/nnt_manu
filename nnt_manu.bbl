@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{35}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -22,6 +22,11 @@ Bergmeir C, Ben\'itez JM (2012).
 \newblock \emph{Journal of Statistical Software}, \textbf{46}(7), 1--26.
 \newblock \urlprefix\url{http://www.jstatsoft.org/v46/i07/}.
 
+\bibitem[{Burke and Ignizio(1997)}]{Burke97}
+Burke L, Ignizio JP (1997).
+\newblock \enquote{A practical overview of neural networks.}
+\newblock \emph{Journal of Intelligent Manufacturing}, \textbf{8}(3), 157--165.
+
 \bibitem[{Cannon(2011)}]{Cannon11}
 Cannon AJ (2011).
 \newblock \enquote{Quantile regression neural networks: implementation in R and
@@ -40,6 +45,13 @@ Csardi G (2015).
 \newblock \emph{cranlogs: Download Logs from the 'RStudio' 'CRAN' Mirror}.
 \newblock R package version 2.1.0,
   \urlprefix\url{https://github.com/metacran/cranlogs}.
+
+\bibitem[{Feng and Wang(2002)}]{Feng02}
+Feng CX, Wang X (2002).
+\newblock \enquote{Digitizing uncertainty modeling for reverse engineering
+  applications: regression versus neural networks.}
+\newblock \emph{Journal of Intelligent Manufacturing}, \textbf{13}(3),
+  189--199.
 
 \bibitem[{Fritsch and Guenther(2012)}]{Fritsch12}
 Fritsch S, Guenther F (2012).
@@ -129,6 +141,13 @@ Limas MC, Mer\'{e} JBO, Marcos AG, de~Pis\'{o}n~Ascacibar FJM, Espinoza AVP,
 \newblock R package version 0.2-15,
   \urlprefix\url{http://CRAN.R-project.org/package=AMORE}.
 
+\bibitem[{Maier and Dandy(2000)}]{Maier00}
+Maier HR, Dandy GC (2000).
+\newblock \enquote{Neural networks for the prediction and forecasting of water
+  resources variables: A review of modelling issues and applications.}
+\newblock \emph{Environmental Modelling and Software}, \textbf{15}(1),
+  101--124.
+
 \bibitem[{McCulloch and Pitts(1943)}]{McCulloch43}
 McCulloch WS, Pitts W (1943).
 \newblock \enquote{A logical calculus of the ideas imminent in nervous
@@ -158,6 +177,13 @@ Paruelo JM, Tomasel F (1997).
 \newblock \enquote{Prediction of functional characteristics of ecosystems: A
   comparison of artificial neural networks and regression models.}
 \newblock \emph{Ecological Modelling}, \textbf{98}(2-3), 173--186.
+
+\bibitem[{Razi and Athappilly(2005)}]{Razi05}
+Razi MA, Athappilly K (2005).
+\newblock \enquote{A comparative predictive analysis of neural networks
+  ({NN}s), nonlinear regression and classification and regression tree ({CART})
+  models.}
+\newblock \emph{Expert Systems and Applications}, \textbf{29}(1), 65--74.
 
 \bibitem[{Ripley(1996)}]{Ripley96}
 Ripley BD (1996).

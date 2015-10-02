@@ -442,15 +442,46 @@ An alternative implementation of \code{lekprofile} is to group the unevaluated e
 
 \section[Applied example]{Applied example}
 
-Issues with different indications of variable importance as a model is refit.
+Although \pkg{NeuralnetTools} provides several methods to extract information from a neural network, it does not provide explicit guidance for developing the initial model.  A more challenging aspect is understanding the effects of network architecture, use of training and validation datasets, and implications for the bias-variance tradeoff with model over- or under-fitting during model development.  A detailed discussion of these issues is beyond the scope of this paper, although an example application is presented below to introduce a `best practices' approach to neural network development.  The models presented above, including the \code{neuraldat} dataset, are contrived examples to illustrate use of the \pkg{NeuralNetTools} package and they do not demonstrate a comprehensive application of neural networks in practice.  Several texts provide explicit guidelines on developing neural network models \cite[e.g.,][]{Ripley96, Lek00, Maier00}.  In general, the following should be considered during model development:
+\begin{itemize}
+\item Initial data pre-processing to normalize inputs and standardize response,
+\item Network architecture including number of hidden layers, number of nodes in each hidden layer, inclusion of bias or skip layers, pruning weights or inputs,
+\item Split of dataset into a training and test dataset, e.g., 2:1, 3:1, leave-one-out, etc., 
+\item Initial starting weights for the back-propagation algorithm, and
+\item Criteria for stopping model training iterations, e.g., error convergance tolerance, maximum number of iterations, minimum error on test dataset, etc.
+\end{itemize}
 
-A cautionary note about the `optimal network' and reproducibility of results.  Note that most literature sources suggest variable standardization prior to using a model yet none of the existing packages in R provide this functionality as a default option (verify).    
+\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(nycflights13)}
+\hlkwd{library}\hlstd{(dplyr)}
+
+\hlcom{# data preprocessing}
+\hlcom{# select UA carrior for month of december and relevant variables}
+\hlcom{# normalize and standardize variables}
+\hlstd{tomod} \hlkwb{<-} \hlkwd{filter}\hlstd{(flights, month} \hlopt{==} \hlnum{12} \hlopt{&} \hlstd{carrier} \hlopt{==} \hlstr{'UA'}\hlstd{)} \hlopt{%>%}
+  \hlkwd{select}\hlstd{(arr_delay, dep_delay, dep_time, arr_time, air_time, distance)} \hlopt{%>%}
+  \hlkwd{mutate_each}\hlstd{(}\hlkwd{funs}\hlstd{(scale),} \hlopt{-}\hlstd{arr_delay)} \hlopt{%>%}
+  \hlkwd{mutate_each}\hlstd{(}\hlkwd{funs}\hlstd{(as.numeric),} \hlopt{-}\hlstd{arr_delay)} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{arr_delay} \hlstd{= scales}\hlopt{::}\hlkwd{rescale}\hlstd{(arr_delay,} \hlkwc{to} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{1}\hlstd{)))} \hlopt{%>%}
+  \hlstd{data.frame}
+
+\hlcom{# create two models}
+\hlcom{# random starting weights are different for each}
+\hlstd{ex1} \hlkwb{<-} \hlkwd{nnet}\hlstd{(arr_delay} \hlopt{~} \hlstd{.,} \hlkwc{size} \hlstd{=} \hlnum{5}\hlstd{,} \hlkwc{linout} \hlstd{=} \hlnum{TRUE}\hlstd{,} \hlkwc{data} \hlstd{= tomod)}
+\hlstd{ex2} \hlkwb{<-} \hlkwd{nnet}\hlstd{(arr_delay} \hlopt{~} \hlstd{.,} \hlkwc{size} \hlstd{=} \hlnum{5}\hlstd{,} \hlkwc{linout} \hlstd{=} \hlnum{TRUE}\hlstd{,} \hlkwc{data} \hlstd{= tomod)}
+
+\hlcom{# view olden results }
+\hlkwd{olden}\hlstd{(ex1)}
+\hlkwd{olden}\hlstd{(ex2)}
+\end{alltt}
+\end{kframe}
 
 \section[Conclusions]{Conclusions}
 
-The \pkg{NeuralNetTools} package provides a simple approach that improves the quality of information obtained from a feed-forward \ac{mlp} neural network.  Functions in the package can be used to visualize a neural network using a \acl{nid} (\code{plotnet}), evaluate variable importance (\code{garson}, \code{olden}), and conduct a sensitivity analysis \code{lekprofile}.  Methods are available for the most downloaded \ac{CRAN} packages that can create neural networks (\pkg{caret}, \pkg{neuralnet}, \pkg{nnet}, \pkg{RSNNS}), whereas additional methods will be made available based on future popularity of the remaining packages (\pkg{AMORE}, \pkg{FCNN4R}, \pkg{monmlp}, \pkg{qrnn}).  An additional objective of the package is to dispel the myth that supervised neural networks for prediction are `black boxes' that provide no information about underlying relationships between the variables \citep{Olden02}.  Although neural networks are considered complex relative to more conventional approaches, the theoretical foundation of the technique has many parallels with traditional modelling techniques that allow insight into causation.  For example, network weights are partially analagous to intercept and slope parameters in a standard regression model such that the estimates can be used to characterize variable interactions.  More over, the model fitting process requires the minimization of an objective function such that conventional techniques to evaluate model sensitivity or performance that apply to other models can be used with neural networks.  Common performance metrics can be used to select an optimal model, whereas functions in \pkg{NeuralNetTools} can provide a practical means of post-hoc assessment. 
+The \pkg{NeuralNetTools} package provides a simple approach that improves the quality of information obtained from a feed-forward \ac{mlp} neural network.  Functions in the package can be used to visualize a neural network using a \acl{nid} (\code{plotnet}), evaluate variable importance (\code{garson}, \code{olden}), and conduct a sensitivity analysis (\code{lekprofile}).  Methods are available for the most used \ac{CRAN} packages that can create neural networks (\pkg{caret}, \pkg{neuralnet}, \pkg{nnet}, \pkg{RSNNS}), whereas additional methods will be made available based on future popularity of the remaining packages (\pkg{AMORE}, \pkg{FCNN4R}, \pkg{monmlp}, \pkg{qrnn}).  A primary objective of the package is to dispel the myth that supervised neural networks for prediction are `black boxes' that provide no information about underlying relationships between the variables \citep{Paruelo97,Olden02}.  Although neural networks are considered complex relative to more conventional approaches, the theoretical foundation has many parallels with traditional modelling techniques that can allow insight into causation.  Moreover, the model fitting process requires the minimization of an objective function such that conventional techniques to evaluate model sensitivity or performance (e.g., cross-validation) can be used with neural networks.  Functions in \pkg{NeuralNetTools} can facilitate the selection of the optimal network architecture or can be used for post-hoc assessment. 
 
-A more compelling issue is when and how to apply neural networks given alternative methods for data-intensive exploration.  A common opinion is that the potential for insight is positively related to model complexity and the relaxation of assumptions required for more constrained methods ().  Indeed, the `neural' component of neural networks is a reference to the network of impulses in the human brain that lead to learning.  This perception has likely contributed to the popularity of the method, although the appeal may be misinformed in practice depending on the dataset or question of interest.  Numerous examples have shown that the \ac{mlp} network may provide comparable insight into variable relationships or predicictive performance as more conventional methods.  As such, the neural network should be considered a tool in the larger toolbox of data-intensive methods that should be used after examination of the tradeoffs between techniques.  For example, an appropriate method should be chosen based on power given the sample size, expected interactions between variables, distributional forms of the response, and other relevant concerns that are considered during exploratory data analysis.  The true value of the \pkg{NeuralNetTools} package is a set of analysis tools that can inform a more balanced assessment given the alternative and complementary methods for data-intensive exploration.
+A more compelling issue is when and how to apply neural networks given alternative methods for data-intensive exploration.  The popularity of the \ac{mlp} neural network is partially the cause of misperceptions and generalizations of their benefits as modelling tools \citep{Burke97}. Indeed, the `neural' component of neural networks is advertised as a mathematical representation of the network of synaptic impulses in the human brain, although the former is of course an over-simplification of the latter.  Several examples have shown that the \ac{mlp} network may provide comparable predictive performance as similar statistical methods \citep{Feng02,Razi05,Beck14a}.  As such, the neural network should be considered a tool in the larger toolbox of data-intensive methods that should be used after examination of the tradeoffs between techniques, with particular emphasis on the needs of a given dataset or research question.  For example, an appropriate method should be chosen based on power given the sample size, expected linear or non-linear interactions between variables, distributional forms of the response, and other relevant concerns that are routinely considered during exploratory data analysis.  The true value of the \pkg{NeuralNetTools} package is a set of analysis tools that can inform a more balanced assessment given the alternative and complementary methods for data-intensive exploration.
 
 \section[Acknowledgments]{Acknowledgments}
  
