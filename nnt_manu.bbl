@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -220,6 +220,12 @@ Wickham H (2009).
 \newblock Springer. New York.
 \newblock ISBN 978-0-387-98140-6.
 \newblock \urlprefix\url{http://had.co.nz/ggplot2/book}.
+
+\bibitem[{Wickham(2014)}]{Wickham14b}
+Wickham H (2014).
+\newblock \emph{nycflights13: Data about flights departing NYC in 2013.}
+\newblock R package version 0.1,
+  \urlprefix\url{http://CRAN.R-project.org/package=nycflights13}.
 
 \bibitem[{Zell \emph{et~al.}(1998)Zell, Mamier, Vogt, Mache, H\"{u}bner,
   D\"{o}ring, Herrmann, Soyez, Schmalzl, Sommer, Hatzigeorgiou, Posselt,

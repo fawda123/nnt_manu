@@ -58,7 +58,7 @@ Functions within this package can be used for the interpretation of neural netwo
 <<setup, include = F, cache = F>>=
 library(knitr)
 # set global chunk options
-opts_chunk$set(fig.path = 'figs/', fig.align = 'center', fig.show = 'hold', message = F, results = 'asis', dev = 'pdf', dev.args = list(family = 'serif'), fig.pos = '!ht', warning = F)
+opts_chunk$set(fig.path = 'figs/', fig.align = 'center', fig.show = 'hold', message = F, results = 'asis', dev = 'pdf', dev.args = list(family = 'serif'), fig.pos = '!ht', warning = F, cache = T)
 options(replace.assign = TRUE, digits = 1)
 
 # other libs
@@ -137,7 +137,7 @@ library(NeuralNetTools)
 
 \pkg{NeuralNetTools} includes four main functions that were developed following techniques described in \citet{Olden02} and references therein.  These functions include \code{plotnet} to plot a neural network interpretation diagram, \code{garson} and \code{olden} functions to evaluate variable importance, and \code{lekprofile} for a sensitivity analysis of neural network response to input variables.  Most of the functions require the extraction of model weights in a common format for each of the neural network object classes in \proglang{R}.  The \code{neuralweights} function can be used to retrieve model weights for any of the model classes describe above.  A two-element \code{list} is returned with the first element describing the structure of the network and the second element as a named list of weight values for the input model.  The function is used internally within the main package functions but may be useful for comparing networks of different object classes.
 
-A sample dataset is also included with \pkg{NeuralNetTools}.  The \code{neuraldat} dataset is a simple \code{data.frame} with 300 rows of observations and columns for two response variables (\code{Y1} and \code{Y2}) and three input variables (\code{X1}, \code{X2}, and \code{X3}.  The input variables are random observations from a standard normal distribution and the response variables are linear combinations of the input variables with additional random components.  The response variables are also standardized from zero to one.  A common approach for data preprocessing prior to creating a neural network is to normalize the input variables and to standardize the response variables \citep{Lek00,Olden02}.  Novel datasets can be preprocessed to this common format using the \code{scale} function from \pkg{base} and the \code{rescale} function from \pkg{scales} for the input and response variables, respectively.  The examples below use three models created from the \code{neuraldat} dataset and include \code{mlp} (\pkg{RSNNS}), \code{nn} (\pkg{RSNNS}), and \code{nnet} (\pkg{nnet}) objects (note the syntax differences).
+A sample dataset is also included with \pkg{NeuralNetTools}.  The \code{neuraldat} dataset is a simple \code{data.frame} with 2000 rows of observations and columns for two response variables (\code{Y1} and \code{Y2}) and three input variables (\code{X1}, \code{X2}, and \code{X3}.  The input variables are random observations from a standard normal distribution and the response variables are linear combinations of the input variables with additional random components.  The response variables are also standardized from zero to one.  A common approach for data preprocessing prior to creating a neural network is to normalize the input variables and to standardize the response variables \citep{Lek00,Olden02}.  Novel datasets can be preprocessed to this common format using the \code{scale} function from \pkg{base} and the \code{rescale} function from \pkg{scales} for the input and response variables, respectively.  The examples below use three models created from the \code{neuraldat} dataset and include \code{mlp} (\pkg{RSNNS}), \code{nn} (\pkg{RSNNS}), and \code{nnet} (\pkg{nnet}) objects (note the syntax differences).
 
 <<eval = T, echo= F, message = F>>=
 library(NeuralNetTools)
@@ -327,7 +327,7 @@ lekprofile(mod3, group_vals = 6, group_show = TRUE) + theme(plot.margin = grid::
 
 \section[Applied example]{Applied example}
 
-Although \pkg{NeuralnetTools} provides several methods to extract information from a neural network, it does not provide explicit guidance for developing the initial model.  A more challenging aspect is understanding the effects of network architecture, use of training and validation datasets, and implications for the bias-variance tradeoff with model over- or under-fitting during model development.  A detailed discussion of these issues is beyond the scope of this paper, although an example application is presented below to introduce a `best practices' approach to neural network development.  The models presented above, including the \code{neuraldat} dataset, are contrived examples to illustrate use of the \pkg{NeuralNetTools} package and they do not demonstrate a comprehensive application of neural networks in practice.  Several texts provide explicit guidelines on developing neural network models \cite[e.g.,][]{Ripley96, Lek00, Maier00}.  In general, the following should be considered during model development:
+Although \pkg{NeuralnetTools} provides several methods to extract information from a neural network, it does not provide explicit guidance for developing the initial model.  A potentially more challenging aspect of using neural netwworks is understanding the effects of network architecture, appropriate use of training and validation datasets, and implications for the bias-variance tradeoff with model over- or under-fitting during model development.  A detailed discussion of these issues is beyond the scope of this paper, although an example application is presented below to introduce a `best practices' approach to model development.  The models presented above, including the \code{neuraldat} dataset, are contrived examples to illustrate use of the \pkg{NeuralNetTools} package and they do not demonstrate a comprehensive application of neural networks in practice.  Several texts provide explicit guidelines on developing neural network models \cite[e.g.,][]{Ripley96, Lek00, Maier00}.  In general, the following should be considered during model development:
 \begin{itemize}
 \item Initial data pre-processing to normalize inputs and standardize response,
 \item Network architecture including number of hidden layers, number of nodes in each hidden layer, inclusion of bias or skip layers, pruning weights or inputs,
@@ -336,29 +336,142 @@ Although \pkg{NeuralnetTools} provides several methods to extract information fr
 \item Criteria for stopping model training iterations, e.g., error convergance tolerance, maximum number of iterations, minimum error on test dataset, etc.
 \end{itemize}
 
-<<eval = F>>=
-library(nycflights13)
+A dataset from the \pkg{nycflights13} package \citep{Wickham14b} is used to demonstrate the effects of different training methods on model conclusions.  This dataset describes flight data for all flights departing New York City (i.e., JFK, LGA, or EWR) in 2013.  The example focuses on all flights from the `UA' carrier in the month of December to identify variables that potentially influence arrival delays (\code{arr\_delay}) at the destination airport.  Factors potentially related to delays were selected from the dataset and included departure delay (\code{dep\_delay}), departure time (\code{dep\_time}), arrival time (\code{arr\_time}), travel time between desinations (\code{air\_time}), and distance flown (\code{distance}).  All explanatory variables are normalized and the response variable is standardized to 0--1.  
+
+The effects of network architecture and initial starting weights on indications of variable importance were evaluated by creating a large number of models and assessing the uncertainty of the importance measures.  Models with one, five, or ten hidden nodes and 100 separate models for each node level with a different set of random starting weights were evaluated.  The relative importance of the variables was saved for each model and combined in a single plot to show overall variable importance as the median and 5\textsuperscript{th}/95\textsuperscript{th} percentiles from the 100 models for each node level (get \href{code}{}). 
+
+Several conclusions about the dataset and effects of network architecture can be made from the results in \cref{fig:flightimp}.  First, delays in arrival time are consistently negatively related to distance travelled and positively related to departure delays and time in the air.  That is, flights arrived later than their scheduled destination time if flight time was long or if their departure was delayed, whereas flights arrived earlier than scheduled for longer distances.  Second, the indications of importance varied in the range of magnitude between the models (i.e., one node  varied +/- 1 and the others +/- 3).  This result suggests that the absolute values of importance only have relevance within a model, whereas only the relative rankings (e.g., least, most important) can be compared between models.  Third and most important, the level of uncertainty for specific variables can be large between model fits for the same architecture (i.e., effect of random starting weights).  This conclusion emphasizes that a single model can often provide misleading information about variable importance such that several fits are often required before results are stabilized.  Additional considerations described above (e.g., criteria for stopping training, use of training and test datasets) can also affect conclusions of variable importance and should be equally considered during model development.
+<<echo = F>>=
+# library(nnet)
+# library(NeuralNetTools)
+# library(dplyr)
+# library(tidyr)
+# library(ggplot2)
+# library(nycflights13)
+# 
+# # data preprocessing
+# # select UA carrier for month of december and relevant variables
+# # normalize and standardize variables
+# tomod <- filter(flights, month == 12 & carrier == 'UA') %>% 
+#   select(arr_delay, dep_delay, dep_time, arr_time, air_time, distance) %>%
+#   mutate_each(funs(scale), -arr_delay) %>% 
+#   mutate_each(funs(as.numeric), -arr_delay) %>% 
+#   mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>% 
+#   data.frame
+# 
+# # setup initial conditions
+# nodes <- c(1, 5, 10)
+# seeds <- sample(c(1:5000), 100)
+# grids <- expand.grid(nodes, seeds)
+# names(grids) <- c('nodes', 'seeds') 
+# 
+# # iterate through conditions
+# imp_vals <- vector('list', nrow(grids))
+# for(i in 1:nrow(grids)){
+#   
+#   cat(i, '\t')
+#   
+#   # get specific conditions
+#   seed_val <- grids[i, 'seeds']
+#   set.seed(seed_val)
+#   node_val <- grids[i, 'nodes']
+# 
+#   # create model
+#   mod <- nnet(arr_delay ~ ., size = node_val, linout = TRUE, data = tomod, trace = F)  
+# 
+#   # get importance, append to output
+#   imp <- olden(mod, bar_plot = FALSE)
+#   imp_vals[[i]] <- imp
+#   
+# }
+# 
+# # summarize
+# imp_sums <- do.call('cbind', imp_vals)
+# nms <- row.names(imp_sums)
+# imp_sums <- t(imp_sums)
+# names(imp_sums) <- nms
+# row.names(imp_sums) <- 1:nrow(imp_sums)
+# imp_sums <- data.frame(grids, imp_sums) %>% 
+#   gather('variable', 'importance', -nodes, -seeds) %>% 
+#   group_by(nodes, variable) %>% 
+#   do((function(x) {
+#        
+#     out <- quantile(x$importance, c(0.05, 0.5, 0.95))
+#     out <- data.frame(t(out))
+#     names(out) <- c('lo', 'med', 'hi')
+# 
+#     out
+#       
+#   })(.)) %>% 
+#   data.frame
+# 
+# save(imp_sums, file = 'imp_sums.RData')
+
 library(dplyr)
+library(ggplot2)
 
-# data preprocessing
-# select UA carrior for month of december and relevant variables
-# normalize and standardize variables
-tomod <- filter(flights, month == 12 & carrier == 'UA') %>% 
-  select(arr_delay, dep_delay, dep_time, arr_time, air_time, distance) %>%
-  mutate_each(funs(scale), -arr_delay) %>% 
-  mutate_each(funs(as.numeric), -arr_delay) %>% 
-  mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>% 
-  data.frame
+load(file = 'imp_sums.RData')
 
-# create two models
-# random starting weights are different for each
-ex1 <- nnet(arr_delay ~ ., size = 5, linout = TRUE, data = tomod)  
-ex2 <- nnet(arr_delay ~ ., size = 5, linout = TRUE, data = tomod)  
+# subet by nodes so barplots can be ordered by medians
+toplo1 <- filter(imp_sums, nodes == 1) %>% 
+  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+toplo2 <- filter(imp_sums, nodes == 5) %>% 
+  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+toplo3 <- filter(imp_sums, nodes == 10) %>% 
+  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
 
-# view olden results 
-olden(ex1)
-olden(ex2)
+# widths
+wd <- 0.3
+ylims <- c(-3.93, 3.49)
+
+p1 <- ggplot(toplo1, aes(x = variable, y = med, fill = med)) + 
+  geom_bar(stat = 'identity') + 
+  geom_errorbar(aes(ymin = lo, ymax = hi), width = wd) + 
+  theme_bw() +
+  theme(axis.title.x = element_blank(), legend.position = 'none') +
+  scale_y_continuous('Importance', limits = ylims)
+
+p2 <- ggplot(toplo2, aes(x = variable, y = med, fill = med)) + 
+  geom_bar(stat = 'identity') + 
+  geom_errorbar(aes(ymin = lo, ymax = hi), width = wd) + 
+  theme_bw() +
+  theme(axis.title.x = element_blank(), legend.position = 'none') +
+  scale_y_continuous('Importance', limits = ylims)
+  
+p3 <- ggplot(toplo3, aes(x = variable, y = med, fill = med)) + 
+  geom_bar(stat = 'identity') + 
+  geom_errorbar(aes(ymin = lo, ymax = hi), width = wd) + 
+  theme_bw() +
+  theme(axis.title.x = element_blank(), legend.position = 'none') +
+  scale_y_continuous('Importance', limits = ylims)
+
 @
+
+\begin{figure}
+\centering
+\subfloat[][Networks with one node]{
+<<flightimp-1, fig.height = 3, fig.width = 8, out.width = '0.95\\textwidth', echo = F>>=
+print(p1)
+@
+\label{fig:flightimp1}
+}
+
+\subfloat[][Networks with five nodes]{
+<<flightimp-2, fig.height = 3, fig.width = 8, out.width = '0.95\\textwidth', echo = F>>=
+print(p2)
+@
+\label{fig:flightimp2}
+}
+
+\subfloat[][Networks with ten nodes]{
+<<flightimp-3, fig.height = 3, fig.width = 8, out.width = '0.95\\textwidth', echo = F>>=
+print(p3)
+@
+\label{fig:flightimp3}
+}
+\caption{Uncertainty in variable importance estimates for three neural networks to evaluate factors related to arrival delays for flights departing New York City.  Three model types with one, five, and ten nodes were evaluated with 100 models with different starting weights for each type.}
+\label{fig:flightimp}
+\end{figure}
 
 \section[Conclusions]{Conclusions}
 
@@ -368,7 +481,7 @@ A more compelling issue is when and how to apply neural networks given alternati
 
 \section[Acknowledgments]{Acknowledgments}
  
-I would like to thank Dr. Bruce Wilson and Dr. Sanford Weisberg of the University of Minnesota for general guidance during the development of this package.  Contributions and suggestions from online users have also greatly improved the utility of the package.    
+I would like to thank Bruce Vondracek, Sanford Weisberg, and Bruce Wilson of the University of Minnesota for general guidance during the development of this package.  Contributions and suggestions from online users have also greatly improved the utility of the package.    
 
 % note that ref titles need to be in title-case 
 \bibliographystyle{jss}
