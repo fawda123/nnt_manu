@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{38}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -39,6 +39,11 @@ Cannon AJ (2015).
 \newblock \emph{monmlp: Monotone Multi-Layer Perceptron Neural Network}.
 \newblock R package version 1.1.3,
   \urlprefix\url{http://CRAN.R-project.org/package=monmlp}.
+
+\bibitem[{Cheng and Titterington(1994)}]{Cheng94}
+Cheng B, Titterington DM (1994).
+\newblock \enquote{Neural networks: A review from a statistical perspective.}
+\newblock \emph{Statistical Science}, \textbf{9}(1), 2--54.
 
 \bibitem[{Csardi(2015)}]{Csardi15}
 Csardi G (2015).
@@ -237,5 +242,11 @@ Zell A, Mamier G, Vogt M, Mache N, H\"{u}bner R, D\"{o}ring S, Herrmann KU,
   Version 4.2}.
 \newblock University of Stuttgart and WSI, University of T\"{u}bingen,
   \urlprefix\url{http://www.ra.cs.uni-tuebingen.de/SNNS/}.
+
+\bibitem[{Zuur \emph{et~al.}(2010)Zuur, Ieno, and Elphick}]{Zuur10}
+Zuur AF, Ieno EN, Elphick CS (2010).
+\newblock \enquote{A protocol for data exploration to avoid common statistical
+  problems.}
+\newblock \emph{Methods in Ecology and Evolution}, \textbf{1}(1), 3--14.
 
 \end{thebibliography}
