@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{39}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -21,6 +21,11 @@ Bergmeir C, Ben\'itez JM (2012).
   Simulator: {RSNNS}.}
 \newblock \emph{Journal of Statistical Software}, \textbf{46}(7), 1--26.
 \newblock \urlprefix\url{http://www.jstatsoft.org/v46/i07/}.
+
+\bibitem[{Bishop(1995)}]{Bishop95}
+Bishop CM (1995).
+\newblock \emph{Neuronal Networks for Pattern Recognition}.
+\newblock Carendon Press, Oxford, United Kingdom.
 
 \bibitem[{Burke and Ignizio(1997)}]{Burke97}
 Burke L, Ignizio JP (1997).
