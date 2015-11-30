@@ -15,6 +15,11 @@ Beck MW, Wilson BN, Vondracek B, Hatch LK (2014).
   Indices of Biotic Integrity for Biological Monitoring.}
 \newblock \emph{Ecological Indicators}, \textbf{45}, 195--208.
 
+\bibitem[{Bell \emph{et~al.}(2009)Bell, Hey, and Szalay}]{Bell09}
+Bell G, Hey T, Szalay A (2009).
+\newblock \enquote{Beyond the Data Deluge.}
+\newblock \emph{Science}, \textbf{323}(5919), 1297--1298.
+
 \bibitem[{Bergmeir and Ben\'itez(2012)}]{Bergmeir12}
 Bergmeir C, Ben\'itez JM (2012).
 \newblock \enquote{Neural Networks in \proglang{R} Using the Stuttgart Neural Network
@@ -164,6 +169,12 @@ McCulloch WS, Pitts W (1943).
   Activity.}
 \newblock \emph{Bulletin of Mathematical Biophysics}, \textbf{5}, 115--133.
 
+\bibitem[{Michener and Jones(2012)}]{Michener12}
+Michener WK, Jones MB (2012).
+\newblock \enquote{Ecoinformatics: Supporting Ecology as a Data-Intensive
+  Science.}
+\newblock \emph{Trends in Ecology and Evolution}, \textbf{27}(2), 85--93.
+
 \bibitem[{Olden and Jackson(2002)}]{Olden02}
 Olden JD, Jackson DA (2002).
 \newblock \enquote{Illuminating the ``Black Box'': A Randomization Approach for
@@ -194,6 +205,11 @@ Razi MA, Athappilly K (2005).
   ({NN}s), Nonlinear Regression and Classification and Regression Tree ({CART})
   Models.}
 \newblock \emph{Expert Systems and Applications}, \textbf{29}(1), 65--74.
+
+\bibitem[{Recknagel(2006)}]{Recknagel06}
+Recknagel F (2006).
+\newblock \emph{Ecological Informatics: Scope, Techniques and Applications}.
+\newblock 2nd edition. Springer-Verlag, Berlin, Germany.
 
 \bibitem[{Ripley(1996)}]{Ripley96}
 Ripley BD (1996).

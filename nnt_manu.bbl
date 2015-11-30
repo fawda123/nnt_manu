@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{42}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -11,9 +11,14 @@
 
 \bibitem[{Beck \emph{et~al.}(2014)Beck, Wilson, Vondracek, and Hatch}]{Beck14a}
 Beck MW, Wilson BN, Vondracek B, Hatch LK (2014).
-\newblock \enquote{Application of Neural Networks to Quantify the Utility of
-  Indices of Biotic Integrity for Biological Monitoring.}
+\newblock \enquote{Application of neural networks to quantify the utility of
+  indices of biotic integrity for biological monitoring.}
 \newblock \emph{Ecological Indicators}, \textbf{45}, 195--208.
+
+\bibitem[{Bell \emph{et~al.}(2009)Bell, Hey, and Szalay}]{Bell09}
+Bell G, Hey T, Szalay A (2009).
+\newblock \enquote{Beyond the data deluge.}
+\newblock \emph{Science}, \textbf{323}(5919), 1297--1298.
 
 \bibitem[{Bergmeir and Ben\'itez(2012)}]{Bergmeir12}
 Bergmeir C, Ben\'itez JM (2012).
@@ -29,13 +34,13 @@ Bishop CM (1995).
 
 \bibitem[{Burke and Ignizio(1997)}]{Burke97}
 Burke L, Ignizio JP (1997).
-\newblock \enquote{A Practical Overview of Neural Networks.}
+\newblock \enquote{A practical overview of neural networks.}
 \newblock \emph{Journal of Intelligent Manufacturing}, \textbf{8}(3), 157--165.
 
 \bibitem[{Cannon(2011)}]{Cannon11}
 Cannon AJ (2011).
-\newblock \enquote{Quantile Regression Neural Networks: Implementation in R and
-  Application to Precipitation Downscaling.}
+\newblock \enquote{Quantile regression neural networks: implementation in R and
+  application to precipitation downscaling.}
 \newblock \emph{Computers \& Geosciences}, \textbf{37}, 1277--1284.
   doi:10.1016/j.cageo.2010.07.005.
 
@@ -47,7 +52,7 @@ Cannon AJ (2015).
 
 \bibitem[{Cheng and Titterington(1994)}]{Cheng94}
 Cheng B, Titterington DM (1994).
-\newblock \enquote{Neural Networks: A Review from a Statistical Perspective.}
+\newblock \enquote{Neural networks: A review from a statistical perspective.}
 \newblock \emph{Statistical Science}, \textbf{9}(1), 2--54.
 
 \bibitem[{Csardi(2015)}]{Csardi15}
@@ -58,65 +63,65 @@ Csardi G (2015).
 
 \bibitem[{Feng and Wang(2002)}]{Feng02}
 Feng CX, Wang X (2002).
-\newblock \enquote{Digitizing Uncertainty Modeling for Reverse Engineering
-  Applications: Regression Versus Neural Networks.}
+\newblock \enquote{Digitizing uncertainty modeling for reverse engineering
+  applications: regression versus neural networks.}
 \newblock \emph{Journal of Intelligent Manufacturing}, \textbf{13}(3),
   189--199.
 
 \bibitem[{Fritsch and Guenther(2012)}]{Fritsch12}
 Fritsch S, Guenther F (2012).
-\newblock \emph{neuralnet: Training of Neural Networks}.
+\newblock \emph{neuralnet: Training of neural networks}.
 \newblock R package version 1.32,
   \urlprefix\url{http://CRAN.R-project.org/package=neuralnet}.
 
 \bibitem[{Garson(1991)}]{Garson91}
 Garson GD (1991).
-\newblock \enquote{Interpreting Neural Network Connection Weights.}
+\newblock \enquote{Interpreting neural network connection weights.}
 \newblock \emph{Artificial Intelligence Expert}, \textbf{6}(4), 46--51.
 
 \bibitem[{Gevrey \emph{et~al.}(2003)Gevrey, Dimopoulos, and Lek}]{Gevrey03}
 Gevrey M, Dimopoulos I, Lek S (2003).
-\newblock \enquote{Review and Comparison of Methods to Study the Contribution
-  of Variables in Artificial Neural Network Models.}
+\newblock \enquote{Review and comparison of methods to study the contribution
+  of variables in artificial neural network models.}
 \newblock \emph{Ecological Modelling}, \textbf{160}(3), 249--264.
 
 \bibitem[{Goh(1995)}]{Goh95}
 Goh ATC (1995).
-\newblock \enquote{Back-propagation Neural Networks for Modeling Complex
-  Systems.}
+\newblock \enquote{Back-propagation neural networks for modeling complex
+  systems.}
 \newblock \emph{Artificial Intelligence in Engineering}, \textbf{9}(3),
   143--151.
 
 \bibitem[{Hartigan and Wong(1979)}]{Hartigan79}
 Hartigan JA, Wong MA (1979).
-\newblock \enquote{A K-means Clustering Algorithm.}
+\newblock \enquote{A K-means clustering algorithm.}
 \newblock \emph{Applied Statistics}, \textbf{28}(1), 100--108.
 
 \bibitem[{Hornik(1991)}]{Hornik91}
 Hornik K (1991).
-\newblock \enquote{Approximation Capabilities of Multilayer Feedforward
-  Networks.}
+\newblock \enquote{Approximation capabilities of multilayer feedforward
+  networks.}
 \newblock \emph{Neural Networks}, \textbf{4}(2), 251--257.
 
 \bibitem[{Jain \emph{et~al.}(2000)Jain, Duin, and Mao}]{Jain00}
 Jain AK, Duin RPW, Mao JC (2000).
-\newblock \enquote{Statistical Pattern Recognition: A review.}
+\newblock \enquote{Statistical pattern recognition: A review.}
 \newblock \emph{{IEEE} Transactions on Pattern Analysis and Machine
   Intelligence}, \textbf{22}(1), 4--37.
 
 \bibitem[{Kell and Oliver(2003)}]{Kell03}
 Kell DB, Oliver SG (2003).
-\newblock \enquote{Here is the Evidence, Now What is the Hypothesis? {T}he
-  Complementary Roles of Inductive and Hypothesis-Driven Science in the
-  Post-Genomic Era.}
+\newblock \enquote{Here is the evidence, now what is the hypothesis? {T}he
+  complementary roles of inductive and hypothesis-driven science in the
+  post-genomic era.}
 \newblock \emph{BioEssays}, \textbf{26}(1), 99--105.
 
 \bibitem[{Kelling \emph{et~al.}(2009)Kelling, Hochachka, Fink, Riedewald,
   Caruana, Ballard, and Hooker}]{Kelling09}
 Kelling S, Hochachka WM, Fink D, Riedewald M, Caruana R, Ballard G, Hooker G
   (2009).
-\newblock \enquote{Data-Intensive Science: A New Paradigm for Biodiversity
-  Studies.}
+\newblock \enquote{Data-intensive science: A new paradigm for biodiversity
+  studies.}
 \newblock \emph{BioScience}, \textbf{59}(7), 613--620.
 
 \bibitem[{Klima(2015)}]{Klima15}
@@ -133,8 +138,8 @@ Kuhn M (2015).
 \bibitem[{Lek \emph{et~al.}(1996)Lek, Delacoste, Baran, Dimopoulos, Lauga, and
   Aulagnier}]{Lek96}
 Lek S, Delacoste M, Baran P, Dimopoulos I, Lauga J, Aulagnier S (1996).
-\newblock \enquote{Application of Neural Networks to Modelling Nonlinear
-  Relationships in Ecology.}
+\newblock \enquote{Application of neural networks to modelling nonlinear
+  relationships in ecology.}
 \newblock \emph{Ecological Modelling}, \textbf{90}(1), 39--52.
 
 \bibitem[{Lek and Gu\'{e}gan(2000)}]{Lek00}
@@ -147,53 +152,64 @@ Lek S, Gu\'{e}gan JF (2000).
   de~Pis\'{o}n~Ascacibar, Espinoza, El\'{i}as, and Ramos}]{Castejon14}
 Limas MC, Mer\'{e} JBO, Marcos AG, de~Pis\'{o}n~Ascacibar FJM, Espinoza AVP,
   El\'{i}as FA, Ramos JMP (2014).
-\newblock \emph{AMORE: A MORE Flexible Neural Network Package}.
+\newblock \emph{AMORE: A MORE flexible neural network package}.
 \newblock R package version 0.2-15,
   \urlprefix\url{http://CRAN.R-project.org/package=AMORE}.
 
 \bibitem[{Maier and Dandy(2000)}]{Maier00}
 Maier HR, Dandy GC (2000).
-\newblock \enquote{Neural Networks for the Prediction and Forecasting of Water
-  Resources Variables: A Review of Modelling Issues and Applications.}
+\newblock \enquote{Neural networks for the prediction and forecasting of water
+  resources variables: A review of modelling issues and applications.}
 \newblock \emph{Environmental Modelling and Software}, \textbf{15}(1),
   101--124.
 
 \bibitem[{McCulloch and Pitts(1943)}]{McCulloch43}
 McCulloch WS, Pitts W (1943).
-\newblock \enquote{A Logical Calculus of the Ideas Imminent in Nervous
-  Activity.}
+\newblock \enquote{A logical calculus of the ideas imminent in nervous
+  activity.}
 \newblock \emph{Bulletin of Mathematical Biophysics}, \textbf{5}, 115--133.
+
+\bibitem[{Michener and Jones(2012)}]{Michener12}
+Michener WK, Jones MB (2012).
+\newblock \enquote{Ecoinformatics: supporting ecology as a data-intensive
+  science.}
+\newblock \emph{Trends in Ecology and Evolution}, \textbf{27}(2), 85--93.
 
 \bibitem[{Olden and Jackson(2002)}]{Olden02}
 Olden JD, Jackson DA (2002).
-\newblock \enquote{Illuminating the ``Black Box'': A Randomization Approach for
-  Understanding Variable Contributions in Artifical Neural Networks.}
+\newblock \enquote{Illuminating the ``black box'': A randomization approach for
+  understanding variable contributions in artifical neural networks.}
 \newblock \emph{Ecological Modelling}, \textbf{154}(1-2), 135--150.
 
 \bibitem[{Olden \emph{et~al.}(2004)Olden, Joy, and Death}]{Olden04}
 Olden JD, Joy MK, Death RG (2004).
-\newblock \enquote{An Accurate Comparison of Methods for Quantifying Variable
-  Importance in Artificial Neural Networks Using Simulated Data.}
+\newblock \enquote{An accurate comparison of methods for quantifying variable
+  importance in artificial neural networks using simulated data.}
 \newblock \emph{Ecological Modelling}, \textbf{178}(3-4), 389--397.
 
 \bibitem[{\"{O}zesmi and \"{O}zesmi(1999)}]{Ozesmi99}
 \"{O}zesmi SL, \"{O}zesmi U (1999).
-\newblock \enquote{An Artificial Neural Network Approach to Spatial Habitat
-  Modelling with Interspecific Interaction.}
+\newblock \enquote{An artificial neural network approach to spatial habitat
+  modelling with interspecific interaction.}
 \newblock \emph{Ecological Modelling}, \textbf{116}(1), 15--31.
 
 \bibitem[{Paruelo and Tomasel(1997)}]{Paruelo97}
 Paruelo JM, Tomasel F (1997).
-\newblock \enquote{Prediction of Functional Characteristics of Ecosystems: A
-  Comparison of Artificial Neural Networks and Regression Models.}
+\newblock \enquote{Prediction of functional characteristics of ecosystems: A
+  comparison of artificial neural networks and regression models.}
 \newblock \emph{Ecological Modelling}, \textbf{98}(2-3), 173--186.
 
 \bibitem[{Razi and Athappilly(2005)}]{Razi05}
 Razi MA, Athappilly K (2005).
-\newblock \enquote{A Comparative Predictive Analysis of Neural Networks
-  ({NN}s), Nonlinear Regression and Classification and Regression Tree ({CART})
-  Models.}
+\newblock \enquote{A comparative predictive analysis of neural networks
+  ({NN}s), nonlinear regression and classification and regression tree ({CART})
+  models.}
 \newblock \emph{Expert Systems and Applications}, \textbf{29}(1), 65--74.
+
+\bibitem[{Recknagel(2006)}]{Recknagel06}
+Recknagel F (2006).
+\newblock \emph{Ecological Informatics: Scope, Techniques and Applications}.
+\newblock second edition. Springer-Verlag, Berlin, Germany.
 
 \bibitem[{Ripley(1996)}]{Ripley96}
 Ripley BD (1996).
@@ -203,19 +219,19 @@ Ripley BD (1996).
 \bibitem[{Rumelhart \emph{et~al.}(1986)Rumelhart, Hinton, and
   Williams}]{Rumelhart86}
 Rumelhart DE, Hinton GE, Williams RJ (1986).
-\newblock \enquote{Learning Representations by Back-propagating Errors.}
+\newblock \enquote{Learning representations by back-propagating errors.}
 \newblock \emph{Nature}, \textbf{323}(6088), 533--536.
 
 \bibitem[{Saeys \emph{et~al.}(2007)Saeys, Inza, and {n}aga}]{Saeys07}
 Saeys Y, Inza I, {n}aga PL (2007).
-\newblock \enquote{A Review of Feature Selection Techniques in Bioinformatics.}
+\newblock \enquote{A review of feature selection techniques in bioinformatics.}
 \newblock \emph{Bioinformatics}, \textbf{23}(19), 2507--2517.
 
 \bibitem[{Swanson \emph{et~al.}(2015)Swanson, Kosmala, Lintott, Simpson, Smith,
   and Packer}]{Swanson15}
 Swanson A, Kosmala M, Lintott C, Simpson R, Smith A, Packer C (2015).
-\newblock \enquote{{S}napshot {S}erengeti: High-Frequency Annotated Camera Trap
-  Images of 40 Mammalian Species in {A}frican Savanna.}
+\newblock \enquote{{S}napshot {S}erengeti: High-frequency annotated camera trap
+  images of 40 mammalian species in {A}frican savanna.}
 \newblock \emph{Scientific Data}, \textbf{2}, 150026.
 
 \bibitem[{Venables and Ripley(2002)}]{Venables02}
@@ -233,7 +249,7 @@ Wickham H (2009).
 
 \bibitem[{Wickham(2014)}]{Wickham14b}
 Wickham H (2014).
-\newblock \emph{nycflights13: Data about Flights Departing NYC in 2013.}
+\newblock \emph{nycflights13: Data about flights departing NYC in 2013.}
 \newblock R package version 0.1,
   \urlprefix\url{http://CRAN.R-project.org/package=nycflights13}.
 
@@ -250,8 +266,8 @@ Zell A, Mamier G, Vogt M, Mache N, H\"{u}bner R, D\"{o}ring S, Herrmann KU,
 
 \bibitem[{Zuur \emph{et~al.}(2010)Zuur, Ieno, and Elphick}]{Zuur10}
 Zuur AF, Ieno EN, Elphick CS (2010).
-\newblock \enquote{A Protocol for Data Exploration to Avoid Common Statistical
-  Problems.}
+\newblock \enquote{A protocol for data exploration to avoid common statistical
+  problems.}
 \newblock \emph{Methods in Ecology and Evolution}, \textbf{1}(1), 3--14.
 
 \end{thebibliography}
