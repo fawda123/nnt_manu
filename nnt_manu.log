@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  30 NOV 2015 13:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  30 NOV 2015 16:41
 entering extended mode
 **nnt_manu.tex
 (M:\docs\manuscripts\nnt_manu\nnt_manu.tex
@@ -404,28 +404,28 @@ Package caption Info: hyperref package is loaded.
 \sf@bottom=\skip58
 )
 (M:\docs\manuscripts\nnt_manu\nnt_manu.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 110.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
 
 (C:\Users\mbeck\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -442,7 +442,7 @@ LaTeX Font Info:    ... okay on input line 111.
 \everyMPtoPDFconversion=\toks17
 )
 \AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring ON on input line 111.
+Package hyperref Info: Link coloring ON on input line 110.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -451,9 +451,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count118
 )
-LaTeX Info: Redefining \ref on input line 111.
-LaTeX Info: Redefining \pageref on input line 111.
-LaTeX Info: Redefining \nameref on input line 111.
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
 
 (M:\docs\manuscripts\nnt_manu\nnt_manu.out)
 (M:\docs\manuscripts\nnt_manu\nnt_manu.out)
@@ -462,22 +462,22 @@ LaTeX Info: Redefining \nameref on input line 111.
 <jsslogo.jpg, id=39, 540.0175pt x 393.47pt>
 File: jsslogo.jpg Graphic file (type jpg)
  <use jsslogo.jpg>
-Package pdftex.def Info: jsslogo.jpg used on input line 111.
+Package pdftex.def Info: jsslogo.jpg used on input line 110.
 (pdftex.def)             Requested size: 89.80768pt x 65.43607pt.
-LaTeX Font Info:    Try loading font information for T1+pzc on input line 111.
+LaTeX Font Info:    Try loading font information for T1+pzc on input line 110.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pzc.fd"
 File: t1pzc.fd 2001/06/04 font definitions for T1/pzc.
 )
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <28> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 111.
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 110.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 111.
+(Font)              <10.95> on input line 110.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 111.
+(Font)              <8> on input line 110.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 111.
-LaTeX Font Info:    Try loading font information for T1+aess on input line 111.
+(Font)              <6> on input line 110.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 110.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
@@ -494,24 +494,24 @@ Underfull \vbox (badness 3482) has occurred while \output is active []
 {C:/Users/mbeck/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <M:/docs/man
 uscripts/nnt_manu/jsslogo.jpg>]
 Package acronym Info: Label `acro:mlp' newly defined as it shall be overridden
-although it is yet undefined on input line 119.
+although it is yet undefined on input line 118.
 Package acronym Info: Label `acro:nid' newly defined as it shall be overridden
-although it is yet undefined on input line 121.
+although it is yet undefined on input line 120.
 Package acronym Info: Label `acro:CRAN' newly defined as it shall be overridden
 
-although it is yet undefined on input line 123.
+although it is yet undefined on input line 122.
 
 Underfull \vbox (badness 1810) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/aer/b/sl' in size <10.95> not available
-(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 124.
+(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 123.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 2 []
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 137.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 136.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -521,48 +521,48 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [3]
-Package color Info: Redefining color shadecolor on input line 144.
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 155
+Package color Info: Redefining color shadecolor on input line 143.
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 154
 .
  (C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\ts1aett.fd
 File: ts1aett.fd 
 )
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 155
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 154
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `TS1/aett/m/n' in size <10.95> not available
-(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 155.
+(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 154.
+Package color Info: Redefining color shadecolor on input line 164.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 4 []
  []
 
 [4]
-Package color Info: Redefining color shadecolor on input line 165.
-Package color Info: Redefining color shadecolor on input line 194.
+Package color Info: Redefining color shadecolor on input line 193.
  <figs/plotnet-1.pdf, id=199, 397.485pt x 397.485pt>
 File: figs/plotnet-1.pdf Graphic file (type pdf)
 
 <use figs/plotnet-1.pdf>
-Package pdftex.def Info: figs/plotnet-1.pdf used on input line 202.
+Package pdftex.def Info: figs/plotnet-1.pdf used on input line 201.
 (pdftex.def)             Requested size: 213.40141pt x 213.40141pt.
  <figs/plotnet-2.pdf, id=200, 397.485pt x 397.485pt>
 File: figs/plotnet-2.pdf Graphic file (type pdf)
 
 <use figs/plotnet-2.pdf>
-Package pdftex.def Info: figs/plotnet-2.pdf used on input line 203.
+Package pdftex.def Info: figs/plotnet-2.pdf used on input line 202.
 (pdftex.def)             Requested size: 213.40141pt x 213.40141pt.
-Package color Info: Redefining color shadecolor on input line 216.
+Package color Info: Redefining color shadecolor on input line 215.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 5
  []
 
 [5]
-Overfull \hbox (4.89291pt too wide) in paragraph at lines 225--225
+Overfull \hbox (4.89291pt too wide) in paragraph at lines 224--224
 []\T1/aett/m/n/10.95 R> modskip <- nnet(Y1 ~ X1 + X2 + X3, data = neuraldat, si
 ze = 5, skip = TRUE)[] 
  []
@@ -571,30 +571,30 @@ ze = 5, skip = TRUE)[]
 File: figs/plotnet_skip-1.pdf Graphic file (type pdf)
 
 <use figs/plotnet_skip-1.pdf>
-Package pdftex.def Info: figs/plotnet_skip-1.pdf used on input line 228.
+Package pdftex.def Info: figs/plotnet_skip-1.pdf used on input line 227.
 (pdftex.def)             Requested size: 213.40141pt x 213.40141pt.
 
 <figs/plotnet_skip-2.pdf, id=217, 397.485pt x 397.485pt>
 File: figs/plotnet_skip-2.pdf Graphic file (type pdf)
 
 <use figs/plotnet_skip-2.pdf>
-Package pdftex.def Info: figs/plotnet_skip-2.pdf used on input line 229.
+Package pdftex.def Info: figs/plotnet_skip-2.pdf used on input line 228.
 (pdftex.def)             Requested size: 213.40141pt x 213.40141pt.
-Package color Info: Redefining color shadecolor on input line 242.
+Package color Info: Redefining color shadecolor on input line 241.
 
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 255--255
+Overfull \hbox (22.10625pt too wide) in paragraph at lines 254--254
 []\T1/aett/m/n/10.95 R> pruneFuncParams <- list(max_pr_error_increase = 10.0, p
 r_accepted_error = 1.0,[] 
  []
 
 
-Overfull \hbox (4.89291pt too wide) in paragraph at lines 255--255
+Overfull \hbox (4.89291pt too wide) in paragraph at lines 254--254
 []\T1/aett/m/n/10.95 R> # plot, pruned connections are omitted (default) or inc
 luded with prune_col[] 
  []
 
 
-Overfull \vbox (0.363pt too high) detected at line 256
+Overfull \vbox (0.363pt too high) detected at line 255
  []
 
 
@@ -607,14 +607,14 @@ anu/figs/plotnet-2.pdf>] <figs/plotprune-1.pdf, id=246, 556.0775pt x 505.89pt>
 File: figs/plotprune-1.pdf Graphic file (type pdf)
 
 <use figs/plotprune-1.pdf>
-Package pdftex.def Info: figs/plotprune-1.pdf used on input line 258.
+Package pdftex.def Info: figs/plotprune-1.pdf used on input line 257.
 (pdftex.def)             Requested size: 212.4719pt x 193.29773pt.
 
 <figs/plotprune-2.pdf, id=247, 556.0775pt x 505.89pt>
 File: figs/plotprune-2.pdf Graphic file (type pdf)
 
 <use figs/plotprune-2.pdf>
-Package pdftex.def Info: figs/plotprune-2.pdf used on input line 259.
+Package pdftex.def Info: figs/plotprune-2.pdf used on input line 258.
 (pdftex.def)             Requested size: 212.4719pt x 193.29773pt.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
@@ -623,7 +623,7 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 
 [7 <M:/docs/manuscripts/nnt_manu/figs/plotnet_skip-1.pdf> <M:/docs/manuscripts/
 nnt_manu/figs/plotnet_skip-2.pdf>]
-Package color Info: Redefining color shadecolor on input line 280.
+Package color Info: Redefining color shadecolor on input line 279.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 8 []
@@ -631,58 +631,58 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 
 [8 <M:/docs/manuscripts/nnt_manu/figs/plotprune-1.pdf> <M:/docs/manuscripts/nnt
 _manu/figs/plotprune-2.pdf>]
-Package color Info: Redefining color shadecolor on input line 307.
+Package color Info: Redefining color shadecolor on input line 306.
 
 <figs/plotimp-1-1.pdf, id=315, 289.08pt x 144.54pt>
 File: figs/plotimp-1-1.pdf Graphic file (type pdf)
  <use figs/plotimp-1-1.pdf>
-Package pdftex.def Info: figs/plotimp-1-1.pdf used on input line 307.
+Package pdftex.def Info: figs/plotimp-1-1.pdf used on input line 306.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
-Package color Info: Redefining color shadecolor on input line 320.
+Package color Info: Redefining color shadecolor on input line 319.
 
 <figs/plotimp-2-1.pdf, id=316, 289.08pt x 144.54pt>
 File: figs/plotimp-2-1.pdf Graphic file (type pdf)
  <use figs/plotimp-2-1.pdf>
-Package pdftex.def Info: figs/plotimp-2-1.pdf used on input line 320.
+Package pdftex.def Info: figs/plotimp-2-1.pdf used on input line 319.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
-Overfull \hbox (9.90485pt too wide) in paragraph at lines 307--321
+Overfull \hbox (9.90485pt too wide) in paragraph at lines 306--320
  [][][][] 
  []
 
-Package color Info: Redefining color shadecolor on input line 334.
+Package color Info: Redefining color shadecolor on input line 333.
 <figs/plotimp-3-1.pdf, id=317, 289.08pt x 144.54pt>
 File: figs/plotimp-3-1.pdf Graphic file (type pdf)
  <use figs/plotimp-3-1.pdf>
-Package pdftex.def Info: figs/plotimp-3-1.pdf used on input line 334.
+Package pdftex.def Info: figs/plotimp-3-1.pdf used on input line 333.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
-Package color Info: Redefining color shadecolor on input line 347.
+Package color Info: Redefining color shadecolor on input line 346.
 
 <figs/plotimp-4-1.pdf, id=318, 289.08pt x 144.54pt>
 File: figs/plotimp-4-1.pdf Graphic file (type pdf)
  <use figs/plotimp-4-1.pdf>
-Package pdftex.def Info: figs/plotimp-4-1.pdf used on input line 347.
+Package pdftex.def Info: figs/plotimp-4-1.pdf used on input line 346.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
-Overfull \hbox (9.90485pt too wide) in paragraph at lines 334--348
+Overfull \hbox (9.90485pt too wide) in paragraph at lines 333--347
  [][][][] 
  []
 
-Package color Info: Redefining color shadecolor on input line 361.
+Package color Info: Redefining color shadecolor on input line 360.
 <figs/plotimp-5-1.pdf, id=319, 289.08pt x 144.54pt>
 File: figs/plotimp-5-1.pdf Graphic file (type pdf)
  <use figs/plotimp-5-1.pdf>
-Package pdftex.def Info: figs/plotimp-5-1.pdf used on input line 361.
+Package pdftex.def Info: figs/plotimp-5-1.pdf used on input line 360.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
-Package color Info: Redefining color shadecolor on input line 374.
+Package color Info: Redefining color shadecolor on input line 373.
 
 <figs/plotimp-6-1.pdf, id=320, 289.08pt x 144.54pt>
 File: figs/plotimp-6-1.pdf Graphic file (type pdf)
  <use figs/plotimp-6-1.pdf>
-Package pdftex.def Info: figs/plotimp-6-1.pdf used on input line 374.
+Package pdftex.def Info: figs/plotimp-6-1.pdf used on input line 373.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
-Overfull \hbox (9.90485pt too wide) in paragraph at lines 361--375
+Overfull \hbox (9.90485pt too wide) in paragraph at lines 360--374
  [][][][] 
  []
 
@@ -695,38 +695,38 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 _manu/figs/plotimp-2-1.pdf> <M:/docs/manuscripts/nnt_manu/figs/plotimp-3-1.pdf>
  <M:/docs/manuscripts/nnt_manu/figs/plotimp-4-1.pdf> <M:/docs/manuscripts/nnt_m
 anu/figs/plotimp-5-1.pdf> <M:/docs/manuscripts/nnt_manu/figs/plotimp-6-1.pdf>]
-Package color Info: Redefining color shadecolor on input line 387.
-Package color Info: Redefining color shadecolor on input line 418.
+Package color Info: Redefining color shadecolor on input line 386.
+Package color Info: Redefining color shadecolor on input line 417.
 
 <figs/plotlek_sens1-1.pdf, id=401, 578.16pt x 180.675pt>
 File: figs/plotlek_sens1-1.pdf Graphic file (type pdf)
 
 <use figs/plotlek_sens1-1.pdf>
-Package pdftex.def Info: figs/plotlek_sens1-1.pdf used on input line 418.
+Package pdftex.def Info: figs/plotlek_sens1-1.pdf used on input line 417.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
-Package color Info: Redefining color shadecolor on input line 432.
+Package color Info: Redefining color shadecolor on input line 431.
 
 <figs/plotlek_sens2-1.pdf, id=402, 578.16pt x 180.675pt>
 File: figs/plotlek_sens2-1.pdf Graphic file (type pdf)
 
 <use figs/plotlek_sens2-1.pdf>
-Package pdftex.def Info: figs/plotlek_sens2-1.pdf used on input line 432.
+Package pdftex.def Info: figs/plotlek_sens2-1.pdf used on input line 431.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
-Package color Info: Redefining color shadecolor on input line 452.
+Package color Info: Redefining color shadecolor on input line 451.
 
 <figs/plotlek_bars1-1.pdf, id=411, 578.16pt x 180.675pt>
 File: figs/plotlek_bars1-1.pdf Graphic file (type pdf)
 
 <use figs/plotlek_bars1-1.pdf>
-Package pdftex.def Info: figs/plotlek_bars1-1.pdf used on input line 452.
+Package pdftex.def Info: figs/plotlek_bars1-1.pdf used on input line 451.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
-Package color Info: Redefining color shadecolor on input line 466.
+Package color Info: Redefining color shadecolor on input line 465.
 
 <figs/plotlek_bars2-1.pdf, id=412, 578.16pt x 180.675pt>
 File: figs/plotlek_bars2-1.pdf Graphic file (type pdf)
 
 <use figs/plotlek_bars2-1.pdf>
-Package pdftex.def Info: figs/plotlek_bars2-1.pdf used on input line 466.
+Package pdftex.def Info: figs/plotlek_bars2-1.pdf used on input line 465.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -746,42 +746,42 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 
 [12 <M:/docs/manuscripts/nnt_manu/figs/plotlek_bars1-1.pdf> <M:/docs/manuscript
 s/nnt_manu/figs/plotlek_bars2-1.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 475.
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 474.
 
 
 (C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\ts1aer.fd
 File: ts1aer.fd 
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10.95> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 475.
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 474.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 13
  []
 
 [13]
-Package color Info: Redefining color shadecolor on input line 503.
+Package color Info: Redefining color shadecolor on input line 502.
  <figs/flightimp-1-1.pdf, id=489, 578.16pt x 216.81pt>
 File: figs/flightimp-1-1.pdf Graphic file (type pdf)
 
 <use figs/flightimp-1-1.pdf>
-Package pdftex.def Info: figs/flightimp-1-1.pdf used on input line 503.
+Package pdftex.def Info: figs/flightimp-1-1.pdf used on input line 502.
 (pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
-Package color Info: Redefining color shadecolor on input line 517.
+Package color Info: Redefining color shadecolor on input line 516.
 
 <figs/flightimp-2-1.pdf, id=490, 578.16pt x 216.81pt>
 File: figs/flightimp-2-1.pdf Graphic file (type pdf)
 
 <use figs/flightimp-2-1.pdf>
-Package pdftex.def Info: figs/flightimp-2-1.pdf used on input line 517.
+Package pdftex.def Info: figs/flightimp-2-1.pdf used on input line 516.
 (pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
-Package color Info: Redefining color shadecolor on input line 531.
+Package color Info: Redefining color shadecolor on input line 530.
 
 <figs/flightimp-3-1.pdf, id=491, 578.16pt x 216.81pt>
 File: figs/flightimp-3-1.pdf Graphic file (type pdf)
 
 <use figs/flightimp-3-1.pdf>
-Package pdftex.def Info: figs/flightimp-3-1.pdf used on input line 531.
+Package pdftex.def Info: figs/flightimp-3-1.pdf used on input line 530.
 (pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
 
 
@@ -824,8 +824,8 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 
 [17])
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 554.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 554.
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 553.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 18 []
@@ -837,18 +837,18 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 554.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 553.
  (M:\docs\manuscripts\nnt_manu\nnt_manu.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 554.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 554.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 553.
 Package rerunfilecheck Info: File `nnt_manu.out' has not changed.
 (rerunfilecheck)             Checksum: EBBF90D68488496A5C40C697E9BCBE2C;791.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 554.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 553.
  ) 
 Here is how much of TeX's memory you used:
  10350 strings out of 493921
  167310 string characters out of 3147282
- 264187 words of memory out of 3000000
+ 264094 words of memory out of 3000000
  13338 multiletter control sequences out of 15000+200000
  61899 words of font info for 104 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -873,7 +873,7 @@ nts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfchan/uz
 cmi8a.pfb>
-Output written on nnt_manu.pdf (19 pages, 475708 bytes).
+Output written on nnt_manu.pdf (19 pages, 475592 bytes).
 PDF statistics:
  664 PDF objects out of 1000 (max. 8388607)
  110 named destinations out of 1000 (max. 500000)

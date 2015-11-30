@@ -14,7 +14,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% almost as usual
-\author{Marcus W. Beck\\Oak Ridge Institute for Science and Education\\US Environmental Protection Agency}
+\author{Marcus W. Beck\\US Environmental Protection Agency}
 \title{\pkg{NeuralNetTools}: Visualization and Analysis Tools for Neural Networks}
 
 %% for pretty printing and a nice hypersummary also set:
@@ -43,7 +43,6 @@ Supervised neural networks have been applied as a machine learning technique to 
 %% in the following format:
 \Address{
   Marcus W. Beck\\
-  Oak Ridge Institude for Science and Education\\
   US Environmental Protection Agency\\
   National Health and Environmental Effects Research Laboratory\\
   Gulf Ecology Division, 1 Sabine Island Drive\\
