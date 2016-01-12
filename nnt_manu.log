@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  12 JAN 2016 08:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  12 JAN 2016 09:27
 entering extended mode
 **nnt_manu.tex
 (M:\docs\manuscripts\nnt_manu\nnt_manu.tex
@@ -515,19 +515,19 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [3]
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 94.
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 93.
 
  (C:/PROGRA~1/R/R-32~1.3/share/texmf/tex/latex\ts1aett.fd
 File: ts1aett.fd 
 )
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 94.
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 93.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `TS1/aett/m/sl' in size <10.95> not available
-(Font)              Font shape `TS1/cmtt/m/sl' tried instead on input line 94.
+(Font)              Font shape `TS1/cmtt/m/sl' tried instead on input line 93.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 4 []
@@ -537,110 +537,107 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 File: figs/plotnet.pdf Graphic file (type pdf)
 
 <use figs/plotnet.pdf, page 1>
-Package pdftex.def Info: figs/plotnet.pdf, page1 used on input line 136.
+Package pdftex.def Info: figs/plotnet.pdf, page1 used on input line 126.
 (pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
 
 <figs/plotnet.pdf, id=201, page=2, 397.485pt x 397.485pt>
 File: figs/plotnet.pdf Graphic file (type pdf)
 
 <use figs/plotnet.pdf, page 2>
-Package pdftex.def Info: figs/plotnet.pdf, page2 used on input line 140.
+Package pdftex.def Info: figs/plotnet.pdf, page2 used on input line 130.
 (pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
 
-Overfull \hbox (2.36908pt too wide) in paragraph at lines 136--141
+Overfull \hbox (2.36908pt too wide) in paragraph at lines 126--131
 [][][][] 
  []
 
-<figs/plotnet_skip.pdf, id=209, page=1, 397.485pt x 397.485pt>
-File: figs/plotnet_skip.pdf Graphic file (type pdf)
-
-<use figs/plotnet_skip.pdf, page 1>
-Package pdftex.def Info: figs/plotnet_skip.pdf, page1 used on input line 151.
-(pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
-
-<figs/plotnet_skip.pdf, id=210, page=2, 397.485pt x 397.485pt>
-File: figs/plotnet_skip.pdf Graphic file (type pdf)
-
-<use figs/plotnet_skip.pdf, page 2>
-Package pdftex.def Info: figs/plotnet_skip.pdf, page2 used on input line 155.
-(pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 5
  []
 
-[5]
+[5 <M:/docs/manuscripts/nnt_manu/figs/plotnet.pdf> <M:/docs/manuscripts/nnt_man
+u/figs/plotnet.pdf>]
+<figs/plotnet_skip.pdf, id=225, page=1, 397.485pt x 397.485pt>
+File: figs/plotnet_skip.pdf Graphic file (type pdf)
 
-LaTeX Warning: Text page 6 contains only floats.
+<use figs/plotnet_skip.pdf, page 1>
+Package pdftex.def Info: figs/plotnet_skip.pdf, page1 used on input line 141.
+(pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
 
+<figs/plotnet_skip.pdf, id=226, page=2, 397.485pt x 397.485pt>
+File: figs/plotnet_skip.pdf Graphic file (type pdf)
+
+<use figs/plotnet_skip.pdf, page 2>
+Package pdftex.def Info: figs/plotnet_skip.pdf, page2 used on input line 145.
+(pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
+
+<figs/plotprune.pdf, id=236, page=1, 556.0775pt x 505.89pt>
+File: figs/plotprune.pdf Graphic file (type pdf)
+
+<use figs/plotprune.pdf, page 1>
+Package pdftex.def Info: figs/plotprune.pdf, page1 used on input line 167.
+(pdftex.def)             Requested size: 212.4719pt x 193.29773pt.
+
+<figs/plotprune.pdf, id=237, page=2, 556.0775pt x 505.89pt>
+File: figs/plotprune.pdf Graphic file (type pdf)
+
+<use figs/plotprune.pdf, page 2>
+Package pdftex.def Info: figs/plotprune.pdf, page2 used on input line 171.
+(pdftex.def)             Requested size: 212.4719pt x 193.29773pt.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 6 []
  []
 
-[6 <M:/docs/manuscripts/nnt_manu/figs/plotnet.pdf> <M:/docs/manuscripts/nnt_man
-u/figs/plotnet.pdf> <M:/docs/manuscripts/nnt_manu/figs/plotnet_skip.pdf> <M:/do
-cs/manuscripts/nnt_manu/figs/plotnet_skip.pdf>]
-<figs/plotprune.pdf, id=249, page=1, 556.0775pt x 505.89pt>
-File: figs/plotprune.pdf Graphic file (type pdf)
-
-<use figs/plotprune.pdf, page 1>
-Package pdftex.def Info: figs/plotprune.pdf, page1 used on input line 180.
-(pdftex.def)             Requested size: 212.4719pt x 193.29773pt.
-
-<figs/plotprune.pdf, id=250, page=2, 556.0775pt x 505.89pt>
-File: figs/plotprune.pdf Graphic file (type pdf)
-
-<use figs/plotprune.pdf, page 2>
-Package pdftex.def Info: figs/plotprune.pdf, page2 used on input line 184.
-(pdftex.def)             Requested size: 212.4719pt x 193.29773pt.
-
+[6 <M:/docs/manuscripts/nnt_manu/figs/plotnet_skip.pdf> <M:/docs/manuscripts/nn
+t_manu/figs/plotnet_skip.pdf>]
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 7
  []
 
 [7 <M:/docs/manuscripts/nnt_manu/figs/plotprune.pdf> <M:/docs/manuscripts/nnt_m
 anu/figs/plotprune.pdf>]
-<figs/plotimp.pdf, id=295, page=1, 289.08pt x 144.54pt>
+<figs/plotimp.pdf, id=296, page=1, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
 
 <use figs/plotimp.pdf, page 1>
-Package pdftex.def Info: figs/plotimp.pdf, page1 used on input line 215.
+Package pdftex.def Info: figs/plotimp.pdf, page1 used on input line 200.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
-<figs/plotimp.pdf, id=296, page=2, 289.08pt x 144.54pt>
+<figs/plotimp.pdf, id=297, page=2, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
 
 <use figs/plotimp.pdf, page 2>
-Package pdftex.def Info: figs/plotimp.pdf, page2 used on input line 219.
+Package pdftex.def Info: figs/plotimp.pdf, page2 used on input line 204.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
-<figs/plotimp.pdf, id=297, page=3, 289.08pt x 144.54pt>
+<figs/plotimp.pdf, id=298, page=3, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
 
 <use figs/plotimp.pdf, page 3>
-Package pdftex.def Info: figs/plotimp.pdf, page3 used on input line 224.
+Package pdftex.def Info: figs/plotimp.pdf, page3 used on input line 209.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
-<figs/plotimp.pdf, id=298, page=4, 289.08pt x 144.54pt>
+<figs/plotimp.pdf, id=299, page=4, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
 
 <use figs/plotimp.pdf, page 4>
-Package pdftex.def Info: figs/plotimp.pdf, page4 used on input line 228.
+Package pdftex.def Info: figs/plotimp.pdf, page4 used on input line 213.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
-<figs/plotimp.pdf, id=299, page=5, 289.08pt x 144.54pt>
+<figs/plotimp.pdf, id=300, page=5, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
 
 <use figs/plotimp.pdf, page 5>
-Package pdftex.def Info: figs/plotimp.pdf, page5 used on input line 233.
+Package pdftex.def Info: figs/plotimp.pdf, page5 used on input line 218.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
-<figs/plotimp.pdf, id=300, page=6, 289.08pt x 144.54pt>
+<figs/plotimp.pdf, id=301, page=6, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
 
 <use figs/plotimp.pdf, page 6>
-Package pdftex.def Info: figs/plotimp.pdf, page6 used on input line 237.
+Package pdftex.def Info: figs/plotimp.pdf, page6 used on input line 222.
 (pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
 
@@ -652,9 +649,6 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 9
  []
@@ -663,103 +657,101 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 u/figs/plotimp.pdf> <M:/docs/manuscripts/nnt_manu/figs/plotimp.pdf> <M:/docs/ma
 nuscripts/nnt_manu/figs/plotimp.pdf> <M:/docs/manuscripts/nnt_manu/figs/plotimp
 .pdf> <M:/docs/manuscripts/nnt_manu/figs/plotimp.pdf>]
-<figs/plotlek_sens.pdf, id=365, page=1, 578.16pt x 180.675pt>
+<figs/plotlek_sens.pdf, id=375, page=1, 578.16pt x 180.675pt>
 File: figs/plotlek_sens.pdf Graphic file (type pdf)
 
 <use figs/plotlek_sens.pdf, page 1>
-Package pdftex.def Info: figs/plotlek_sens.pdf, page1 used on input line 266.
+Package pdftex.def Info: figs/plotlek_sens.pdf, page1 used on input line 247.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
 
-<figs/plotlek_sens.pdf, id=366, page=2, 578.16pt x 180.675pt>
+<figs/plotlek_sens.pdf, id=376, page=2, 578.16pt x 180.675pt>
 File: figs/plotlek_sens.pdf Graphic file (type pdf)
 
 <use figs/plotlek_sens.pdf, page 2>
-Package pdftex.def Info: figs/plotlek_sens.pdf, page2 used on input line 271.
+Package pdftex.def Info: figs/plotlek_sens.pdf, page2 used on input line 252.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
 
-<figs/plotlek_bars.pdf, id=375, page=1, 578.16pt x 180.675pt>
+<figs/plotlek_bars.pdf, id=385, page=1, 578.16pt x 180.675pt>
 File: figs/plotlek_bars.pdf Graphic file (type pdf)
 
 <use figs/plotlek_bars.pdf, page 1>
-Package pdftex.def Info: figs/plotlek_bars.pdf, page1 used on input line 282.
+Package pdftex.def Info: figs/plotlek_bars.pdf, page1 used on input line 263.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
 
-<figs/plotlek_bars.pdf, id=376, page=2, 578.16pt x 180.675pt>
+<figs/plotlek_bars.pdf, id=386, page=2, 578.16pt x 180.675pt>
 File: figs/plotlek_bars.pdf Graphic file (type pdf)
 
 <use figs/plotlek_bars.pdf, page 2>
-Package pdftex.def Info: figs/plotlek_bars.pdf, page2 used on input line 287.
+Package pdftex.def Info: figs/plotlek_bars.pdf, page2 used on input line 268.
 (pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 296.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 10 []
+ []
+
+[10 <M:/docs/manuscripts/nnt_manu/figs/plotlek_sens.pdf> <M:/docs/manuscripts/n
+nt_manu/figs/plotlek_sens.pdf>]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/aer/m/n/10.95 11
+ []
+
+[11 <M:/docs/manuscripts/nnt_manu/figs/plotlek_bars.pdf> <M:/docs/manuscripts/n
+nt_manu/figs/plotlek_bars.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 277.
 
 
 (C:/PROGRA~1/R/R-32~1.3/share/texmf/tex/latex\ts1aer.fd
 File: ts1aer.fd 
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10.95> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 296.
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 277.
 
-Overfull \hbox (10.94998pt too wide) has occurred while \output is active
-\T1/aer/m/n/10.95 10 []
- []
-
-[10]
-Overfull \hbox (10.94998pt too wide) has occurred while \output is active
-[] \T1/aer/m/n/10.95 11
- []
-
-[11 <M:/docs/manuscripts/nnt_manu/figs/plotlek_sens.pdf> <M:/docs/manuscripts/n
-nt_manu/figs/plotlek_sens.pdf>]
-Overfull \hbox (10.94998pt too wide) has occurred while \output is active
-\T1/aer/m/n/10.95 12 []
- []
-
-[12 <M:/docs/manuscripts/nnt_manu/figs/plotlek_bars.pdf> <M:/docs/manuscripts/n
-nt_manu/figs/plotlek_bars.pdf>]
-<figs/flightimp.pdf, id=432, page=1, 578.16pt x 216.81pt>
+<figs/flightimp.pdf, id=431, page=1, 578.16pt x 216.81pt>
 File: figs/flightimp.pdf Graphic file (type pdf)
 
 <use figs/flightimp.pdf, page 1>
-Package pdftex.def Info: figs/flightimp.pdf, page1 used on input line 313.
+Package pdftex.def Info: figs/flightimp.pdf, page1 used on input line 294.
 (pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
 
-<figs/flightimp.pdf, id=433, page=2, 578.16pt x 216.81pt>
+<figs/flightimp.pdf, id=432, page=2, 578.16pt x 216.81pt>
 File: figs/flightimp.pdf Graphic file (type pdf)
 
 <use figs/flightimp.pdf, page 2>
-Package pdftex.def Info: figs/flightimp.pdf, page2 used on input line 318.
+Package pdftex.def Info: figs/flightimp.pdf, page2 used on input line 299.
 (pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
 
-<figs/flightimp.pdf, id=434, page=3, 578.16pt x 216.81pt>
+<figs/flightimp.pdf, id=433, page=3, 578.16pt x 216.81pt>
 File: figs/flightimp.pdf Graphic file (type pdf)
 
 <use figs/flightimp.pdf, page 3>
-Package pdftex.def Info: figs/flightimp.pdf, page3 used on input line 323.
+Package pdftex.def Info: figs/flightimp.pdf, page3 used on input line 304.
 (pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 1286) has occurred while \output is active []
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 12 []
+ []
+
+[12]
+
+LaTeX Warning: Text page 13 contains only floats.
 
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 13
  []
 
-[13]
-
-LaTeX Warning: Text page 14 contains only floats.
-
-
+[13 <M:/docs/manuscripts/nnt_manu/figs/flightimp.pdf> <M:/docs/manuscripts/nnt_
+manu/figs/flightimp.pdf> <M:/docs/manuscripts/nnt_manu/figs/flightimp.pdf>]
+(M:\docs\manuscripts\nnt_manu\CopyOfnnt_manu.bbl
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 14 []
  []
 
-[14 <M:/docs/manuscripts/nnt_manu/figs/flightimp.pdf> <M:/docs/manuscripts/nnt_
-manu/figs/flightimp.pdf> <M:/docs/manuscripts/nnt_manu/figs/flightimp.pdf>]
-(M:\docs\manuscripts\nnt_manu\CopyOfnnt_manu.bbl
+[14]
 LaTeX Font Info:    Font shape `T1/aer/b/it' in size <10.95> not available
 (Font)              Font shape `T1/aer/bx/it' tried instead on input line 49.
 
@@ -775,37 +767,37 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 16 []
  []
 
-[16]
+[16])
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 327.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 327.
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 17
  []
 
-[17])
-LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 346.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 346.
-
+[17]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 18 []
  []
 
 [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 346.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 327.
  (M:\docs\manuscripts\nnt_manu\nnt_manu.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 346.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 346.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
 Package rerunfilecheck Info: File `nnt_manu.out' has not changed.
 (rerunfilecheck)             Checksum: EBBF90D68488496A5C40C697E9BCBE2C;791.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 346.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 327.
  ) 
 Here is how much of TeX's memory you used:
  10295 strings out of 493921
  166432 string characters out of 3147282
- 263322 words of memory out of 3000000
+ 264322 words of memory out of 3000000
  13297 multiletter control sequences out of 15000+200000
  62391 words of font info for 106 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,11n,47p,1705b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,47p,1777b,510s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\mbeck\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tcrm1095.pk> <C:\Users\mbeck\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\tcst1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
@@ -827,9 +819,9 @@ pe1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a.
 pfb>
-Output written on nnt_manu.pdf (18 pages, 451638 bytes).
+Output written on nnt_manu.pdf (18 pages, 450859 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
+ 606 PDF objects out of 1000 (max. 8388607)
  109 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -117,17 +117,10 @@ Methods in \pkg{NeuralNetTools} were written for several \proglang{R} packages t
 
 \section[Package structure]{Package structure}
 
-The stable release of \pkg{NeuralNetTools} can be installed from \ac{CRAN} and the development version can be installed from GitHub:
+The stable release of \pkg{NeuralNetTools} can be installed from \ac{CRAN} and loaded as follows:
 
 <<eval = F, echo = T>>=
-# install from CRAN
 install.packages('NeuralNetTools')
-library(NeuralNetTools)
-
-# install from GitHub
-install.package('devtools')
-library(devtools)
-install_github('fawda123/NeuralNetTools')
 library(NeuralNetTools)
 @
 
@@ -139,20 +132,13 @@ A common approach for data preprocessing is to normalize the input variables and
 library(NeuralNetTools)
 @
 <<results = hide>>=
-# set random seed for initial weights for training
 set.seed(123)
-
-# mlp object, RSNNS package
 library(RSNNS)
 x <- neuraldat[, c('X1', 'X2', 'X3')]
 y <- neuraldat[, 'Y1']
 mod1 <- mlp(x, y, size = 5)
-
-# nn object, neuralnet package
 library(neuralnet)
 mod2 <- neuralnet(Y1 ~ X1 + X2 + X3, data = neuraldat, hidden = 5)
-
-#nnet object, nnet package
 library(nnet)
 mod3 <- nnet(Y1 ~ X1 + X2 + X3, data = neuraldat, size = 5)
 @
@@ -227,15 +213,11 @@ plotnet(mod, prune_col = 'lightblue', rel_rsc = c(3, 8))
 dev.off()
 @
 <<eval = F, echo = T, results = hide>>=
-# pruned model using RSNNS
 pruneFuncParams <- list(max_pr_error_increase = 10.0, pr_accepted_error = 1.0,
   no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01, 
   init_matrix_value = 1e-6, input_pruning = TRUE, hidden_pruning = TRUE)
 mod <- mlp(x, y, size = 5, pruneFunc = "OptimalBrainSurgeon",
  pruneFuncParams = pruneFuncParams)
-
-# plot, pruned connections are omitted (default) or included with prune_col
-par(mar = c(0, 0, 0, 0))
 plotnet(mod, rel_rsc = c(3, 8))
 plotnet(mod, prune_col = 'lightblue', rel_rsc = c(3, 8))
 @
@@ -260,10 +242,8 @@ Garson's algorithm was originally described by \citet{Garson91} and further modi
 
 The \code{olden} function is a more flexible approach to evaluate variable importance using the connection weights algorithm \citep{Olden04}. This method calculates importance as the summed product of the raw input-hidden and hidden-output connection weights between each input and output node. An advantage is the relative contributions of each connection weight are maintained in both magnitude and sign. For example, connection weights that change sign (e.g., positive to negative) between the input-hidden to hidden-output layers would have a cancelling effect, whereas Garson's algorithm may provide different results based on the absolute magnitude. An additional advantage is that Olden's algorithm can evaluate neural networks with multiple hidden layers and response variables. The importance values assigned to each variable are also in units based on the summed product of the connection weights, whereas \code{garson} returns importance scaled from 0--1.
 
-Both functions have similar implementations and require only a model object as input.  The default output is a \pkg{ggplot2} bar plot \citep[i.e., \code{geom\_bar},][]{Wickham09} that shows the relative importance of each input variable in the model (\cref{fig:plotimp}).  The plot aesthetics are based on internal code that can be changed using conventional syntax for \pkg{ggplot2} applied to the output object.  The importance values can also be returned as a \code{data.frame} if \code{bar\_plot = FALSE}.  
-
+Both functions have similar implementations and require only a model object as input.  The default output is a \pkg{ggplot2} bar plot \citep[i.e., \code{geom\_bar},][]{Wickham09} that shows the relative importance of each input variable in the model (\cref{fig:plotimp}).  The plot aesthetics are based on internal code that can be changed using conventional syntax for \pkg{ggplot2} applied to the output object.  The importance values can also be returned as a \code{data.frame} if \code{bar\_plot = FALSE}.  Variable importance shown in \Cref{fig:plotimp} was estimated for each model:
 <<eval = F>>=
-# garson and olden functions for each model
 garson(mod1)
 olden(mod1)
 garson(mod2)
@@ -319,18 +299,11 @@ An alternative approach to evaluate variable interactions in a neural network is
 
 The \code{lekprofile} function evaluates the effects of input variables by returning a plot of model predictions across the range of values for each variable.  The remaining explanatory variables are held constant when evaluating the effects of each input variable.  The \code{lekprofile} function provides two options for setting constant values of unevaluated explanatory variables.  The first option follows the original profile method by holding unevaluated variables at different quantiles (e.g., minimum, 20th percentile, maximum, \cref{fig:plotlek_sens1,fig:plotlek_bars1}). This is implemented by creating a matrix where the number of rows is the number of observations in the original dataset and the number of columns is the number of explanatory variables. All explanatory variables are held at a chosen constant value (e.g., median), while the variable of interest is sequenced from its minimum to maximum value across the range of observations. This matrix is then used to predict values of the response variable from a fitted model object. This is repeated for each explanatory variable to obtain all response curves.  Constant values are set in \code{lekprofile} by passing one or more values in the range 0--1 to the \code{group\_vals} argument.  The default holds variables at the minimum, 20\textsuperscript{th}, 40\textsuperscript{th}, 60\textsuperscript{th}, 80\textsuperscript{th}, and maximum percentiles (i.e., \code{group\_vals = c(0, 0.2, 0.4, 0.6, 0.8, 1)}).  
 
-A second implementation of \code{lekprofile} is to group the unevaluated explanatory variables by natural groupings defined by the data. Covariance among predictors may present unlikely scenarios if all unevaluated variables are held at the same level (e.g., high values for one variable may be unlikely with high values for a second variable). The second option holds unevaluated variables at mean values defined by natural clusters in the data (\cref{fig:plotlek_sens2,fig:plotlek_bars2}). Clusters are identified using {\it k}-means clustering (\code{kmeans} from base \pkg{stats}, \citealt{Hartigan79}) of the input variables if the argument passed to \code{group_vals} is an integer value greater than one. The centers (means) of the clusters are then used as constant values for the unevaluated variables.  \citet{Beck14a} provide an example of the clustering method for \code{lekprofile} by evaluating response of a lake health index to different explanatory variables.  Lake clusters were identified given covariance among variables, such that holding explanatory variables at values defined by clusters created more ecologically valid response curves.  Both methods return similar plots, with additional options to visualize the groupings for unevaluated explanatory variables (\cref{fig:plotlek_bars}).  For the latter case, \code{split\_show = TRUE} will return a stacked bar plot for each group with heights within each bar proportional to the constant values.
+A second implementation of \code{lekprofile} is to group the unevaluated explanatory variables by natural groupings defined by the data. Covariance among predictors may present unlikely scenarios if all unevaluated variables are held at the same level (e.g., high values for one variable may be unlikely with high values for a second variable). The second option holds unevaluated variables at mean values defined by natural clusters in the data (\cref{fig:plotlek_sens2,fig:plotlek_bars2}). Clusters are identified using {\it k}-means clustering (\code{kmeans} from base \pkg{stats}, \citealt{Hartigan79}) of the input variables if the argument passed to \code{group_vals} is an integer value greater than one. The centers (means) of the clusters are then used as constant values for the unevaluated variables.  \citet{Beck14a} provide an example of the clustering method for \code{lekprofile} by evaluating response of a lake health index to different explanatory variables.  Lake clusters were identified given covariance among variables, such that holding explanatory variables at values defined by clusters created more ecologically valid response curves.  Both methods return similar plots, with additional options to visualize the groupings for unevaluated explanatory variables (\cref{fig:plotlek_bars}).  For the latter case, \code{group\_show = TRUE} will return a stacked bar plot for each group with heights within each bar proportional to the constant values.  Sensitivity profiles were created using the standard approach based on quantiles and using the alternative clustering method (\cref{fig:plotlek_sens}), including bar plots of the relative values for unevaluated explanatory variables (\cref{fig:plotlek_bars}).
 <<eval = F>>=
-# lek profile, quantile evaluation
 lekprofile(mod3)
-
-# lek profile, quantile groups 
 lekprofile(mod3, group_show = TRUE)
-
-# lek profile, cluster evaluation
 lekprofile(mod3, group_vals = 6)
-
-# lek profile, cluster groups
 lekprofile(mod3, group_vals = 6, group_show = TRUE)
 @
 <<echo = F, results = hide>>=
