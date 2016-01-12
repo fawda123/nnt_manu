@@ -1,50 +1,34 @@
-## # install from CRAN
-## install.packages('NeuralNetTools')
-## library(NeuralNetTools)
-## 
-## # install from GitHub
-## install.package('devtools')
-## library(devtools)
-## install_github('fawda123/NeuralNetTools')
-## library(NeuralNetTools)
-library(NeuralNetTools)
+## install.packages("NeuralNetTools")
+library("NeuralNetTools")
 
-# mlp object, RSNNS package
-library(RSNNS)
+set.seed(123)
+library("RSNNS")
 x <- neuraldat[, c('X1', 'X2', 'X3')]
 y <- neuraldat[, 'Y1']
 mod1 <- mlp(x, y, size = 5)
-
-# nn object, neuralnet package
-library(neuralnet)
+library("neuralnet")
 mod2 <- neuralnet(Y1 ~ X1 + X2 + X3, data = neuraldat, hidden = 5)
-
-#nnet object, nnet package
-library(nnet)
+library("nnet")
 mod3 <- nnet(Y1 ~ X1 + X2 + X3, data = neuraldat, size = 5)
+
 par(mar = c(0, 0, 0, 0))
 plotnet(mod3, nid = F, circle_col = 'grey', bord_col = 'grey')
 plotnet(mod3)
-# create a model with a skip layer
+
 modskip <- nnet(Y1 ~ X1 + X2 + X3, data = neuraldat, size = 5, skip = TRUE)
 
-# plot
 par(mar = c(0, 0, 0, 0))
 plotnet(modskip, skip = TRUE)
 plotnet(modskip)
-# pruned model using RSNNS
+
 pruneFuncParams <- list(max_pr_error_increase = 10.0, pr_accepted_error = 1.0,
-  no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01, 
+  no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01,
   init_matrix_value = 1e-6, input_pruning = TRUE, hidden_pruning = TRUE)
 mod <- mlp(x, y, size = 5, pruneFunc = "OptimalBrainSurgeon",
  pruneFuncParams = pruneFuncParams)
-
-# plot, pruned connections are omitted (default) or included with prune_col
-par(mar = c(0, 0, 0, 0))
 plotnet(mod, rel_rsc = c(3, 8))
 plotnet(mod, prune_col = 'lightblue', rel_rsc = c(3, 8))
 
-# garson and olden functions for each model
 garson(mod1)
 olden(mod1)
 garson(mod2)
@@ -52,26 +36,17 @@ olden(mod2)
 garson(mod3)
 olden(mod3)
 
-# lek profile, quantile evaluation
 lekprofile(mod3)
-
-# lek profile, quantile groups
 lekprofile(mod3, group_show = TRUE)
-
-# lek profile, cluster evaluation
 lekprofile(mod3, group_vals = 6)
-
-# lek profile, cluster groups
 lekprofile(mod3, group_vals = 6, group_show = TRUE)
 
-##
-# applied example
-library(nnet)
-library(NeuralNetTools)
-library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(nycflights13)
+library("nnet")
+library("NeuralNetTools")
+library("dplyr")
+library("tidyr")
+library("ggplot2")
+library("nycflights13")
 
 # data preprocessing
 # select UA carrier for month of december and relevant variables
@@ -128,9 +103,6 @@ imp_sums <- data.frame(grids, imp_sums) %>%
       
   })(.)) %>% 
   data.frame
-
-save(imp_sums, file = 'imp_sums.RData')
-load(file = 'imp_sums.RData')
 
 # subet by nodes so barplots can be ordered by medians
 toplo1 <- filter(imp_sums, nodes == 1) %>% 

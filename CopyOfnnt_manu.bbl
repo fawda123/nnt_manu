@@ -237,13 +237,13 @@ Swanson A, Kosmala M, Lintott C, Simpson R, Smith A, Packer C (2015).
 \bibitem[{Venables and Ripley(2002)}]{Venables02}
 Venables WN, Ripley BD (2002).
 \newblock \emph{Modern Applied Statistics with \proglang{S}}.
-\newblock Fourth edition. Springer, New York, New York.
+\newblock Fourth edition. Springer-Verlag, New York, New York.
 \newblock \urlprefix\url{http://www.stats.ox.ac.uk/pub/MASS4}.
 
 \bibitem[{Wickham(2009)}]{Wickham09}
 Wickham H (2009).
 \newblock \emph{\pkg{ggplot2}: Elegant Graphics for Data Analysis}.
-\newblock Springer. New York.
+\newblock Springer-Verlag. New York.
 \newblock ISBN 978-0-387-98140-6.
 \newblock \urlprefix\url{http://had.co.nz/ggplot2/book}.
 
