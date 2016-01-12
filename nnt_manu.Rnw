@@ -51,18 +51,16 @@ Supervised neural networks have been applied as a machine learning technique to 
   E-mail: \email{beck.marcus@epa.gov}
 }
 
-% knitr options
-<<setup, include = F, cache = F>>=
-library(knitr)
-# set global chunk options
-opts_chunk$set(fig.path = 'figs/', fig.align = 'center', fig.show = 'hold', message = F, dev = 'pdf', dev.args = list(family = 'serif'), fig.pos = '!ht', warning = F, cache = T, background = 'white', highlight = F, prompt = TRUE)
-options(replace.assign = TRUE, digits = 1, prompt="R> ")
+% options and libs
+<<echo = FALSE>>=
+# opts_chunk$set(fig.path = 'figs/', fig.align = 'center', fig.show = 'hold', message = F, dev = 'pdf', dev.args = list(family = 'serif'), fig.pos = '!ht', warning = F, cache = T, background = 'white', highlight = F, prompt = TRUE)
+options(digits = 1, prompt = 'R> ')
 
 # other libs
 library(ggplot2)
 @
 % get online bib file
-<<echo = FALSE, cache = FALSE>>=
+<<echo = FALSE>>=
 refs <- httr::GET('https://raw.githubusercontent.com/fawda123/refs/master/refs.bib')
 refs <- rawToChar(refs$content)
 writeLines(refs, con = file('refs.bib'))
@@ -71,6 +69,7 @@ writeLines(refs, con = file('refs.bib'))
 %% need no \usepackage{Sweave.sty}
 
 \begin{document}
+\SweaveOpts{concordance=FALSE}
 
 %% Note that you should use the \pkg{}, \proglang{} and \code{} commands.
 
@@ -136,10 +135,10 @@ library(NeuralNetTools)
 
 A common approach for data preprocessing is to normalize the input variables and to standardize the response variables \citep{Lek00,Olden02}.  A sample dataset that follows this format is included with \pkg{NeuralNetTools}.  The \code{neuraldat} dataset is a simple \code{data.frame} with 2000 rows of observations and five columns for two response variables (\code{Y1} and \code{Y2}) and three input variables (\code{X1}, \code{X2}, and \code{X3}).  The input variables are random observations from a standard normal distribution and the response variables are linear combinations of the input variables with additional random components.  The response variables are also standardized from zero to one.  Additional datasets can be preprocessed to this common format using the \code{scale} function from \pkg{base} and the \code{rescale} function from \pkg{scales} for the input and response variables, respectively.  The examples below use three models created from the \code{neuraldat} dataset and include \code{mlp} (\pkg{RSNNS}), \code{nn} (\pkg{RSNNS}), and \code{nnet} (\pkg{nnet}) objects.
 
-<<eval = T, echo= F, message = F>>=
+<<eval = T, echo = F, message = F>>=
 library(NeuralNetTools)
 @
-<<results = 'hide'>>=
+<<results = hide>>=
 # set random seed for initial weights for training
 set.seed(123)
 
@@ -164,27 +163,70 @@ Existing plot functions in \proglang{R} to view neural networks are minimal.  Su
 
 Tbe \code{plotnet} function in \pkg{NeuralNetTools} plots a \acl{nid} \citep[\acs{nid},][]{Ozesmi99} and includes several options to customize aesthetics. A \ac{nid} is a modification to the standard conceptual illustration of the \ac{mlp} network that changes the thickness and color of the weight connections based on magnitude and sign, respectively.  Positive weights between layers are shown as black lines and negative weights as grey lines. Line thickness is in proportion to absolute magnitude of each weight (\cref{fig:plotnet}).
 
-<<plotnet, fig.show = 'hold', fig.height = 5.5, fig.width = 5.5, out.height = '7.5cm', out.width = '7.5cm', fig.cap = 'Examples from the \\code{plotnet} function showing neural networks as a standard graphic (\\ref{fig:plotnet1}) and using the \\acl{nid} (\\ref{fig:plotnet2}).  Labels outside of the nodes represent variable names and labels within the nodes indicate the layer and node (I: input, H: hidden, O: output, B: bias).', fig.subcap = c('', '')>>=
+<<echo = FALSE, results = hide>>=
+pdf('figs/plotnet.pdf', height = 5.5, width = 5.5, family = 'serif')
 par(mar = c(0, 0, 0, 0))
 plotnet(mod3, nid = F, circle_col = 'grey', bord_col = 'grey')
 plotnet(mod3)
+dev.off()
 @
+\begin{figure}[!ht]
+\subfloat[][]{
+\includegraphics[width=7.5cm,page=1]{figs/plotnet.pdf}
+\label{fig:plotnet1}
+}
+\subfloat[][]{
+\includegraphics[width=7.5cm, page=2]{figs/plotnet.pdf}
+\label{fig:plotnet2}
+}
+\caption{Examples from the \code{plotnet} function showing neural networks as a standard graphic (\ref{fig:plotnet1}) and using the \acl{nid} (\ref{fig:plotnet2}).  Labels outside of the nodes represent variable names and labels within the nodes indicate the layer and node (I: input, H: hidden, O: output, B: bias).}
+\label{fig:plotnet}
+\end{figure}
 
 A primary and skip layer network can also be plotted for \code{nnet} models with a skip layer connection (\cref{fig:plotnet_skip}). Models with skip layers include additional connections from the input to output layers that bypass the hidden layer \citep{Ripley96}.  The default behavior of \code{plotnet} is to plot the primary network, whereas the skip layer can be viewed separately with \code{skip = TRUE}. If \code{nid = TRUE}, the line widths for both the primary and skip layer plots are relative to all weights. Plotting a network with only a skip layer (i.e., no hidden layer, \code{size = 0} in \code{nnet}) will include bias connections to the output layer, whereas these are included only in the primary plot if size is greater than zero.
 
-<<plotnet_skip, fig.show = 'hold', fig.height = 5.5, fig.width = 5.5, out.height = '7.5cm', out.width = '7.5cm', fig.cap = 'Examples from the \\code{plotnet} function showing a neural network with a separate skip layer between the input and output layers.  The skip layer (\\ref{fig:plotnet_skip1}) and primary neural network (\\ref{fig:plotnet_skip2}) can be viewed separately with \\code{plotnet} by using \\code{skip = TRUE} or \\code{skip = FALSE}.', results = 'hide', fig.subcap = c('', '')>>=
+<<echo = FALSE, results = hide>>=
 # create a model with a skip layer
 modskip <- nnet(Y1 ~ X1 + X2 + X3, data = neuraldat, size = 5, skip = TRUE)
 
 # plot
+pdf('figs/plotnet_skip.pdf', height = 5.5, width = 5.5, family = 'serif')
 par(mar = c(0, 0, 0, 0))
 plotnet(modskip, skip = TRUE)
 plotnet(modskip)
+dev.off()
 @
+\begin{figure}[!ht]
+\subfloat[][]{
+\includegraphics[width=7.5cm,page=1]{figs/plotnet_skip.pdf}
+\label{fig:plotnet_skip1}
+}
+\subfloat[][]{
+\includegraphics[width=7.5cm, page=2]{figs/plotnet_skip.pdf}
+\label{fig:plotnet_skip2}
+}
+\caption{Examples from the \code{plotnet} function showing a neural network with a separate skip layer between the input and output layers.  The skip layer (\ref{fig:plotnet_skip1}) and primary neural network (\ref{fig:plotnet_skip2}) can be viewed separately with \code{plotnet} by using \code{skip = TRUE} or \code{skip = FALSE}.}
+\label{fig:plotnet_skip}
+\end{figure}
 
 The \pkg{RSNNS} package provides algorithms to prune connections or nodes in a neural network \citep{Bergmeir12}.  This approach can remove connection weights between layers or input nodes that do not contribute to the predictive performance of the network.  Pruning has additional benefits of an increase in power by increasing the degrees of freedom or the identification of input nodes with low importance.  Algorithms in \pkg{RSNNS} for weight pruning include magnitude based pruning, Optimal Brain Damage, and Optimal Brain Surgeon, whereas algorithms for node pruning include skeletonization and the non-contributing units method \citep{Zell98}.  The \code{plotnet} function can plot a pruned neural network, with options to omit or display the pruned connections (\cref{fig:plotprune}).  
 
-<<plotprune, eval = T, echo = T, fig.show = 'hold', fig.height = 7, fig.width = 7.7, out.width = '0.48\\textwidth', fig.cap = 'A pruned neural network from \\pkg{RSNNS} \\citep{Bergmeir12} using the `Optimal Brain Surgeon\' algorithm described in \\citet{Zell98}.  The default plotting behavior of \\code{plotnet} is to omit pruned connections (\\ref{fig:plotprune1}), whereas they can be viewed as dashed lines by including the \\code{prune\\_col} argument (\\ref{fig:plotprune2}).', fig.subcap = c('', '')>>=
+<<eval = F, echo = F, results = hide>>=
+# pruned model using RSNNS
+pruneFuncParams <- list(max_pr_error_increase = 10.0, pr_accepted_error = 1.0,
+  no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01, 
+  init_matrix_value = 1e-6, input_pruning = TRUE, hidden_pruning = TRUE)
+mod <- mlp(x, y, size = 5, pruneFunc = "OptimalBrainSurgeon",
+ pruneFuncParams = pruneFuncParams)
+
+# plot, pruned connections are omitted (default) or included with prune_col
+pdf('figs/plotprune.pdf', height = 7, width = 7.7, family = 'serif')
+par(mar = c(0, 0, 0, 0))
+plotnet(mod, rel_rsc = c(3, 8))
+plotnet(mod, prune_col = 'lightblue', rel_rsc = c(3, 8))
+dev.off()
+@
+<<eval = F, echo = T, results = hide>>=
 # pruned model using RSNNS
 pruneFuncParams <- list(max_pr_error_increase = 10.0, pr_accepted_error = 1.0,
   no_of_pr_retrain_cycles = 1000, min_error_to_stop = 0.01, 
@@ -197,6 +239,18 @@ par(mar = c(0, 0, 0, 0))
 plotnet(mod, rel_rsc = c(3, 8))
 plotnet(mod, prune_col = 'lightblue', rel_rsc = c(3, 8))
 @
+\begin{figure}[!ht]
+\subfloat[][]{
+\includegraphics[width=0.48\textwidth, page=1]{figs/plotprune.pdf}
+\label{fig:plotprune1}
+}
+\subfloat[][]{
+\includegraphics[width=0.48\textwidth, page=2]{figs/plotprune.pdf}
+\label{fig:plotprune2}
+}
+\caption{A pruned neural network from \pkg{RSNNS} \citep{Bergmeir12} using the `Optimal Brain Surgeon' algorithm described in \citet{Zell98}.  The default plotting behavior of \code{plotnet} is to omit pruned connections (\ref{fig:plotprune1}), whereas they can be viewed as dashed lines by including the \code{prune\_col} argument (\ref{fig:plotprune2}).}
+\label{fig:plotprune}
+\end{figure}
 
 \subsection{Evaluating variable importance}
 
@@ -217,45 +271,42 @@ olden(mod2)
 garson(mod3)
 olden(mod3)
 @
-
+<<results = hide, echo = FALSE>>=
+pdf('figs/plotimp.pdf', family = 'serif', height = 2, width = 4)
+garson(mod1)
+olden(mod1)
+garson(mod2)
+olden(mod2)
+garson(mod3)
+olden(mod3)
+dev.off()
+@
 \begin{figure}[!h]
 \centering
 \subfloat[][Model 1 (\code{mlp}), \code{garson}]{
-<<plotimp-1, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
-garson(mod1)
-@
+\includegraphics[width = 0.47\textwidth, page = 1]{figs/plotimp.pdf}
 \label{fig:plotimp1}
 }
 \subfloat[][Model 1 (\code{mlp}), \code{olden}]{
-<<plotimp-2, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
-olden(mod1)
-@
+\includegraphics[width = 0.47\textwidth, page = 2]{figs/plotimp.pdf}
 \label{fig:plotimp2}
 }
 
 \subfloat[][Model 2 (\code{nn}), \code{garson}]{
-<<plotimp-3, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
-garson(mod2)
-@
+\includegraphics[width = 0.47\textwidth, page = 3]{figs/plotimp.pdf}
 \label{fig:plotimp3}
 }
 \subfloat[][Model 2 (\code{nn}), \code{olden}]{
-<<plotimp-4, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
-olden(mod2)
-@
+\includegraphics[width = 0.47\textwidth, page = 4]{figs/plotimp.pdf}
 \label{fig:plotimp4}
 }
 
 \subfloat[][Model 3 (\code{nnet}), \code{garson}]{
-<<plotimp-5, fig.height = 2, fig.width = 4, out.width = '0.47\\textwidth', echo = F>>=
-garson(mod3)
-@
+\includegraphics[width = 0.47\textwidth, page = 5]{figs/plotimp.pdf}
 \label{fig:plotimp5}
 }
 \subfloat[][Model 3 (\code{nnet}), \code{olden}]{
-<<plotimp-6, fig.height = 2, fig.width =4, out.width = '0.47\\textwidth', echo = F>>=
-olden(mod3)
-@
+\includegraphics[width = 0.47\textwidth, page = 6]{figs/plotimp.pdf}
 \label{fig:plotimp6}
 }
 \caption{Variable importance for three models using Garson's algorithm for relative importance (\code{garson}, \cref{fig:plotimp1,fig:plotimp3,fig:plotimp5}, \citealt{Garson91,Goh95}) and Olden's conection weights algorithm (\code{olden}, \cref{fig:plotimp2,fig:plotimp4,fig:plotimp6}, \citealt{Olden04}).  Garson's algorithm shows importance as absolute values from 0--1, whereas Olden's algorithm preserves sign and magnitude.  Importance values for Olden's algorithm are from the summed product of model weights and are not rescaled.}
@@ -282,22 +333,28 @@ lekprofile(mod3, group_vals = 6)
 # lek profile, cluster groups
 lekprofile(mod3, group_vals = 6, group_show = TRUE)
 @
+<<echo = F, results = hide>>=
+pdf('figs/plotlek_sens.pdf', height = 2.5, width = 8, family = 'serif')
+lekprofile(mod3) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
+lekprofile(mod3, group_vals = 6) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
+dev.off()
 
-\begin{figure}
+pdf('figs/plotlek_bars.pdf', height = 2.5, width = 8, family = 'serif')
+lekprofile(mod3, group_show = TRUE) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
+lekprofile(mod3, group_vals = 6, group_show = TRUE) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
+dev.off()
+@
+\begin{figure}[!ht]
 \centering
 \subfloat[][Response with quantiles]{
-<<plotlek_sens1, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', echo = F>>=
-lekprofile(mod3) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
-@
+\includegraphics[width = 0.9\textwidth, page = 1]{figs/plotlek_sens.pdf}
 \label{fig:plotlek_sens1}
 }
 
 \subfloat[][Response with clusters]{
-<<plotlek_sens2, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', echo = F>>=
-lekprofile(mod3, group_vals = 6) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
-@
+\includegraphics[width = 0.9\textwidth, page = 2]{figs/plotlek_sens.pdf}
 \label{fig:plotlek_sens2}
-}s
+}
 \caption{Sensitivity analysis of a neural network using the Lek profile method to evaluate the effects of explanatory variables.  \Cref{fig:plotlek_sens1} groups unevaluated explanatory variables at quantiles (minimum, 20\textsuperscript{th}, 40\textsuperscript{th}, 60\textsuperscript{th}, 80\textsuperscript{th}, and maximum percentiles) and \cref{fig:plotlek_sens2} groups by cluster means (six groups).  Values at which explanatory variables are held constant for each group are shown in \cref{fig:plotlek_bars1,fig:plotlek_bars2}.}
 \label{fig:plotlek_sens}
 \end{figure}
@@ -306,16 +363,12 @@ lekprofile(mod3, group_vals = 6) + theme(plot.margin = grid::unit(c(0, 0, 0, 0),
 \begin{figure}
 \centering
 \subfloat[][Quantile groupings]{
-<<plotlek_bars1, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', echo = F>>=
-lekprofile(mod3, group_show = TRUE) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
-@
+\includegraphics[width = 0.9\textwidth, page = 1]{figs/plotlek_bars.pdf}
 \label{fig:plotlek_bars1}
 }
 
 \subfloat[][Cluster groupings]{
-<<plotlek_bars2, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', echo = F>>=
-lekprofile(mod3, group_vals = 6, group_show = TRUE) + theme(plot.margin = grid::unit(c(0, 0, 0, 0), 'cm'))
-@
+\includegraphics[width = 0.9\textwidth, page = 2]{figs/plotlek_bars.pdf}
 \label{fig:plotlek_bars2}
 }
 \caption{Bar plots for values of unevaluated explanatory variables in each group in \cref{fig:plotlek_sens1,fig:plotlek_sens2}.  \Cref{fig:plotlek_bars1} shows default quantile groupings set at the minimum, 20\textsuperscript{th}, 40\textsuperscript{th}, 60\textsuperscript{th}, 80\textsuperscript{th}, and maximum percentiles.  For example, variables are held at negative values for group 1 (i.e., stacked bars with negative heights) for the minimum value, whereas group 6 holds variables at their maximum (largest positive heights). \Cref{fig:plotlek_bars2} shows the cluster centers for each variable in each group.  Groups in \cref{fig:plotlek_bars2} are random because the input variables are from a standard normal distribution.}
@@ -338,7 +391,7 @@ A dataset from \pkg{nycflights13} \citep{Wickham14b} is used to demonstrate effe
 The effects of network architecture and initial starting weights on estimates of variable importance were evaluated by creating many models and assessing the uncertainty of the importance.  Models with one, five, or ten hidden nodes and 100 separate models for each node level were created.  Each model had a random set of starting weights for the first training iteration.  Importance estimates using \code{olden} were saved for each model and combined in a single plot to show overall variable importance as the median and 5\textsuperscript{th}/95\textsuperscript{th} percentiles from the 100 models for each node level (see analysis \href{https://raw.githubusercontent.com/fawda123/nnt_manu/master/flightimp.R}{code}). 
 
 Several conclusions can be made from \cref{fig:flightimp}.  First, delays in arrival time are negatively related to distance and positively related to departure delays and travel air.  That is, flights arrived later than their scheduled time if flight time was long or if their departure was delayed, whereas flights arrived earlier than scheduled for longer distances.  No conclusions can be made for the other variables because the bounds of uncertainty included zero.  Second, the range of importance estimates varied between the models (i.e., one node  varied +/- 1 and the others +/- 3).  This suggests that the relative importance estimates only have relevance within each model, whereas only the rankings (e.g., least, most important) can be compared between models.  Third and most important, the level of uncertainty for specific variables can be large between model fits for the same architecture.  This suggests that a single model can provide misleading information such that several models may be required to improve the certainty of conclusions.  Additional considerations described above (e.g., criteria for stopping training, use of training and test datasets) can also affect the interpration of model information and should be equally considered during model development.
-<<echo = F>>=
+<<echo = F, results = hide>>=
 # library(nnet)
 # library(NeuralNetTools)
 # library(dplyr)
@@ -442,28 +495,26 @@ p3 <- ggplot(toplo3, aes(x = variable, y = med, fill = med)) +
   theme(axis.title.x = element_blank(), legend.position = 'none') +
   scale_y_continuous('Importance', limits = ylims)
 
+pdf('figs/flightimp.pdf', height = 3, width = 8, family = 'serif')
+print(p1)
+print(p2)
+print(p3)
+dev.off()
 @
-
 \begin{figure}[!h]
 \centering
 \subfloat[][Networks with one node]{
-<<flightimp-1, fig.height = 3, fig.width = 8, out.width = '0.95\\textwidth', echo = F>>=
-print(p1)
-@
+\includegraphics[width = 0.95\textwidth, page = 1]{figs/flightimp.pdf}
 \label{fig:flightimp1}
 }
 
 \subfloat[][Networks with five nodes]{
-<<flightimp-2, fig.height = 3, fig.width = 8, out.width = '0.95\\textwidth', echo = F>>=
-print(p2)
-@
+\includegraphics[width = 0.95\textwidth, page = 2]{figs/flightimp.pdf}
 \label{fig:flightimp2}
 }
 
 \subfloat[][Networks with ten nodes]{
-<<flightimp-3, fig.height = 3, fig.width = 8, out.width = '0.95\\textwidth', echo = F>>=
-print(p3)
-@
+\includegraphics[width = 0.95\textwidth, page = 3]{figs/flightimp.pdf}
 \label{fig:flightimp3}
 }
 \caption{Uncertainty in variable importance estimates for three neural networks to evaluate factors related to arrival delays for flights departing New York City.  Three model types with one, five, and ten nodes were evaluated with 100 models with different starting weights for each type.}
