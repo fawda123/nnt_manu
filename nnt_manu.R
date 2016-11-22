@@ -58,6 +58,19 @@ tomod <- filter(flights, month == 12 & carrier == 'UA') %>%
   mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>% 
   data.frame
 
+# example model
+mod <- nnet(arr_delay ~ ., size = 5, linout = TRUE, data = tomod, trace = F)  
+
+# plots of the example model
+plotnet(mod)
+garson(mod)
+olden(mod)
+lekprofile(mod, group_vals = 5)
+lekprofile(mod, group_vals = 5, group_show = TRUE)
+
+##
+# test the effects of model structure and starting conditions on variable importance
+
 # setup initial conditions
 nodes <- c(1, 5, 10)
 seeds <- sample(c(1:5000), 100)
@@ -106,15 +119,15 @@ imp_sums <- data.frame(grids, imp_sums) %>%
 
 # subet by nodes so barplots can be ordered by medians
 toplo1 <- filter(imp_sums, nodes == 1) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 toplo2 <- filter(imp_sums, nodes == 5) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 toplo3 <- filter(imp_sums, nodes == 10) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 
 # widths
 wd <- 0.3
-ylims <- c(-3.93, 3.49)
+ylims <- with(imp_sums, c(min(lo), max(hi)))
 
 p1 <- ggplot(toplo1, aes(x = variable, y = med, fill = med)) + 
   geom_bar(stat = 'identity') + 

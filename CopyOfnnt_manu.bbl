@@ -61,6 +61,14 @@ Csardi G (2015).
 \newblock \proglang{R} package version 2.1.0,
   \urlprefix\url{https://github.com/metacran/cranlogs}.
 
+\bibitem[{Ellenius and Groth(2000)}]{Ellenius00}
+Ellenius J, Groth T (2000).
+\newblock \enquote{Methods for selection of adequate neural network structures
+  with application to early assessment of chest pain patients by biochemical 
+  monitoring.}
+\newblock \emph{International Journal of Medical Informatics}, \textbf{57}(2-3),
+  181--202.
+
 \bibitem[{Feng and Wang(2002)}]{Feng02}
 Feng CX, Wang X (2002).
 \newblock \enquote{Digitizing Uncertainty Modeling for Reverse Engineering

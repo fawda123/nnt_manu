@@ -1,9 +1,10 @@
-library(nnet)
-library(NeuralNetTools)
-library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(nycflights13)
+
+library("nnet")
+library("NeuralNetTools")
+library("dplyr")
+library("tidyr")
+library("ggplot2")
+library("nycflights13")
 
 # data preprocessing
 # select UA carrier for month of december and relevant variables
@@ -14,6 +15,19 @@ tomod <- filter(flights, month == 12 & carrier == 'UA') %>%
   mutate_each(funs(as.numeric), -arr_delay) %>% 
   mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>% 
   data.frame
+
+# example model
+mod <- nnet(arr_delay ~ ., size = 5, linout = TRUE, data = tomod, trace = F)  
+
+# plots of the example model
+plotnet(mod)
+garson(mod)
+olden(mod)
+lekprofile(mod, group_vals = 5)
+lekprofile(mod, group_vals = 5, group_show = TRUE)
+
+##
+# test the effects of model structure and starting conditions on variable importance
 
 # setup initial conditions
 nodes <- c(1, 5, 10)
@@ -63,15 +77,15 @@ imp_sums <- data.frame(grids, imp_sums) %>%
 
 # subet by nodes so barplots can be ordered by medians
 toplo1 <- filter(imp_sums, nodes == 1) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 toplo2 <- filter(imp_sums, nodes == 5) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 toplo3 <- filter(imp_sums, nodes == 10) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 
 # widths
 wd <- 0.3
-ylims <- c(-3.93, 3.49)
+ylims <- with(imp_sums, c(min(lo), max(hi)))
 
 p1 <- ggplot(toplo1, aes(x = variable, y = med, fill = med)) + 
   geom_bar(stat = 'identity') + 
@@ -93,3 +107,7 @@ p3 <- ggplot(toplo3, aes(x = variable, y = med, fill = med)) +
   theme_bw() +
   theme(axis.title.x = element_blank(), legend.position = 'none') +
   scale_y_continuous('Importance', limits = ylims)
+
+print(p1)
+print(p2)
+print(p3)

@@ -97,6 +97,7 @@
 \newlabel{fig:plotnet}{{1}{5}{Examples from the \code {plotnet} function showing neural networks as a standard graphic (\ref {fig:plotnet1}) and using the \acl {nid} (\ref {fig:plotnet2}). Labels outside of the nodes represent variable names and labels within the nodes indicate the layer and node (I: input, H: hidden, O: output, B: bias).\relax }{figure.caption.4}{}}
 \newlabel{fig:plotnet@cref}{{[figure][1][]1}{5}}
 \citation{Bergmeir12}
+\citation{Ellenius00}
 \citation{Zell98}
 \citation{Bergmeir12}
 \citation{Zell98}
@@ -113,7 +114,6 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Examples from the \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup  function showing a neural network with a separate skip layer between the input and output layers. The skip layer (\ref  {fig:plotnet_skip1}) and primary neural network (\ref  {fig:plotnet_skip2}) can be viewed separately with \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup  by using \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 skip = TRUE}\egroup  or \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 skip = FALSE}\egroup .\relax }}{6}{figure.caption.5}}
 \newlabel{fig:plotnet_skip}{{2}{6}{Examples from the \code {plotnet} function showing a neural network with a separate skip layer between the input and output layers. The skip layer (\ref {fig:plotnet_skip1}) and primary neural network (\ref {fig:plotnet_skip2}) can be viewed separately with \code {plotnet} by using \code {skip = TRUE} or \code {skip = FALSE}.\relax }{figure.caption.5}{}}
 \newlabel{fig:plotnet_skip@cref}{{[figure][2][]2}{6}}
-\acronymused{nid}
 \citation{Garson91}
 \citation{Goh95}
 \citation{Goh95}
@@ -127,6 +127,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A pruned neural network from {\fontseries  {b}\selectfont  RSNNS} \citep  {Bergmeir12} using the `Optimal Brain Surgeon' algorithm described in \citet  {Zell98}. The default plotting behavior of \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup  is to omit pruned connections (\ref  {fig:plotprune1}), whereas they can be viewed as dashed lines by including the \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 prune\_col}\egroup  argument (\ref  {fig:plotprune2}).\relax }}{7}{figure.caption.6}}
 \newlabel{fig:plotprune}{{3}{7}{A pruned neural network from \pkg {RSNNS} \citep {Bergmeir12} using the `Optimal Brain Surgeon' algorithm described in \citet {Zell98}. The default plotting behavior of \code {plotnet} is to omit pruned connections (\ref {fig:plotprune1}), whereas they can be viewed as dashed lines by including the \code {prune\_col} argument (\ref {fig:plotprune2}).\relax }{figure.caption.6}{}}
 \newlabel{fig:plotprune@cref}{{[figure][3][]3}{7}}
+\acronymused{nid}
 \acronymused{nid}
 \citation{Wickham09}
 \citation{Garson91,Goh95}
@@ -179,18 +180,35 @@
 \newlabel{fig:plotlek_bars}{{6}{11}{Bar plots for values of unevaluated explanatory variables in each group in \cref {fig:plotlek_sens1,fig:plotlek_sens2}. \Cref {fig:plotlek_bars1} shows default quantile groupings set at the minimum, 20\textsuperscript {th}, 40\textsuperscript {th}, 60\textsuperscript {th}, 80\textsuperscript {th}, and maximum percentiles. For example, variables are held at negative values for group 1 (i.e., stacked bars with negative heights) for the minimum value, whereas group 6 holds variables at their maximum (largest positive heights). \Cref {fig:plotlek_bars2} shows the cluster centers for each variable in each group. Groups in \cref {fig:plotlek_bars2} are random because the input variables are from a standard normal distribution.\relax }{figure.caption.9}{}}
 \newlabel{fig:plotlek_bars@cref}{{[figure][6][]6}{11}}
 \citation{Wickham14b}
-\newlabel{fig:flightimp1}{{7a}{13}{Subfigure 7a}{subfigure.7.1}{}}
-\newlabel{fig:flightimp1@cref}{{[subfigure][1][7]7a}{13}}
-\newlabel{sub@fig:flightimp1}{{(a)}{a}{Subfigure 7a\relax }{subfigure.7.1}{}}
-\newlabel{fig:flightimp2}{{7b}{13}{Subfigure 7b}{subfigure.7.2}{}}
-\newlabel{fig:flightimp2@cref}{{[subfigure][2][7]7b}{13}}
-\newlabel{sub@fig:flightimp2}{{(b)}{b}{Subfigure 7b\relax }{subfigure.7.2}{}}
-\newlabel{fig:flightimp3}{{7c}{13}{Subfigure 7c}{subfigure.7.3}{}}
-\newlabel{fig:flightimp3@cref}{{[subfigure][3][7]7c}{13}}
-\newlabel{sub@fig:flightimp3}{{(c)}{c}{Subfigure 7c\relax }{subfigure.7.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Uncertainty in variable importance estimates for three neural networks to evaluate factors related to arrival delays for flights departing New York City. Three model types with one, five, and ten nodes were evaluated with 100 models with different starting weights for each type.\relax }}{13}{figure.caption.10}}
-\newlabel{fig:flightimp}{{7}{13}{Uncertainty in variable importance estimates for three neural networks to evaluate factors related to arrival delays for flights departing New York City. Three model types with one, five, and ten nodes were evaluated with 100 models with different starting weights for each type.\relax }{figure.caption.10}{}}
-\newlabel{fig:flightimp@cref}{{[figure][7][]7}{13}}
+\acronymused{mlp}
+\acronymused{nid}
+\acronymused{nid}
+\newlabel{fig:flightplotsa}{{7a}{14}{Subfigure 7a}{subfigure.7.1}{}}
+\newlabel{fig:flightplotsa@cref}{{[subfigure][1][7]7a}{14}}
+\newlabel{sub@fig:flightplotsa}{{(a)}{a}{Subfigure 7a\relax }{subfigure.7.1}{}}
+\newlabel{fig:flightplotsb}{{7b}{14}{Subfigure 7b}{subfigure.7.2}{}}
+\newlabel{fig:flightplotsb@cref}{{[subfigure][2][7]7b}{14}}
+\newlabel{sub@fig:flightplotsb}{{(b)}{b}{Subfigure 7b\relax }{subfigure.7.2}{}}
+\newlabel{fig:flightplotsc}{{7c}{14}{Subfigure 7c}{subfigure.7.3}{}}
+\newlabel{fig:flightplotsc@cref}{{[subfigure][3][7]7c}{14}}
+\newlabel{sub@fig:flightplotsc}{{(c)}{c}{Subfigure 7c\relax }{subfigure.7.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Results from a simple \ac {mlp} model of arrival delay for December airline flights versus departure delay (\bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 dep\_delay}\egroup ), departure time (\bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 dep\_time}\egroup ), arrival time (\bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 arr\_time}\egroup ), travel time between destinations (\bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 air\_time}\egroup ), and distance flown (\bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 distance}\egroup ). The three plots show the \ac {nid} from \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 plotnet}\egroup  (\ref  {fig:flightplotsa}), variable importance with \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 garson}\egroup  and \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 olden}\egroup  (\ref  {fig:flightplotsb}), and sensitivity analysis with variable groupings from \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 lekprofile}\egroup  (\ref  {fig:flightplotsc}). Interpretations are provided in the text.\relax }}{14}{figure.caption.10}}
+\acronymused{mlp}
+\acronymused{nid}
+\newlabel{fig:flightplots}{{7}{14}{Results from a simple \ac {mlp} model of arrival delay for December airline flights versus departure delay (\code {dep\_delay}), departure time (\code {dep\_time}), arrival time (\code {arr\_time}), travel time between destinations (\code {air\_time}), and distance flown (\code {distance}). The three plots show the \ac {nid} from \code {plotnet} (\ref {fig:flightplotsa}), variable importance with \code {garson} and \code {olden} (\ref {fig:flightplotsb}), and sensitivity analysis with variable groupings from \code {lekprofile} (\ref {fig:flightplotsc}). Interpretations are provided in the text.\relax }{figure.caption.10}{}}
+\newlabel{fig:flightplots@cref}{{[figure][7][]7}{14}}
+\newlabel{fig:flightimp1}{{8a}{15}{Subfigure 8a}{subfigure.8.1}{}}
+\newlabel{fig:flightimp1@cref}{{[subfigure][1][8]8a}{15}}
+\newlabel{sub@fig:flightimp1}{{(a)}{a}{Subfigure 8a\relax }{subfigure.8.1}{}}
+\newlabel{fig:flightimp2}{{8b}{15}{Subfigure 8b}{subfigure.8.2}{}}
+\newlabel{fig:flightimp2@cref}{{[subfigure][2][8]8b}{15}}
+\newlabel{sub@fig:flightimp2}{{(b)}{b}{Subfigure 8b\relax }{subfigure.8.2}{}}
+\newlabel{fig:flightimp3}{{8c}{15}{Subfigure 8c}{subfigure.8.3}{}}
+\newlabel{fig:flightimp3@cref}{{[subfigure][3][8]8c}{15}}
+\newlabel{sub@fig:flightimp3}{{(c)}{c}{Subfigure 8c\relax }{subfigure.8.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Uncertainty in variable importance estimates for three neural networks to evaluate factors related to arrival delays for flights departing New York City. Three model types with one, five, and ten nodes were evaluated with 100 models with different starting weights for each type.\relax }}{15}{figure.caption.11}}
+\newlabel{fig:flightimp}{{8}{15}{Uncertainty in variable importance estimates for three neural networks to evaluate factors related to arrival delays for flights departing New York City. Three model types with one, five, and ten nodes were evaluated with 100 models with different starting weights for each type.\relax }{figure.caption.11}{}}
+\newlabel{fig:flightimp@cref}{{[figure][8][]8}{15}}
 \citation{Paruelo97,Olden02}
 \citation{Cheng94}
 \citation{Burke97}
@@ -210,36 +228,37 @@
 \bibcite{Cannon15}{{7}{2015}{{Cannon}}{{}}}
 \bibcite{Cheng94}{{8}{1994}{{Cheng and Titterington}}{{}}}
 \bibcite{Csardi15}{{9}{2015}{{Csardi}}{{}}}
-\bibcite{Feng02}{{10}{2002}{{Feng and Wang}}{{}}}
-\bibcite{Fritsch12}{{11}{2012}{{Fritsch and Guenther}}{{}}}
-\bibcite{Garson91}{{12}{1991}{{Garson}}{{}}}
-\bibcite{Gevrey03}{{13}{2003}{{Gevrey \emph  {et~al.}}}{{Gevrey, Dimopoulos, and Lek}}}
-\bibcite{Goh95}{{14}{1995}{{Goh}}{{}}}
-\bibcite{Hartigan79}{{15}{1979}{{Hartigan and Wong}}{{}}}
-\bibcite{Hornik91}{{16}{1991}{{Hornik}}{{}}}
-\bibcite{Jain00}{{17}{2000}{{Jain \emph  {et~al.}}}{{Jain, Duin, and Mao}}}
-\bibcite{Kell03}{{18}{2003}{{Kell and Oliver}}{{}}}
-\bibcite{Kelling09}{{19}{2009}{{Kelling \emph  {et~al.}}}{{Kelling, Hochachka, Fink, Riedewald, Caruana, Ballard, and Hooker}}}
-\bibcite{Klima15}{{20}{2015}{{Klima}}{{}}}
-\bibcite{Kuhn15}{{21}{2015}{{Kuhn}}{{}}}
-\bibcite{Lek96}{{22}{1996}{{Lek \emph  {et~al.}}}{{Lek, Delacoste, Baran, Dimopoulos, Lauga, and Aulagnier}}}
-\bibcite{Lek00}{{23}{2000}{{Lek and Gu\'{e}gan}}{{}}}
-\bibcite{Castejon14}{{24}{2014}{{Limas \emph  {et~al.}}}{{Limas, Mer\'{e}, Marcos, de~Pis\'{o}n~Ascacibar, Espinoza, El\'{i}as, and Ramos}}}
-\bibcite{Maier00}{{25}{2000}{{Maier and Dandy}}{{}}}
-\bibcite{McCulloch43}{{26}{1943}{{McCulloch and Pitts}}{{}}}
-\bibcite{Michener12}{{27}{2012}{{Michener and Jones}}{{}}}
-\bibcite{Olden02}{{28}{2002}{{Olden and Jackson}}{{}}}
-\bibcite{Olden04}{{29}{2004}{{Olden \emph  {et~al.}}}{{Olden, Joy, and Death}}}
-\bibcite{Ozesmi99}{{30}{1999}{{\"{O}zesmi and \"{O}zesmi}}{{}}}
-\bibcite{Paruelo97}{{31}{1997}{{Paruelo and Tomasel}}{{}}}
-\bibcite{Razi05}{{32}{2005}{{Razi and Athappilly}}{{}}}
-\bibcite{Recknagel06}{{33}{2006}{{Recknagel}}{{}}}
-\bibcite{Ripley96}{{34}{1996}{{Ripley}}{{}}}
-\bibcite{Rumelhart86}{{35}{1986}{{Rumelhart \emph  {et~al.}}}{{Rumelhart, Hinton, and Williams}}}
-\bibcite{Saeys07}{{36}{2007}{{Saeys \emph  {et~al.}}}{{Saeys, Inza, and {n}aga}}}
-\bibcite{Swanson15}{{37}{2015}{{Swanson \emph  {et~al.}}}{{Swanson, Kosmala, Lintott, Simpson, Smith, and Packer}}}
-\bibcite{Venables02}{{38}{2002}{{Venables and Ripley}}{{}}}
-\bibcite{Wickham09}{{39}{2009}{{Wickham}}{{}}}
-\bibcite{Wickham14b}{{40}{2014}{{Wickham}}{{}}}
-\bibcite{Zell98}{{41}{1998}{{Zell \emph  {et~al.}}}{{Zell, Mamier, Vogt, Mache, H\"{u}bner, D\"{o}ring, Herrmann, Soyez, Schmalzl, Sommer, Hatzigeorgiou, Posselt, Schreiner, Kett, Clemente, Wieland, and Gatter}}}
-\bibcite{Zuur10}{{42}{2010}{{Zuur \emph  {et~al.}}}{{Zuur, Ieno, and Elphick}}}
+\bibcite{Ellenius00}{{10}{2000}{{Ellenius and Groth}}{{}}}
+\bibcite{Feng02}{{11}{2002}{{Feng and Wang}}{{}}}
+\bibcite{Fritsch12}{{12}{2012}{{Fritsch and Guenther}}{{}}}
+\bibcite{Garson91}{{13}{1991}{{Garson}}{{}}}
+\bibcite{Gevrey03}{{14}{2003}{{Gevrey \emph  {et~al.}}}{{Gevrey, Dimopoulos, and Lek}}}
+\bibcite{Goh95}{{15}{1995}{{Goh}}{{}}}
+\bibcite{Hartigan79}{{16}{1979}{{Hartigan and Wong}}{{}}}
+\bibcite{Hornik91}{{17}{1991}{{Hornik}}{{}}}
+\bibcite{Jain00}{{18}{2000}{{Jain \emph  {et~al.}}}{{Jain, Duin, and Mao}}}
+\bibcite{Kell03}{{19}{2003}{{Kell and Oliver}}{{}}}
+\bibcite{Kelling09}{{20}{2009}{{Kelling \emph  {et~al.}}}{{Kelling, Hochachka, Fink, Riedewald, Caruana, Ballard, and Hooker}}}
+\bibcite{Klima15}{{21}{2015}{{Klima}}{{}}}
+\bibcite{Kuhn15}{{22}{2015}{{Kuhn}}{{}}}
+\bibcite{Lek96}{{23}{1996}{{Lek \emph  {et~al.}}}{{Lek, Delacoste, Baran, Dimopoulos, Lauga, and Aulagnier}}}
+\bibcite{Lek00}{{24}{2000}{{Lek and Gu\'{e}gan}}{{}}}
+\bibcite{Castejon14}{{25}{2014}{{Limas \emph  {et~al.}}}{{Limas, Mer\'{e}, Marcos, de~Pis\'{o}n~Ascacibar, Espinoza, El\'{i}as, and Ramos}}}
+\bibcite{Maier00}{{26}{2000}{{Maier and Dandy}}{{}}}
+\bibcite{McCulloch43}{{27}{1943}{{McCulloch and Pitts}}{{}}}
+\bibcite{Michener12}{{28}{2012}{{Michener and Jones}}{{}}}
+\bibcite{Olden02}{{29}{2002}{{Olden and Jackson}}{{}}}
+\bibcite{Olden04}{{30}{2004}{{Olden \emph  {et~al.}}}{{Olden, Joy, and Death}}}
+\bibcite{Ozesmi99}{{31}{1999}{{\"{O}zesmi and \"{O}zesmi}}{{}}}
+\bibcite{Paruelo97}{{32}{1997}{{Paruelo and Tomasel}}{{}}}
+\bibcite{Razi05}{{33}{2005}{{Razi and Athappilly}}{{}}}
+\bibcite{Recknagel06}{{34}{2006}{{Recknagel}}{{}}}
+\bibcite{Ripley96}{{35}{1996}{{Ripley}}{{}}}
+\bibcite{Rumelhart86}{{36}{1986}{{Rumelhart \emph  {et~al.}}}{{Rumelhart, Hinton, and Williams}}}
+\bibcite{Saeys07}{{37}{2007}{{Saeys \emph  {et~al.}}}{{Saeys, Inza, and {n}aga}}}
+\bibcite{Swanson15}{{38}{2015}{{Swanson \emph  {et~al.}}}{{Swanson, Kosmala, Lintott, Simpson, Smith, and Packer}}}
+\bibcite{Venables02}{{39}{2002}{{Venables and Ripley}}{{}}}
+\bibcite{Wickham09}{{40}{2009}{{Wickham}}{{}}}
+\bibcite{Wickham14b}{{41}{2014}{{Wickham}}{{}}}
+\bibcite{Zell98}{{42}{1998}{{Zell \emph  {et~al.}}}{{Zell, Mamier, Vogt, Mache, H\"{u}bner, D\"{o}ring, Herrmann, Soyez, Schmalzl, Sommer, Hatzigeorgiou, Posselt, Schreiner, Kett, Clemente, Wieland, and Gatter}}}
+\bibcite{Zuur10}{{43}{2010}{{Zuur \emph  {et~al.}}}{{Zuur, Ieno, and Elphick}}}
