@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  13 DEC 2015 17:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  28 NOV 2016 11:27
 entering extended mode
 **cover_letter.tex
 (M:\docs\manuscripts\nnt_manu\cover_letter.tex
@@ -288,8 +288,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 34.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 46.
 
+Overfull \hbox (3.69612pt too wide) in paragraph at lines 34--35
+\OT1/ptm/m/n/10.95 sponse to the re-viewer com-ments (re-view[]response.pdf), a
+n R script of the manuscript code (nnt[]manu.R),
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 46.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -312,20 +317,20 @@ Package rerunfilecheck Info: File `cover_letter.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) 
 Here is how much of TeX's memory you used:
- 5411 strings out of 493921
- 80420 string characters out of 3147282
- 165391 words of memory out of 3000000
- 8678 multiletter control sequences out of 15000+200000
+ 5412 strings out of 493921
+ 80438 string characters out of 3147282
+ 164391 words of memory out of 3000000
+ 8679 multiletter control sequences out of 15000+200000
  12553 words of font info for 33 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,4n,21p,882b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,4n,21p,545b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on cover_letter.pdf (1 page, 45033 bytes).
+Output written on cover_letter.pdf (1 page, 44356 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
+ 27 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
