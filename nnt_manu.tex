@@ -54,7 +54,6 @@ Supervised neural networks have been applied as a machine learning technique to 
 }
 
 % options and libs
-% get online bib file
 
 %% need no \usepackage{Sweave.sty}
 
@@ -84,7 +83,7 @@ y_k = f_o \left(\sum\limits_{h} w_{hk}f_h \left( \sum\limits_{i} w_{ih}x_i\right
 where the estimated value $k$ of the response variable $y$ is a sum of products between the respective weights $w$ for $i$ input variables $x$ and $h$ hidden nodes, mediated by the activation functions $f_h$ and $f_o$ for each hidden and output node.
 
 
-Methods in \pkg{NeuralNetTools} were written for several \proglang{R} packages that can be used to create \ac{mlp} neural networks: \pkg{neuralnet} \citep{Fritsch12}, \pkg{nnet} \citep{Venables02}, and \pkg{RSNNS} \citep{Bergmeir12}. Limited methods were also developed for neural network objects created with the \code{train} function from the \pkg{caret} package \citep{Kuhn15}.  Additional \proglang{R} packages that can create \ac{mlp} neural networks include \pkg{AMORE} that implements the `TAO-robust backpropagation algorithm' for model fitting \citep{Castejon14}, \pkg{FCNN4R} as an \proglang{R} interface to the \pkg{FCNN} \proglang{C++} library \citep{Klima15}, \pkg{monmlp} for networks with partial monotonicity constraints \citep{Cannon15}, and \pkg{qrnn} for quantile regression neural networks \citep{Cannon11}.  At the time of writing, the \ac{CRAN} download logs \citep{Csardi15} showed that the \proglang{R} packages with methods in \pkg{NeuralNetTools} included 95\% of all downloads for the available \ac{mlp} packages, with \pkg{nnet} accounting for over 78\%.  As such, methods have not been included in \pkg{NeuralNetTools} for the remaining packages, although further development of \pkg{NeuralNetTools} could include additional methods based on popularity.  Methods for each function are currently available for  \code{mlp} (\pkg{RSNNS}), \code{nn} (\pkg{neuralnet}), \code{nnet} (\pkg{nnet}), and \code{train} (\pkg{caret}, only if the object also inherits from the \code{nnet} class).  Additional \code{default} or \code{numeric} methods are available for some of the generic functions.
+Methods in \pkg{NeuralNetTools} were written for several \proglang{R} packages that can be used to create \ac{mlp} neural networks: \pkg{neuralnet} \citep{Fritsch12}, \pkg{nnet} \citep{Venables02}, and \pkg{RSNNS} \citep{Bergmeir12}. Limited methods were also developed for neural network objects created with the \code{train} function from the \pkg{caret} package \citep{Kuhn15}.  Additional \proglang{R} packages that can create \ac{mlp} neural networks include \pkg{AMORE} that implements the `TAO-robust backpropagation algorithm' for model fitting \citep{Castejon14}, \pkg{FCNN4R} as an \proglang{R} interface to the \pkg{FCNN} \proglang{C++} library \citep{Klima15}, \pkg{monmlp} for networks with partial monotonicity constraints \citep{Cannon15}, and \pkg{qrnn} for quantile regression neural networks \citep{Cannon11}.  At the time of writing, the \ac{CRAN} download logs \citep{Csardi15} showed that the \proglang{R} packages with methods in \pkg{NeuralNetTools} included 95\% of all downloads for the available \ac{mlp} packages, with \pkg{nnet} accounting for over 68\%.  As such, methods have not been included in \pkg{NeuralNetTools} for the remaining packages, although further development of \pkg{NeuralNetTools} could include additional methods based on popularity.  Methods for each function are currently available for  \code{mlp} (\pkg{RSNNS}), \code{nn} (\pkg{neuralnet}), \code{nnet} (\pkg{nnet}), and \code{train} (\pkg{caret}, only if the object also inherits from the \code{nnet} class).  Additional \code{default} or \code{numeric} methods are available for some of the generic functions.
 
 \section[Package structure]{Package structure}
 
@@ -376,8 +375,6 @@ I thank Bruce Vondracek, Sanford Weisberg, and Bruce Wilson of the University of
 
 % note that ref titles need to be in title-case 
 % \bibliographystyle{jss}
-% \bibliography{refs}
-% this file is bbl edited by hand after running bibtex
-\input{CopyOfnnt_manu.bbl}
+\bibliography{refs}
 
 \end{document}

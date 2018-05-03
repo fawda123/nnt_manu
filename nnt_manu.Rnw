@@ -60,12 +60,6 @@ options(digits = 1, prompt = 'R> ')
 # other libs
 library("ggplot2")
 @
-% get online bib file
-<<echo = FALSE>>=
-refs <- httr::GET('https://raw.githubusercontent.com/fawda123/refs/master/refs.bib')
-refs <- rawToChar(refs$content)
-writeLines(refs, con = file('refs.bib'))
-@
 
 %% need no \usepackage{Sweave.sty}
 
@@ -516,15 +510,15 @@ load(file = 'imp_sums.RData')
 
 # subet by nodes so barplots can be ordered by medians
 toplo1 <- filter(imp_sums, nodes == 1) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 toplo2 <- filter(imp_sums, nodes == 5) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 toplo3 <- filter(imp_sums, nodes == 10) %>% 
-  mutate(variable = factor(variable, levels = levels(variable)[order(med)]))
+  mutate(variable = factor(variable, levels = variable[order(med)]))
 
 # widths
 wd <- 0.3
-ylims <- c(-3.93, 3.49)
+ylims <- with(imp_sums, c(min(lo), max(hi)))
 
 p1 <- ggplot(toplo1, aes(x = variable, y = med, fill = med)) + 
   geom_bar(stat = 'identity') + 
@@ -587,8 +581,6 @@ I thank Bruce Vondracek, Sanford Weisberg, and Bruce Wilson of the University of
 
 % note that ref titles need to be in title-case 
 % \bibliographystyle{jss}
-% \bibliography{refs}
-% this file is bbl edited by hand after running bibtex
-\input{CopyOfnnt_manu.bbl}
+\bibliography{refs}
 
 \end{document}
