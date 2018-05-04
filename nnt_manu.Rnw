@@ -368,7 +368,7 @@ tomod <- filter(flights, month == 12 & carrier == 'UA') %>%
   data.frame
 @
 Then, a standard \ac{mlp} with five hidden nodes was created with the \pkg{nnet} package to model the effects of selected variables on arrival delays. The entire dataset is used for the example but separate training and validation datasets should be used in practice.  
-<<eval = F, eval = T, results = hide>>=
+<<eval = F, results = hide>>=
 library(nnet)
 mod <- nnet(arr_delay ~ ., size = 5, linout = TRUE, data = tomod, trace = F)  
 @

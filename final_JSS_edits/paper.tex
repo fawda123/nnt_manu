@@ -643,30 +643,30 @@ can be obtained with the functions in \pkg{NeuralNetTools}. The
 \ac{nid} (\ref{fig:flightplotsa}) shows the model structure and can be
 used as a general characterization of the relationships between
 variables.  For example, most of the connection weights from input
-node I5 are negative (gray), suggesting that distance traveled has an
-opposing relationship with arrival delays. Similarly, a large positive
-weight is observed between I3 and H1, suggesting arrival time is
-positively associated with arrival delays.  However, interpreting
-individual connection weights between layers is challenging.
-Figures~\ref{fig:flightplotsb} and \ref{fig:flightplotsc} provide more
-quantitative descriptions using information from both the \ac{nid} and
-model predictions.  \Cref{fig:flightplotsb} shows variable importance
-using the \code{garson} and \code{olden} algorithms.  The
-\code{garson} function suggests time between destinations
-(\code{air\_time}) has the strongest relationship with arrival delays,
-similar to a strong positive association shown with the \code{olden}
-method. However, the \code{garson} function shows arrival time
-(\code{arr\_time}) as the third most important variable for arrival
-delays, whereas this is ranked highest by the \code{olden}
+nodes I2 and I5 are strongly negative (gray), suggesting that departure 
+time and distance traveled has an opposing relationship with arrival 
+delays. Similarly, large positive weights are observed for I3 and I4, 
+suggesting arrival time and time in the air are positively associated 
+with arrival delays.  However, interpreting individual connection weights 
+between layers is challenging. Figures~\ref{fig:flightplotsb} and 
+\ref{fig:flightplotsc} provide more quantitative descriptions using 
+information from both the \ac{nid} and model predictions.  
+\Cref{fig:flightplotsb} shows variable importance using the \code{garson} 
+and \code{olden} algorithms.  The \code{garson} function suggests time 
+between destinations (\code{air\_time}) has the strongest relationship 
+with arrival delays, similar to a strong positive association shown 
+with the \code{olden} method. However, the \code{garson} function 
+shows arrival time (\code{arr\_time}) as the third most important 
+variable for arrival delays, whereas this is ranked highest by the \code{olden}
 function. Similar discrepancies between the two methods are observed
 for other variables, which are explained below. Finally, results from
 the \code{lekprofile} function (Figure~\ref{fig:flightplotsc}) confirm those
 in Figure~\ref{fig:flightplotsb}, with the addition of non-linear responses
 that vary by different groupings of the data.  Values for each
 variable in the different unevaluated groups (based on clustering)
-show that there were no obvious patterns between groups with the
-exception being group four that generally had early arrival times and
-long departure delays.
+show that there were no obvious patterns between groups, with the
+exception being group one that generally had longer times in the air 
+and greater distance travelled.
 
 %%%%
 \begin{figure}[t!]

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.28)  3 MAY 2018 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.8)  3 MAY 2018 19:49
 entering extended mode
 **./nnt_manu.tex
 (nnt_manu.tex
 LaTeX2e <2017-04-15>
-Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 (jss.cls
 Document Class: jss 2013/04/06 2.2 jss class by Achim Zeileis
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -24,14 +24,14 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -42,7 +42,15 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
@@ -70,16 +78,16 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
-("C:\Program Files\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyvrb\fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count87
+\FV@CodeLineNo=\count88
 \FV@InFile=\read1
 \FV@TabBox=\box26
-\c@FancyVerbLine=\count88
-\FV@StepNumber=\count89
+\c@FancyVerbLine=\count89
+\FV@StepNumber=\count90
 \FV@OutFile=\write3
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
@@ -88,7 +96,7 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 
@@ -174,12 +182,12 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count90
+\c@NAT@ctr=\count91
 )
 \footerskip=\skip45
 
@@ -193,8 +201,8 @@ Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -240,13 +248,13 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen105
-\Hy@linkcounter=\count91
-\Hy@pagecounter=\count92
+\Hy@linkcounter=\count92
+\Hy@pagecounter=\count93
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count93
+\Hy@SavedSpaceFactor=\count94
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -258,15 +266,15 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count94
+\c@Hy@tempcnt=\count95
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
 \XeTeXLinkMargin=\dimen106
-\Fld@menulength=\count95
+\Fld@menulength=\count96
 \Field@Width=\dimen107
 \Fld@charsize=\dimen108
 Package hyperref Info: Hyper figures OFF on input line 6358.
@@ -278,17 +286,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count96
-\c@Item=\count97
-\c@Hfootnote=\count98
+\Hy@abspage=\count97
+\c@Item=\count98
+\c@Hfootnote=\count99
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count99
-\c@bookmark@seq@number=\count100
+\Fld@listcount=\count100
+\c@bookmark@seq@number=\count101
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -311,23 +319,23 @@ Package hyperref Warning: Option `hyperindex' has already been used,
 Package hyperref Info: Option `colorlinks' set `true' on input line 444.
 Package hyperref Info: Option `linktocpage' set `true' on input line 444.
 Package hyperref Info: Option `plainpages' set `false' on input line 444.
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
+) (C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\acronym\acronym.sty
 Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\bigfoot\suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
-("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\xstring\xstring.sty
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\generic\xstring\xstring.tex
 \@xs@message=\write4
-\integerpart=\count101
-\decimalpart=\count102
+\integerpart=\count102
+\decimalpart=\count103
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks15
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\cleveref\cleveref.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\cleveref\cleveref.sty
 Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2230.
 LaTeX Info: Redefining \cref on input line 2230.
@@ -341,13 +349,13 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2230.
 LaTeX Info: Redefining \labelcref on input line 2230.
 LaTeX Info: Redefining \labelcpageref on input line 2230.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen109
@@ -358,31 +366,32 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen114
 \caption@hangindent=\dimen115
 )
-\c@ContinuedFloat=\count103
+\c@ContinuedFloat=\count104
 Package caption Info: hyperref package is loaded.
 )
-\c@KVtest=\count104
+\c@KVtest=\count105
 \sf@farskip=\skip53
 \sf@captopadj=\dimen116
 \sf@capskip=\skip54
 \sf@nearskip=\skip55
-\c@subfigure=\count105
-\c@subfigure@save=\count106
-\c@lofdepth=\count107
-\c@subtable=\count108
-\c@subtable@save=\count109
-\c@lotdepth=\count110
+\c@subfigure=\count106
+\c@subfigure@save=\count107
+\c@lofdepth=\count108
+\c@subtable=\count109
+\c@subtable@save=\count110
+\c@lotdepth=\count111
 \sf@top=\skip56
 \sf@bottom=\skip57
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip58
 \fb@frw=\dimen117
 \fb@frh=\dimen118
 \FrameRule=\dimen119
 \FrameSep=\dimen120
-) (nnt_manu.aux)
+)
+(nnt_manu.aux)
 \openout1 = `nnt_manu.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -399,26 +408,25 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 60.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
+\scratchcounter=\count112
 \scratchdimen=\dimen121
 \scratchbox=\box27
-\nofMPsegments=\count112
-\nofMParguments=\count113
+\nofMPsegments=\count113
+\nofMParguments=\count114
 \everyMPshowfont=\toks16
-\MPscratchCnt=\count114
+\MPscratchCnt=\count115
 \MPscratchDim=\dimen122
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks17
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -429,7 +437,7 @@ Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
@@ -442,7 +450,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count117
+\c@section@level=\count118
 )
 LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
@@ -452,15 +460,14 @@ LaTeX Info: Redefining \nameref on input line 60.
 \@outlinefile=\write5
 \openout5 = `nnt_manu.out'.
 
-<jsslogo.jpg, id=39, 540.0175pt x 393.47pt>
+ <jsslogo.jpg, id=39, 540.0175pt x 393.47pt>
 File: jsslogo.jpg Graphic file (type jpg)
-<use jsslogo.jpg>
-Package pdftex.def Info: jsslogo.jpg  used on input line 60. on input line 60.
-Package pdftex.def Info: Requested size: 89.80768pt x 65.43607pt on input line 
-60.
-LaTeX Font Info:    Try loading font information for T1+pzc on input line 60.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pzc.fd"
+<use jsslogo.jpg>
+Package pdftex.def Info: jsslogo.jpg used on input line 60.
+(pdftex.def)             Requested size: 89.80768pt x 65.43607pt.
+LaTeX Font Info:    Try loading font information for T1+pzc on input line 60.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pzc.fd"
 File: t1pzc.fd 2001/06/04 font definitions for T1/pzc.
 )
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <28> not available
@@ -489,8 +496,7 @@ Underfull \vbox (badness 3148) has occurred while \output is active []
 
  [1
 
-{C:/Users/Marcus.SCCWRP2K/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <.
-/jsslogo.jpg>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./jsslogo.jpg>]
 Package acronym Info: Label `acro:mlp' newly defined as it shall be overridden
 although it is yet undefined on input line 69.
 Package acronym Info: Label `acro:nid' newly defined as it shall be overridden
@@ -533,21 +539,19 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 4 []
  []
 
-[4]
-<figs/plotnet.pdf, id=202, page=1, pagebox=cropbox, 397.485pt x 397.485pt>
+[4] <figs/plotnet.pdf, id=202, page=1, 397.485pt x 397.485pt>
 File: figs/plotnet.pdf Graphic file (type pdf)
+
 <use figs/plotnet.pdf, page 1>
-Package pdftex.def Info: figs/plotnet.pdf , page1 used on input line 127. on in
-put line 127.
-Package pdftex.def Info: Requested size: 213.39566pt x 213.40141pt on input lin
-e 127.
-<figs/plotnet.pdf, id=203, page=2, pagebox=cropbox, 397.485pt x 397.485pt>
+Package pdftex.def Info: figs/plotnet.pdf, page1 used on input line 127.
+(pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
+
+<figs/plotnet.pdf, id=203, page=2, 397.485pt x 397.485pt>
 File: figs/plotnet.pdf Graphic file (type pdf)
+
 <use figs/plotnet.pdf, page 2>
-Package pdftex.def Info: figs/plotnet.pdf , page2 used on input line 131. on in
-put line 131.
-Package pdftex.def Info: Requested size: 213.39566pt x 213.40141pt on input lin
-e 131.
+Package pdftex.def Info: figs/plotnet.pdf, page2 used on input line 131.
+(pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
 
 Overfull \hbox (2.36908pt too wide) in paragraph at lines 127--132
 [][][][] 
@@ -559,36 +563,33 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [5 <./figs/plotnet.pdf> <./figs/plotnet.pdf>]
-<figs/plotnet_skip.pdf, id=227, page=1, pagebox=cropbox, 397.485pt x 397.485pt>
-
+<figs/plotnet_skip.pdf, id=227, page=1, 397.485pt x 397.485pt>
 File: figs/plotnet_skip.pdf Graphic file (type pdf)
+
 <use figs/plotnet_skip.pdf, page 1>
-Package pdftex.def Info: figs/plotnet_skip.pdf , page1 used on input line 142. 
-on input line 142.
-Package pdftex.def Info: Requested size: 213.39566pt x 213.40141pt on input lin
-e 142.
-<figs/plotnet_skip.pdf, id=228, page=2, pagebox=cropbox, 397.485pt x 397.485pt>
+Package pdftex.def Info: figs/plotnet_skip.pdf, page1 used on input line 142.
+(pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
 
+<figs/plotnet_skip.pdf, id=228, page=2, 397.485pt x 397.485pt>
 File: figs/plotnet_skip.pdf Graphic file (type pdf)
+
 <use figs/plotnet_skip.pdf, page 2>
-Package pdftex.def Info: figs/plotnet_skip.pdf , page2 used on input line 146. 
-on input line 146.
-Package pdftex.def Info: Requested size: 213.39566pt x 213.40141pt on input lin
-e 146.
-<figs/plotprune.pdf, id=240, page=1, pagebox=cropbox, 556.0775pt x 505.89pt>
+Package pdftex.def Info: figs/plotnet_skip.pdf, page2 used on input line 146.
+(pdftex.def)             Requested size: 213.39566pt x 213.40141pt.
+
+<figs/plotprune.pdf, id=240, page=1, 556.0775pt x 505.89pt>
 File: figs/plotprune.pdf Graphic file (type pdf)
+
 <use figs/plotprune.pdf, page 1>
-Package pdftex.def Info: figs/plotprune.pdf , page1 used on input line 168. on 
-input line 168.
-Package pdftex.def Info: Requested size: 212.4719pt x 193.29773pt on input line
- 168.
-<figs/plotprune.pdf, id=241, page=2, pagebox=cropbox, 556.0775pt x 505.89pt>
+Package pdftex.def Info: figs/plotprune.pdf, page1 used on input line 168.
+(pdftex.def)             Requested size: 212.4719pt x 193.29773pt.
+
+<figs/plotprune.pdf, id=241, page=2, 556.0775pt x 505.89pt>
 File: figs/plotprune.pdf Graphic file (type pdf)
+
 <use figs/plotprune.pdf, page 2>
-Package pdftex.def Info: figs/plotprune.pdf , page2 used on input line 172. on 
-input line 172.
-Package pdftex.def Info: Requested size: 212.4719pt x 193.29773pt on input line
- 172.
+Package pdftex.def Info: figs/plotprune.pdf, page2 used on input line 172.
+(pdftex.def)             Requested size: 212.4719pt x 193.29773pt.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 6 []
@@ -603,48 +604,47 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [7 <./figs/plotprune.pdf> <./figs/plotprune.pdf>]
-<figs/plotimp.pdf, id=301, page=1, pagebox=cropbox, 289.08pt x 144.54pt>
+<figs/plotimp.pdf, id=301, page=1, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
+
 <use figs/plotimp.pdf, page 1>
-Package pdftex.def Info: figs/plotimp.pdf , page1 used on input line 201. on in
-put line 201.
-Package pdftex.def Info: Requested size: 208.04779pt x 104.02238pt on input lin
-e 201.
-<figs/plotimp.pdf, id=302, page=2, pagebox=cropbox, 289.08pt x 144.54pt>
+Package pdftex.def Info: figs/plotimp.pdf, page1 used on input line 201.
+(pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
+
+<figs/plotimp.pdf, id=302, page=2, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
+
 <use figs/plotimp.pdf, page 2>
-Package pdftex.def Info: figs/plotimp.pdf , page2 used on input line 205. on in
-put line 205.
-Package pdftex.def Info: Requested size: 208.04779pt x 104.02238pt on input lin
-e 205.
-<figs/plotimp.pdf, id=303, page=3, pagebox=cropbox, 289.08pt x 144.54pt>
+Package pdftex.def Info: figs/plotimp.pdf, page2 used on input line 205.
+(pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
+
+<figs/plotimp.pdf, id=303, page=3, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
+
 <use figs/plotimp.pdf, page 3>
-Package pdftex.def Info: figs/plotimp.pdf , page3 used on input line 210. on in
-put line 210.
-Package pdftex.def Info: Requested size: 208.04779pt x 104.02238pt on input lin
-e 210.
-<figs/plotimp.pdf, id=304, page=4, pagebox=cropbox, 289.08pt x 144.54pt>
+Package pdftex.def Info: figs/plotimp.pdf, page3 used on input line 210.
+(pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
+
+<figs/plotimp.pdf, id=304, page=4, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
+
 <use figs/plotimp.pdf, page 4>
-Package pdftex.def Info: figs/plotimp.pdf , page4 used on input line 214. on in
-put line 214.
-Package pdftex.def Info: Requested size: 208.04779pt x 104.02238pt on input lin
-e 214.
-<figs/plotimp.pdf, id=305, page=5, pagebox=cropbox, 289.08pt x 144.54pt>
+Package pdftex.def Info: figs/plotimp.pdf, page4 used on input line 214.
+(pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
+
+<figs/plotimp.pdf, id=305, page=5, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
+
 <use figs/plotimp.pdf, page 5>
-Package pdftex.def Info: figs/plotimp.pdf , page5 used on input line 219. on in
-put line 219.
-Package pdftex.def Info: Requested size: 208.04779pt x 104.02238pt on input lin
-e 219.
-<figs/plotimp.pdf, id=306, page=6, pagebox=cropbox, 289.08pt x 144.54pt>
+Package pdftex.def Info: figs/plotimp.pdf, page5 used on input line 219.
+(pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
+
+<figs/plotimp.pdf, id=306, page=6, 289.08pt x 144.54pt>
 File: figs/plotimp.pdf Graphic file (type pdf)
+
 <use figs/plotimp.pdf, page 6>
-Package pdftex.def Info: figs/plotimp.pdf , page6 used on input line 223. on in
-put line 223.
-Package pdftex.def Info: Requested size: 208.04779pt x 104.02238pt on input lin
-e 223.
+Package pdftex.def Info: figs/plotimp.pdf, page6 used on input line 223.
+(pdftex.def)             Requested size: 208.04779pt x 104.02238pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -661,34 +661,33 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 
 [9 <./figs/plotimp.pdf> <./figs/plotimp.pdf> <./figs/plotimp.pdf> <./figs/ploti
 mp.pdf> <./figs/plotimp.pdf> <./figs/plotimp.pdf>]
-<figs/plotlek_sens.pdf, id=377, page=1, pagebox=cropbox, 578.16pt x 180.675pt>
+<figs/plotlek_sens.pdf, id=377, page=1, 578.16pt x 180.675pt>
 File: figs/plotlek_sens.pdf Graphic file (type pdf)
+
 <use figs/plotlek_sens.pdf, page 1>
-Package pdftex.def Info: figs/plotlek_sens.pdf , page1 used on input line 248. 
-on input line 248.
-Package pdftex.def Info: Requested size: 398.38567pt x 124.49495pt on input lin
-e 248.
-<figs/plotlek_sens.pdf, id=378, page=2, pagebox=cropbox, 578.16pt x 180.675pt>
+Package pdftex.def Info: figs/plotlek_sens.pdf, page1 used on input line 248.
+(pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
+
+<figs/plotlek_sens.pdf, id=378, page=2, 578.16pt x 180.675pt>
 File: figs/plotlek_sens.pdf Graphic file (type pdf)
+
 <use figs/plotlek_sens.pdf, page 2>
-Package pdftex.def Info: figs/plotlek_sens.pdf , page2 used on input line 253. 
-on input line 253.
-Package pdftex.def Info: Requested size: 398.38567pt x 124.49495pt on input lin
-e 253.
-<figs/plotlek_bars.pdf, id=387, page=1, pagebox=cropbox, 578.16pt x 180.675pt>
+Package pdftex.def Info: figs/plotlek_sens.pdf, page2 used on input line 253.
+(pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
+
+<figs/plotlek_bars.pdf, id=387, page=1, 578.16pt x 180.675pt>
 File: figs/plotlek_bars.pdf Graphic file (type pdf)
+
 <use figs/plotlek_bars.pdf, page 1>
-Package pdftex.def Info: figs/plotlek_bars.pdf , page1 used on input line 264. 
-on input line 264.
-Package pdftex.def Info: Requested size: 398.38567pt x 124.49495pt on input lin
-e 264.
-<figs/plotlek_bars.pdf, id=388, page=2, pagebox=cropbox, 578.16pt x 180.675pt>
+Package pdftex.def Info: figs/plotlek_bars.pdf, page1 used on input line 264.
+(pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
+
+<figs/plotlek_bars.pdf, id=388, page=2, 578.16pt x 180.675pt>
 File: figs/plotlek_bars.pdf Graphic file (type pdf)
+
 <use figs/plotlek_bars.pdf, page 2>
-Package pdftex.def Info: figs/plotlek_bars.pdf , page2 used on input line 269. 
-on input line 269.
-Package pdftex.def Info: Requested size: 398.38567pt x 124.49495pt on input lin
-e 269.
+Package pdftex.def Info: figs/plotlek_bars.pdf, page2 used on input line 269.
+(pdftex.def)             Requested size: 398.38567pt x 124.49495pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 10 []
@@ -713,59 +712,55 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 12 []
  []
 
-[12]
-<figs/flightplots1.pdf, id=445, page=1, pagebox=cropbox, 397.485pt x 289.08pt>
+[12] <figs/flightplots1.pdf, id=445, page=1, 397.485pt x 289.08pt>
 File: figs/flightplots1.pdf Graphic file (type pdf)
+
 <use figs/flightplots1.pdf, page 1>
-Package pdftex.def Info: figs/flightplots1.pdf , page1 used on input line 326. 
-on input line 326.
-Package pdftex.def Info: Requested size: 221.32687pt x 160.97061pt on input lin
-e 326.
-<figs/flightplots1.pdf, id=446, page=2, pagebox=cropbox, 397.485pt x 289.08pt>
+Package pdftex.def Info: figs/flightplots1.pdf, page1 used on input line 326.
+(pdftex.def)             Requested size: 221.32687pt x 160.97061pt.
+
+<figs/flightplots1.pdf, id=446, page=2, 397.485pt x 289.08pt>
 File: figs/flightplots1.pdf Graphic file (type pdf)
+
 <use figs/flightplots1.pdf, page 2>
-Package pdftex.def Info: figs/flightplots1.pdf , page2 used on input line 330. 
-on input line 330.
-Package pdftex.def Info: Requested size: 221.32687pt x 160.97061pt on input lin
-e 330.
+Package pdftex.def Info: figs/flightplots1.pdf, page2 used on input line 330.
+(pdftex.def)             Requested size: 221.32687pt x 160.97061pt.
 
 Overfull \hbox (14.5852pt too wide) in paragraph at lines 326--331
  [][][][] 
  []
 
-<figs/flightplots2.pdf, id=447, page=1, pagebox=cropbox, 578.16pt x 325.215pt>
+<figs/flightplots2.pdf, id=447, page=1, 578.16pt x 325.215pt>
 File: figs/flightplots2.pdf Graphic file (type pdf)
+
 <use figs/flightplots2.pdf, page 1>
-Package pdftex.def Info: figs/flightplots2.pdf , page1 used on input line 335. 
-on input line 335.
-Package pdftex.def Info: Requested size: 464.78778pt x 261.44272pt on input lin
-e 335.
+Package pdftex.def Info: figs/flightplots2.pdf, page1 used on input line 335.
+(pdftex.def)             Requested size: 464.78778pt x 261.44272pt.
 
 Overfull \hbox (29.42664pt too wide) in paragraph at lines 335--336
  [][] 
  []
 
-<figs/flightimp.pdf, id=457, page=1, pagebox=cropbox, 578.16pt x 216.81pt>
+<figs/flightimp.pdf, id=457, page=1, 578.16pt x 216.81pt>
 File: figs/flightimp.pdf Graphic file (type pdf)
+
 <use figs/flightimp.pdf, page 1>
-Package pdftex.def Info: figs/flightimp.pdf , page1 used on input line 349. on 
-input line 349.
-Package pdftex.def Info: Requested size: 420.5197pt x 157.69434pt on input line
- 349.
-<figs/flightimp.pdf, id=458, page=2, pagebox=cropbox, 578.16pt x 216.81pt>
+Package pdftex.def Info: figs/flightimp.pdf, page1 used on input line 349.
+(pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
+
+<figs/flightimp.pdf, id=458, page=2, 578.16pt x 216.81pt>
 File: figs/flightimp.pdf Graphic file (type pdf)
+
 <use figs/flightimp.pdf, page 2>
-Package pdftex.def Info: figs/flightimp.pdf , page2 used on input line 354. on 
-input line 354.
-Package pdftex.def Info: Requested size: 420.5197pt x 157.69434pt on input line
- 354.
-<figs/flightimp.pdf, id=459, page=3, pagebox=cropbox, 578.16pt x 216.81pt>
+Package pdftex.def Info: figs/flightimp.pdf, page2 used on input line 354.
+(pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
+
+<figs/flightimp.pdf, id=459, page=3, 578.16pt x 216.81pt>
 File: figs/flightimp.pdf Graphic file (type pdf)
+
 <use figs/flightimp.pdf, page 3>
-Package pdftex.def Info: figs/flightimp.pdf , page3 used on input line 359. on 
-input line 359.
-Package pdftex.def Info: Requested size: 420.5197pt x 157.69434pt on input line
- 359.
+Package pdftex.def Info: figs/flightimp.pdf, page3 used on input line 359.
+(pdftex.def)             Requested size: 420.5197pt x 157.69434pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 13
@@ -830,34 +825,34 @@ Package rerunfilecheck Info: File `nnt_manu.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 380.
  ) 
 Here is how much of TeX's memory you used:
- 10463 strings out of 493312
- 169742 string characters out of 3138869
- 269685 words of memory out of 3000000
- 13708 multiletter control sequences out of 15000+200000
+ 10521 strings out of 493323
+ 170572 string characters out of 3139064
+ 273713 words of memory out of 3000000
+ 13751 multiletter control sequences out of 15000+200000
  60851 words of font info for 106 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,11n,49p,1967b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Marcus.SCCWRP2K\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\tcrm1095.pk> <C:\Users\Marcus.SCCWRP2K\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\tcst1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/en
-c/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsltt10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/urw/zapfchan/uzcmi8a.pfb>
-Output written on nnt_manu.pdf (20 pages, 471900 bytes).
+ <C:\Users\Marcus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\tcrm1095.pk> <C:\Users\Marcus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\tcst1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.en
+c}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzc
+mi8a.pfb>
+Output written on nnt_manu.pdf (20 pages, 472191 bytes).
 PDF statistics:
  648 PDF objects out of 1000 (max. 8388607)
  116 named destinations out of 1000 (max. 500000)
